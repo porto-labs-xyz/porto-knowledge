@@ -376,16 +376,16 @@
       "id": "doc_porto_design_system_agents_md",
       "type": "document",
       "label": "Agents",
-      "description": "Porto Design System package instructions Use released package content only. Do not ingest restricted deck PDFs, private valuations, biographies or local source paths. Read the design-system skill before producing a Porto visual artifact. Keep Figma node IDs and links in figma/release-manifest.json; do not invent them. Before visual work, query the private organisation graph from the Porto workspace: python3.",
+      "description": "Porto Design System package instructions Use released package content only. Do not ingest restricted deck PDFs, private valuations, biographies or local source paths. Read the design-system skill before producing a Porto visual artifact. Keep Figma node IDs and links in figma/release-manifest.json; do not invent them. Figma is the editable visual authority. The package is release evidence. Never state that a local.",
       "source_path": "porto-design-system/AGENTS.md",
       "source_repository": "design-system",
       "authority": "released_design_system",
       "classification": "internal",
       "kind": "supporting",
       "materialized": true,
-      "source_hash": "sha256:c2684c63e93d62976e74ea857e25d549e587ae3fc78b639db501f0e1a1c06a23",
+      "source_hash": "sha256:c6f39bedeb34ba2b47cbc3815692d716a47f5b3445d054aa4f17960dec445ac2",
       "source_revision": "cb55551e81cb0cebd247f06ac33ffe1b77565001",
-      "content": "# Porto Design System package instructions\n\nUse released package content only. Do not ingest restricted deck PDFs, private valuations, biographies or local source paths. Read the design-system skill before producing a Porto visual artifact. Keep Figma node IDs and links in `figma/release-manifest.json`; do not invent them.\n\nBefore visual work, query the private organisation graph from the Porto workspace: `python3 ../porto-knowledge/scripts/knowledge.py route marketing-deck`. Follow the route through the released design system, brand voice and cited product sources. When a released design-system source changes, refresh Porto Knowledge, run an impact query for that source, and review connected marketing, presentation and public-copy routes before publishing.\n\nFigma is the editable visual authority. The package is release evidence. Never state that a local export, plugin script or specification is a Figma implementation until the Figma file and inspected nodes are recorded.\n"
+      "content": "# Porto Design System package instructions\n\nUse released package content only. Do not ingest restricted deck PDFs, private valuations, biographies or local source paths. Read the design-system skill before producing a Porto visual artifact. Keep Figma node IDs and links in `figma/release-manifest.json`; do not invent them.\n\nFigma is the editable visual authority. The package is release evidence. Never state that a local export, plugin script or specification is a Figma implementation until the Figma file and inspected nodes are recorded.\n"
     },
     {
       "id": "doc_porto_design_system_changelog_md",
@@ -406,16 +406,16 @@
       "id": "doc_porto_design_system_coverage_md",
       "type": "document",
       "label": "Coverage",
-      "description": "Coverage matrix Area Local release Native Figma --- --- --- 00 Start Here figma/IMPORT.md, README Blocked 01 Foundations tokens/, specifications/foundations.md Blocked 02 Identity specifications/identity-imagery.md Blocked 03 Illustration and imagery asset registry Blocked 04 Core components specifications/components.md Blocked 05 Data visualisation specifications/data-viz.md Blocked 06 Website library.",
+      "description": "Coverage matrix Area Local release Native Figma --- --- --- 00 Start Here figma/IMPORT.md, README Partial native Figma overview created and inspected 01 Foundations tokens/, specifications/foundations.md Figma page created; system not yet built 02 Identity specifications/identity-imagery.md Figma page created; system not yet built 03 Illustration and imagery asset registry Blocked 04 Core components.",
       "source_path": "porto-design-system/COVERAGE.md",
       "source_repository": "design-system",
       "authority": "released_design_system",
       "classification": "internal",
       "kind": "supporting",
       "materialized": true,
-      "source_hash": "sha256:6b62e607eafccb33a33e5d9783779e3e738a1298ac632c62f8d5127e16df9743",
+      "source_hash": "sha256:1c36d3f4185ff75b861ccd321df4a5513e932bda7c71c39d2276aa41d048e725",
       "source_revision": "cb55551e81cb0cebd247f06ac33ffe1b77565001",
-      "content": "# Coverage matrix\n\n| Area | Local release | Native Figma |\n| --- | --- | --- |\n| 00 Start Here | `figma/IMPORT.md`, README | Blocked |\n| 01 Foundations | `tokens/`, `specifications/foundations.md` | Blocked |\n| 02 Identity | `specifications/identity-imagery.md` | Blocked |\n| 03 Illustration and imagery | asset registry | Blocked |\n| 04 Core components | `specifications/components.md` | Blocked |\n| 05 Data visualisation | `specifications/data-viz.md` | Blocked |\n| 06 Website library | `specifications/components.md` | Blocked |\n| 07 Presentation templates | `templates/presentations.md` | Blocked |\n| 08 Document templates | `templates/documents.md` | Blocked |\n| 09 Marketing templates | `templates/marketing.md` | Blocked |\n| 10 Voice and content | `specifications/content.md` | Blocked |\n| 11 Examples and quality | `examples/`, `validation/` | Blocked |\n| 12 Governance and archive | CHANGELOG, manifest, instructions | Blocked |\n\n"
+      "content": "# Coverage matrix\n\n| Area | Local release | Native Figma |\n| --- | --- | --- |\n| 00 Start Here | `figma/IMPORT.md`, README | Partial native Figma overview created and inspected |\n| 01 Foundations | `tokens/`, `specifications/foundations.md` | Figma page created; system not yet built |\n| 02 Identity | `specifications/identity-imagery.md` | Figma page created; system not yet built |\n| 03 Illustration and imagery | asset registry | Blocked |\n| 04 Core components | `specifications/components.md` | Blocked |\n| 05 Data visualisation | `specifications/data-viz.md` | Blocked |\n| 06 Website library | `specifications/components.md` | Blocked |\n| 07 Presentation templates | `templates/presentations.md` | Blocked |\n| 08 Document templates | `templates/documents.md` | Blocked |\n| 09 Marketing templates | `templates/marketing.md` | Blocked |\n| 10 Voice and content | `specifications/content.md` | Blocked |\n| 11 Examples and quality | `examples/`, `validation/` | Blocked |\n| 12 Governance and archive | CHANGELOG, manifest, instructions | Blocked |\n"
     },
     {
       "id": "doc_porto_design_system_decisions_md",
@@ -466,16 +466,16 @@
       "id": "doc_porto_design_system_status_md",
       "type": "document",
       "label": "Status",
-      "description": "Status Version: 0.1.0-dev.1 Current task: await Figma authentication, then create the private project and execute the import/build order in figma/IMPORT.md. Blocker: https://www.figma.com/files/ presents an unauthenticated sign-in form. No account, team, destination or edit permission can be verified. Next action: user signs into the intended private Figma workspace, then return here to create and inspect the.",
+      "description": "Status Version: 0.1.0-dev.1 Current task: native Figma library started. Blocker: the confirmed Figma Starter plan caps this file at three pages and its in-app build agent has exhausted its daily credits. Next action: upgrade or move the file to a plan with unlimited pages, then complete the remaining ten library pages, component families, templates and validation. Completed locally: portable tokens, approved asset.",
       "source_path": "porto-design-system/STATUS.md",
       "source_repository": "design-system",
       "authority": "released_design_system",
       "classification": "internal",
       "kind": "supporting",
       "materialized": true,
-      "source_hash": "sha256:8420b0c54227fb08d71cb9c0b2f188873c49deadbc0b172476704dc9f654ff70",
+      "source_hash": "sha256:df47554a96024152ec75d4a321983e82d68651d8ac32ff097ba960a1631627d9",
       "source_revision": "cb55551e81cb0cebd247f06ac33ffe1b77565001",
-      "content": "# Status\n\n**Version:** `0.1.0-dev.1`  \n**Current task:** await Figma authentication, then create the private project and execute the import/build order in `figma/IMPORT.md`.  \n**Blocker:** `https://www.figma.com/files/` presents an unauthenticated sign-in form. No account, team, destination or edit permission can be verified.  \n**Next action:** user signs into the intended private Figma workspace, then return here to create and inspect the library.  \n\nCompleted locally: portable tokens, approved asset bundle, coverage matrix, editable-native construction specification, all required template inventories, public-safe examples, agent skill, source manifest and validation checklist.\n\n"
+      "content": "# Status\n\n**Version:** `0.1.0-dev.1`\n**Current task:** native Figma library started.\n**Blocker:** the confirmed Figma Starter plan caps this file at three pages and its in-app build agent has exhausted its daily credits.\n**Next action:** upgrade or move the file to a plan with unlimited pages, then complete the remaining ten library pages, component families, templates and validation.\n\nCompleted locally: portable tokens, approved asset bundle, coverage matrix, editable-native construction specification, all required template inventories, public-safe examples, agent skill, source manifest and validation checklist. In Figma: `Porto DS Library`, pages `00 Start Here`, `01 Foundations`, `02 Identity`, and inspected editable frame `porto-start-here` (1920×1080). The overview uses Inter because Avenir Next was unavailable in the active Figma font environment; IBM Plex Mono is available for labels.\n"
     },
     {
       "id": "doc_porto_design_system_examples_representative_briefs_md",
@@ -511,16 +511,16 @@
       "id": "doc_porto_design_system_skills_porto_design_system_skill_md",
       "type": "document",
       "label": "Skill",
-      "description": "--- name: porto-design-system description: Create Porto decks, documents and marketing assets from a released Porto Design System package and verified Figma library. Use for Porto visual communications, not protocol implementation or legal drafting. --- Porto Design System Before applying this skill to a Porto deck, marketing asset or public visual, query ../porto-knowledge/scripts/knowledge.py route marketing-deck.",
+      "description": "--- name: porto-design-system description: Create Porto decks, documents and marketing assets from a released Porto Design System package and verified Figma library. Use for Porto visual communications, not protocol implementation or legal drafting. --- Porto Design System Read STATUS.md, figma/release-manifest.json, specifications/foundations.md, the channel's template file and specifications/content.md. If a Figma.",
       "source_path": "porto-design-system/skills/porto-design-system/SKILL.md",
       "source_repository": "design-system",
       "authority": "released_design_system",
       "classification": "internal",
       "kind": "supporting",
       "materialized": true,
-      "source_hash": "sha256:50c08448113fa08c88e66b20902f233ad05d14273a443f439f2f5c7ac501b8c1",
+      "source_hash": "sha256:89971dfcac72c73d107b6e97eaa0a2e6874d3f178a8f4bb4b5a37e71d42ff3d7",
       "source_revision": "cb55551e81cb0cebd247f06ac33ffe1b77565001",
-      "content": "---\nname: porto-design-system\ndescription: Create Porto decks, documents and marketing assets from a released Porto Design System package and verified Figma library. Use for Porto visual communications, not protocol implementation or legal drafting.\n---\n\n# Porto Design System\n\nBefore applying this skill to a Porto deck, marketing asset or public visual, query `../porto-knowledge/scripts/knowledge.py route marketing-deck` from the Porto workspace. Treat the returned Design System and Brand Voice nodes as mandatory starting context, then verify all product or payout claims in their cited canonical sources.\n\nRead `STATUS.md`, `figma/release-manifest.json`, `specifications/foundations.md`, the channel's template file and `specifications/content.md`. If a Figma file key, named version or relevant node ID is missing, do not represent the result as a native Figma deliverable.\n\nStart from a structured brief: audience, purpose, channel, dimensions, mode, privacy, content source, output and package version. Choose Marketing Dark for campaign/deck work, Editorial Light only when its proposed status is suitable, and Legal Plain only for neutral legal presentation. Keep private commercial content out of public examples.\n\nUse main component instances and released assets. Preserve image proportions, use vector geometry for charts and retain the exact 8%, 70%, 70/30 and 70/25/5 values when applicable. Treat hatching as decoration, never data. Do not promise a performer 70%, operator allocation without operating infrastructure or immediate per-stream settlement.\n\nBefore export, check source qualification, contrast, overflow, safe areas, citations, data labels, linked instances and image ratio. Record mode, package version, Figma file key/node IDs and export result. If direct Figma editing is unavailable, generate from released package assets and clearly call it a non-native-Figma output.\n\nExample prompts are in `../../examples/representative-briefs.md`.\n"
+      "content": "---\nname: porto-design-system\ndescription: Create Porto decks, documents and marketing assets from a released Porto Design System package and verified Figma library. Use for Porto visual communications, not protocol implementation or legal drafting.\n---\n\n# Porto Design System\n\nRead `STATUS.md`, `figma/release-manifest.json`, `specifications/foundations.md`, the channel's template file and `specifications/content.md`. If a Figma file key, named version or relevant node ID is missing, do not represent the result as a native Figma deliverable.\n\nStart from a structured brief: audience, purpose, channel, dimensions, mode, privacy, content source, output and package version. Choose Marketing Dark for campaign/deck work, Editorial Light only when its proposed status is suitable, and Legal Plain only for neutral legal presentation. Keep private commercial content out of public examples.\n\nUse main component instances and released assets. Preserve image proportions, use vector geometry for charts and retain the exact 8%, 70%, 70/30 and 70/25/5 values when applicable. Treat hatching as decoration, never data. Do not promise a performer 70%, operator allocation without operating infrastructure or immediate per-stream settlement.\n\nBefore export, check source qualification, contrast, overflow, safe areas, citations, data labels, linked instances and image ratio. Record mode, package version, Figma file key/node IDs and export result. If direct Figma editing is unavailable, generate from released package assets and clearly call it a non-native-Figma output.\n\nExample prompts are in `../../examples/representative-briefs.md`.\n"
     },
     {
       "id": "doc_porto_design_system_specifications_components_md",

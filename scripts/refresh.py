@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import json
 import re
+import shutil
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
@@ -154,6 +155,12 @@ def main():
     )
     (graph_dir / "neo4j.cypher").write_text(cypher + "\n", encoding="utf-8")
     write_human(graph)
+    # Keep a dependency-free static build alongside the graph. The explorer
+    # deliberately loads the same generated JSON that agents query.
+    dist = ROOT / "dist"
+    (dist / "data").mkdir(parents=True, exist_ok=True)
+    shutil.copy2(ROOT / "site" / "index.html", dist / "index.html")
+    shutil.copy2(graph_dir / "knowledge-graph.json", dist / "data" / "knowledge-graph.json")
     print(f"Built {len(nodes)} nodes and {len(edges)} edges; materialised {sum(1 for n in nodes if n.get('materialized'))} sources.")
     if missing:
         print("Missing allowlisted sources: " + ", ".join(missing))

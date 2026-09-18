@@ -5,7 +5,7 @@ type: document
 
 # Coverage
 
-Coverage matrix Area Local release Native Figma --- --- --- 00 Start Here figma/IMPORT.md, README Blocked 01 Foundations tokens/, specifications/foundations.md Blocked 02 Identity specifications/identity-imagery.md Blocked 03 Illustration and imagery asset registry Blocked 04 Core components specifications/components.md Blocked 05 Data visualisation specifications/data-viz.md Blocked 06 Website library.
+Coverage matrix Area Local release Native Figma --- --- --- 00 Start Here figma/IMPORT.md, README Partial native Figma overview created and inspected 01 Foundations tokens/, specifications/foundations.md Figma page created; system not yet built 02 Identity specifications/identity-imagery.md Figma page created; system not yet built 03 Illustration and imagery asset registry Blocked 04 Core components.
 
 ## Connected knowledge
 
@@ -17,9 +17,9 @@ No outgoing links.
 
 | Area | Local release | Native Figma |
 | --- | --- | --- |
-| 00 Start Here | `figma/IMPORT.md`, README | Blocked |
-| 01 Foundations | `tokens/`, `specifications/foundations.md` | Blocked |
-| 02 Identity | `specifications/identity-imagery.md` | Blocked |
+| 00 Start Here | `figma/IMPORT.md`, README | Partial native Figma overview created and inspected |
+| 01 Foundations | `tokens/`, `specifications/foundations.md` | Figma page created; system not yet built |
+| 02 Identity | `specifications/identity-imagery.md` | Figma page created; system not yet built |
 | 03 Illustration and imagery | asset registry | Blocked |
 | 04 Core components | `specifications/components.md` | Blocked |
 | 05 Data visualisation | `specifications/data-viz.md` | Blocked |
@@ -30,5 +30,4 @@ No outgoing links.
 | 10 Voice and content | `specifications/content.md` | Blocked |
 | 11 Examples and quality | `examples/`, `validation/` | Blocked |
 | 12 Governance and archive | CHANGELOG, manifest, instructions | Blocked |
-
 

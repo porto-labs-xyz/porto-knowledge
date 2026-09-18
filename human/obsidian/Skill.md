@@ -5,7 +5,7 @@ type: document
 
 # Skill
 
---- name: porto-design-system description: Create Porto decks, documents and marketing assets from a released Porto Design System package and verified Figma library. Use for Porto visual communications, not protocol implementation or legal drafting. --- Porto Design System Before applying this skill to a Porto deck, marketing asset or public visual, query ../porto-knowledge/scripts/knowledge.py route marketing-deck.
+--- name: porto-design-system description: Create Porto decks, documents and marketing assets from a released Porto Design System package and verified Figma library. Use for Porto visual communications, not protocol implementation or legal drafting. --- Porto Design System Read STATUS.md, figma/release-manifest.json, specifications/foundations.md, the channel's template file and specifications/content.md. If a Figma.
 
 ## Connected knowledge
 
@@ -19,8 +19,6 @@ description: Create Porto decks, documents and marketing assets from a released 
 ---
 
 # Porto Design System
-
-Before applying this skill to a Porto deck, marketing asset or public visual, query `../porto-knowledge/scripts/knowledge.py route marketing-deck` from the Porto workspace. Treat the returned Design System and Brand Voice nodes as mandatory starting context, then verify all product or payout claims in their cited canonical sources.
 
 Read `STATUS.md`, `figma/release-manifest.json`, `specifications/foundations.md`, the channel's template file and `specifications/content.md`. If a Figma file key, named version or relevant node ID is missing, do not represent the result as a native Figma deliverable.
 
