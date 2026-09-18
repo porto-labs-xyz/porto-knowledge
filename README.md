@@ -1,6 +1,6 @@
 # Porto Knowledge
 
-Private, source-grounded organisational knowledge for Porto. It gives people a
+Public, source-grounded organisational knowledge for Porto. It gives people a
 linked reading surface and gives agents a deterministic way to locate,
 traverse and verify the material that applies to a task.
 
@@ -20,7 +20,7 @@ source file, revision, classification and hash from which it was built.
 - A generated Obsidian vault and Graphviz overview for human exploration.
 - Impact links: a changed source can identify the documentation, public copy,
   design assets and agent routes that need review.
-- A private-only source boundary. Restricted deck files, legal negotiations,
+- A public-safe source boundary. Restricted deck files, legal negotiations,
   biographies, credentials and machine-local paths are deliberately not copied
   here.
 
@@ -56,7 +56,7 @@ source revisions with the `PORTO_KNOWLEDGE_SOURCES_TOKEN` organisation secret.
 The manifest is the source allowlist. Add an organisational source by declaring
 its authority, owner, classification and materialisation policy first. Do not
 add restricted private-deck content, negotiations, personal data, credentials,
-or host paths just because this repository is private.
+or host paths. Private source repositories may contribute metadata only.
 
 ## Repository layout
 

@@ -2,11 +2,11 @@
   "schema_version": 1,
   "description": "Allowlisted Porto sources. Source repositories are authoritative; this graph is a private projection.",
   "repositories": [
-    {"id": "whitepaper", "url": "https://github.com/porto-labs-xyz/whitepaper.git", "workspace_path": "whitepaper", "authority": "company_product_intent", "classification": "internal", "materialize": true, "discover": ["*.md"]},
-    {"id": "pips", "url": "https://github.com/porto-labs-xyz/PIPs.git", "workspace_path": "pips", "authority": "normative_protocol", "classification": "internal", "materialize": true, "discover": ["*.md"]},
+    {"id": "whitepaper", "url": "https://github.com/porto-labs-xyz/whitepaper.git", "workspace_path": "whitepaper", "authority": "company_product_intent", "classification": "public", "materialize": true, "discover": ["*.md"]},
+    {"id": "pips", "url": "https://github.com/porto-labs-xyz/PIPs.git", "workspace_path": "pips", "authority": "normative_protocol", "classification": "public", "materialize": true, "discover": ["*.md"]},
     {"id": "docs", "url": "https://github.com/porto-labs-xyz/docs.git", "workspace_path": "docs", "authority": "published_documentation", "classification": "public", "materialize": true, "discover": ["docs/**/*.md", "docs/**/*.mdx"]},
     {"id": "landing", "url": "https://github.com/porto-labs-xyz/lander.git", "workspace_path": "porto-landing", "authority": "approved_brand_voice", "classification": "public", "materialize": true, "discover": ["*.md", "src/**/*.jsx"]},
-    {"id": "design-system", "url": "https://github.com/porto-labs-xyz/porto-design-system.git", "workspace_path": "porto-design-system", "authority": "released_design_system", "classification": "internal", "materialize": true, "discover": ["*.md", "**/*.md", "tokens/*.json"]},
+    {"id": "design-system", "url": "https://github.com/porto-labs-xyz/porto-design-system.git", "workspace_path": "porto-design-system", "authority": "released_design_system", "classification": "restricted_metadata_only", "materialize": false},
     {"id": "workspace-guidance", "url": null, "workspace_path": ".", "authority": "operating_guidance", "classification": "restricted_metadata_only", "materialize": false}
   ],
   "documents": [
@@ -20,11 +20,9 @@
     {"path": "pips/PIP-5.md", "source": "pips", "domain": "payouts_rights", "kind": "normative", "title": "PIP-5: Listener-Centric Payouts"},
     {"path": "pips/PIP-6.md", "source": "pips", "domain": "network_operations", "kind": "normative", "title": "PIP-6: Node Operations"},
     {"path": "pips/PIP-7.md", "source": "pips", "domain": "governance_process", "kind": "normative", "title": "PIP-7: Governance"},
-    {"path": "pips/PIP-8.md", "source": "pips", "domain": "token_economics", "kind": "normative", "title": "PIP-8: Economic Loop"},
     {"path": "porto-landing/CLAUDE.md", "source": "landing", "domain": "brand_public", "kind": "brand", "title": "Porto Brand Voice"},
     {"path": "porto-landing/src/pages/index.jsx", "source": "landing", "domain": "brand_public", "kind": "public_copy", "title": "Porto Landing Page"},
     {"path": "docs/docs/intro.mdx", "source": "docs", "domain": "knowledge_ops", "kind": "published", "title": "Porto Documentation"},
-    {"path": "docs/docs/whitepaper.md", "source": "docs", "domain": "mission_market", "kind": "published", "title": "Published Whitepaper"},
     {"path": "porto-design-system/README.md", "source": "design-system", "domain": "design_system", "kind": "design", "title": "Porto Design System"},
     {"path": "porto-design-system/specifications/foundations.md", "source": "design-system", "domain": "design_system", "kind": "design", "title": "Design Foundations"},
     {"path": "porto-design-system/specifications/content.md", "source": "design-system", "domain": "design_system", "kind": "design", "title": "Design Content Rules"},

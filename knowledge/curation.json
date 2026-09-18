@@ -15,7 +15,7 @@
   "concepts": {
     "concept_artist_control": {"label": "Artist ownership and control", "domain": "mission_market", "aliases": ["artist ownership", "creator control", "artists run the network"], "sources": ["whitepaper/porto-whitepaper.md"]},
     "concept_music_distribution": {"label": "Music distribution network", "domain": "product_distribution", "aliases": ["delivery layer", "CDN", "distribution infrastructure"], "sources": ["whitepaper/porto-whitepaper.md", "pips/PIP-2.md"]},
-    "concept_prt": {"label": "PRT utility token", "domain": "token_economics", "aliases": ["PRT", "token utility", "token economics"], "sources": ["pips/PIP-3.md", "pips/PIP-8.md"]},
+    "concept_prt": {"label": "PRT utility token", "domain": "token_economics", "aliases": ["PRT", "token utility", "token economics"], "sources": ["pips/PIP-3.md"]},
     "concept_valid_play": {"label": "Valid billable play", "domain": "streaming_attestation", "aliases": ["billable stream", "stream validity", "play threshold"], "sources": ["pips/PIP-4.md"]},
     "concept_attestation": {"label": "Playback attestation", "domain": "streaming_attestation", "aliases": ["playback proof", "attestor", "stream attestation"], "sources": ["pips/PIP-4.md"]},
     "concept_epoch_settlement": {"label": "Epoch settlement", "domain": "payouts_rights", "aliases": ["daily settlement", "payout epoch", "settlement timing"], "sources": ["pips/PIP-5.md"]},
