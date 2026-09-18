@@ -9,7 +9,7 @@ CLAUDE.md Context for Claude Code working in the Porto Labs landing page repo. T
 
 ## Connected knowledge
 
-- describes: [[Porto brand voice]] (EXTRACTED)
+- describes: [[Porto brand voice (concept)|Porto brand voice]] (EXTRACTED)
 
 ## Source content
 

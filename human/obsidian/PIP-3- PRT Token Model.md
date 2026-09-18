@@ -9,7 +9,7 @@ Simple Summary PRT is Porto's native token, implemented as an Aptos-standard Fun
 
 ## Connected knowledge
 
-- describes: [[PRT utility token]] (EXTRACTED)
+- describes: [[PRT utility token|PRT utility token]] (EXTRACTED)
 
 ## Source content
 

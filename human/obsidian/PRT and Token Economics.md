@@ -9,8 +9,8 @@ Issuance, utility, redemption, reserves and fees.
 
 ## Connected knowledge
 
-- contains_source: [[PIP-3: PRT Token Model]] (EXTRACTED)
-- contains: [[PRT utility token]] (EXTRACTED)
+- contains_source: [[PIP-3- PRT Token Model|PIP-3: PRT Token Model]] (EXTRACTED)
+- contains: [[PRT utility token|PRT utility token]] (EXTRACTED)
 
 ## Source content
 

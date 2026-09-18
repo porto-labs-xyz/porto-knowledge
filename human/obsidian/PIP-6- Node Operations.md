@@ -9,8 +9,8 @@ Simple Summary Specifies the three node operating modes (CDN, Validator, Full), 
 
 ## Connected knowledge
 
-- describes: [[Node roles]] (EXTRACTED)
-- describes: [[Registration and staking]] (EXTRACTED)
+- describes: [[Node roles|Node roles]] (EXTRACTED)
+- describes: [[Registration and staking|Registration and staking]] (EXTRACTED)
 
 ## Source content
 

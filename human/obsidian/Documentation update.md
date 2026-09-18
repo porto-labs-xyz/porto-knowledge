@@ -9,9 +9,9 @@ Identify the canonical source, update published mirrors, refresh this graph, the
 
 ## Connected knowledge
 
-- starts_with: [[Knowledge refresh and impact review]] (EXTRACTED)
-- starts_with: [[Porto brand voice]] (EXTRACTED)
-- starts_with: [[Governed parameter registry]] (EXTRACTED)
+- starts_with: [[Knowledge refresh and impact review|Knowledge refresh and impact review]] (EXTRACTED)
+- starts_with: [[Porto brand voice (concept)|Porto brand voice]] (EXTRACTED)
+- starts_with: [[Governed parameter registry|Governed parameter registry]] (EXTRACTED)
 
 ## Source content
 

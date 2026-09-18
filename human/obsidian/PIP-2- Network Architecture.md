@@ -9,8 +9,8 @@ Simple Summary Porto is decentralized streaming infrastructure that replaces the
 
 ## Connected knowledge
 
-- describes: [[Music distribution network]] (EXTRACTED)
-- describes: [[Node roles]] (EXTRACTED)
+- describes: [[Music distribution network|Music distribution network]] (EXTRACTED)
+- describes: [[Node roles|Node roles]] (EXTRACTED)
 
 ## Source content
 

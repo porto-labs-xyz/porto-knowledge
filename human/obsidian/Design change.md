@@ -9,8 +9,8 @@ Use released package content and record an approved design decision. Do not mate
 
 ## Connected knowledge
 
-- starts_with: [[Released Porto Design System]] (EXTRACTED)
-- starts_with: [[Knowledge refresh and impact review]] (EXTRACTED)
+- starts_with: [[Released Porto Design System|Released Porto Design System]] (EXTRACTED)
+- starts_with: [[Knowledge refresh and impact review|Knowledge refresh and impact review]] (EXTRACTED)
 
 ## Source content
 

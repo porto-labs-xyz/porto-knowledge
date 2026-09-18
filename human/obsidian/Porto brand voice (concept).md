@@ -9,7 +9,7 @@ Porto brand voice is a curated Porto concept.
 
 ## Connected knowledge
 
-- requires: [[Released Porto Design System]] (INFERRED)
+- requires: [[Released Porto Design System|Released Porto Design System]] (INFERRED)
 
 ## Source content
 

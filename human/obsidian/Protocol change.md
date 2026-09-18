@@ -9,10 +9,10 @@ Start with the relevant normative PIP. Separate current Beta behaviour from Main
 
 ## Connected knowledge
 
-- starts_with: [[Governed parameter registry]] (EXTRACTED)
-- starts_with: [[Beta-to-Mainnet rollout]] (EXTRACTED)
-- starts_with: [[Playback attestation]] (EXTRACTED)
-- starts_with: [[Epoch settlement]] (EXTRACTED)
+- starts_with: [[Governed parameter registry|Governed parameter registry]] (EXTRACTED)
+- starts_with: [[Beta-to-Mainnet rollout|Beta-to-Mainnet rollout]] (EXTRACTED)
+- starts_with: [[Playback attestation|Playback attestation]] (EXTRACTED)
+- starts_with: [[Epoch settlement|Epoch settlement]] (EXTRACTED)
 
 ## Source content
 

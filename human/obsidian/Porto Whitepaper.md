@@ -9,9 +9,9 @@ Porto: A Network-Owned Infrastructure Layer for Music Distribution v0.1.0 , Draf
 
 ## Connected knowledge
 
-- describes: [[Artist ownership and control]] (EXTRACTED)
-- describes: [[Music distribution network]] (EXTRACTED)
-- describes: [[Beta-to-Mainnet rollout]] (EXTRACTED)
+- describes: [[Artist ownership and control|Artist ownership and control]] (EXTRACTED)
+- describes: [[Music distribution network|Music distribution network]] (EXTRACTED)
+- describes: [[Beta-to-Mainnet rollout|Beta-to-Mainnet rollout]] (EXTRACTED)
 
 ## Source content
 

@@ -9,8 +9,8 @@ Music delivery, app-chain architecture and node roles.
 
 ## Connected knowledge
 
-- contains_source: [[PIP-2: Network Architecture]] (EXTRACTED)
-- contains: [[Music distribution network]] (EXTRACTED)
+- contains_source: [[PIP-2- Network Architecture|PIP-2: Network Architecture]] (EXTRACTED)
+- contains: [[Music distribution network|Music distribution network]] (EXTRACTED)
 
 ## Source content
 

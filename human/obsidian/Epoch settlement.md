@@ -9,7 +9,7 @@ Epoch settlement is a curated Porto concept.
 
 ## Connected knowledge
 
-- allocates: [[Multi-party rights-holder splits]] (INFERRED)
+- allocates: [[Multi-party rights-holder splits|Multi-party rights-holder splits]] (INFERRED)
 
 ## Source content
 

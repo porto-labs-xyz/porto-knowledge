@@ -9,7 +9,7 @@ restricted guidance source. restricted_metadata_only.
 
 ## Connected knowledge
 
-- describes: [[Knowledge refresh and impact review]] (EXTRACTED)
+- describes: [[Knowledge refresh and impact review|Knowledge refresh and impact review]] (EXTRACTED)
 
 ## Source content
 

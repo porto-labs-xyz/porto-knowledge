@@ -9,9 +9,9 @@ Simple Summary Every play of a musical work on Porto is served from an audio ori
 
 ## Connected knowledge
 
-- describes: [[Valid billable play]] (EXTRACTED)
-- describes: [[Playback attestation]] (EXTRACTED)
-- describes: [[Beta-to-Mainnet rollout]] (EXTRACTED)
+- describes: [[Valid billable play|Valid billable play]] (EXTRACTED)
+- describes: [[Playback attestation|Playback attestation]] (EXTRACTED)
+- describes: [[Beta-to-Mainnet rollout|Beta-to-Mainnet rollout]] (EXTRACTED)
 
 ## Source content
 

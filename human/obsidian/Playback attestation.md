@@ -9,7 +9,7 @@ Playback attestation is a curated Porto concept.
 
 ## Connected knowledge
 
-- progresses_to: [[Beta-to-Mainnet rollout]] (INFERRED)
+- progresses_to: [[Beta-to-Mainnet rollout|Beta-to-Mainnet rollout]] (INFERRED)
 
 ## Source content
 

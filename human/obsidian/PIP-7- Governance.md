@@ -9,7 +9,7 @@ Simple Summary Specifies the governance-controlled parameter set referenced thro
 
 ## Connected knowledge
 
-- describes: [[Governed parameter registry]] (EXTRACTED)
+- describes: [[Governed parameter registry|Governed parameter registry]] (EXTRACTED)
 
 ## Source content
 

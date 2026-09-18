@@ -9,7 +9,7 @@ Node roles is a curated Porto concept.
 
 ## Connected knowledge
 
-- requires: [[Registration and staking]] (INFERRED)
+- requires: [[Registration and staking|Registration and staking]] (INFERRED)
 
 ## Source content
 

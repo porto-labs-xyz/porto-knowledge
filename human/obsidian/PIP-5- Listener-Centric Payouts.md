@@ -9,8 +9,8 @@ Simple Summary The payoutsplitter module converts finalized StreamEvents into ac
 
 ## Connected knowledge
 
-- describes: [[Epoch settlement]] (EXTRACTED)
-- describes: [[Multi-party rights-holder splits]] (EXTRACTED)
+- describes: [[Epoch settlement|Epoch settlement]] (EXTRACTED)
+- describes: [[Multi-party rights-holder splits|Multi-party rights-holder splits]] (EXTRACTED)
 
 ## Source content
 

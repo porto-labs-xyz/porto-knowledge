@@ -57,6 +57,16 @@ def write_human(graph):
     for old in vault.glob("*.md"):
         old.unlink()
     by_id = {n["id"]: n for n in graph["nodes"]}
+    label_counts = {}
+    for node in graph["nodes"]:
+        key = node["label"].casefold()
+        label_counts[key] = label_counts.get(key, 0) + 1
+    note_names = {}
+    for node in graph["nodes"]:
+        safe = re.sub(r"[/:]", "-", node["label"])
+        if label_counts[node["label"].casefold()] > 1:
+            safe += f" ({node['type']})"
+        note_names[node["id"]] = safe
     outgoing = {}
     for edge in graph["edges"]:
         outgoing.setdefault(edge["source"], []).append(edge)
@@ -68,8 +78,8 @@ def write_human(graph):
         links = []
         for edge in outgoing.get(node["id"], []):
             target = by_id[edge["target"]]
-            links.append(f"- {edge['relation']}: [[{target['label']}]] ({edge['confidence']})")
-        safe = re.sub(r"[/:]", "-", node["label"])
+            links.append(f"- {edge['relation']}: [[{note_names[target['id']]}|{target['label']}]] ({edge['confidence']})")
+        safe = note_names[node["id"]]
         (vault / f"{safe}.md").write_text(
             f"---\nid: {node['id']}\ntype: {node['type']}\n---\n\n# {node['label']}\n\n"
             f"{node.get('description', '')}\n\n## Connected knowledge\n\n"

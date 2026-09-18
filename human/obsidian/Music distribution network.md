@@ -9,7 +9,7 @@ Music distribution network is a curated Porto concept.
 
 ## Connected knowledge
 
-- uses: [[Node roles]] (INFERRED)
+- uses: [[Node roles|Node roles]] (INFERRED)
 
 ## Source content
 

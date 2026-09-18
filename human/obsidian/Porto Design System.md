@@ -9,7 +9,7 @@ design source. restricted_metadata_only.
 
 ## Connected knowledge
 
-- describes: [[Released Porto Design System]] (EXTRACTED)
+- describes: [[Released Porto Design System|Released Porto Design System]] (EXTRACTED)
 
 ## Source content
 

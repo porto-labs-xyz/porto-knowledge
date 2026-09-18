@@ -9,8 +9,8 @@ Why Porto exists, the market problem and artist ownership.
 
 ## Connected knowledge
 
-- contains_source: [[Porto Whitepaper]] (EXTRACTED)
-- contains: [[Artist ownership and control]] (EXTRACTED)
+- contains_source: [[Porto Whitepaper|Porto Whitepaper]] (EXTRACTED)
+- contains: [[Artist ownership and control|Artist ownership and control]] (EXTRACTED)
 
 ## Source content
 

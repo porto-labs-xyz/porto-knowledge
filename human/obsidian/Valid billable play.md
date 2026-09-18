@@ -9,7 +9,7 @@ Valid billable play is a curated Porto concept.
 
 ## Connected knowledge
 
-- requires: [[Playback attestation]] (INFERRED)
+- requires: [[Playback attestation|Playback attestation]] (INFERRED)
 
 ## Source content
 
