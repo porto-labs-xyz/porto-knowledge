@@ -159,7 +159,12 @@ def main():
     # deliberately loads the same generated JSON that agents query.
     dist = ROOT / "dist"
     (dist / "data").mkdir(parents=True, exist_ok=True)
-    shutil.copy2(ROOT / "site" / "index.html", dist / "index.html")
+    explorer = (ROOT / "site" / "index.html").read_text(encoding="utf-8")
+    # Private Site authentication applies separately to static subrequests.
+    # Embed the redacted graph to keep the viewer reliably self-contained.
+    safe_graph = json.dumps(graph, ensure_ascii=False).replace("<", "\\u003c")
+    explorer = explorer.replace("<!-- GRAPH_DATA -->", f'<script id="graph-data" type="application/json">{safe_graph}</script>')
+    (dist / "index.html").write_text(explorer, encoding="utf-8")
     shutil.copy2(graph_dir / "knowledge-graph.json", dist / "data" / "knowledge-graph.json")
     print(f"Built {len(nodes)} nodes and {len(edges)} edges; materialised {sum(1 for n in nodes if n.get('materialized'))} sources.")
     if missing:
