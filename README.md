@@ -4,6 +4,10 @@ Private, source-grounded organisational knowledge for Porto. It gives people a
 linked reading surface and gives agents a deterministic way to locate,
 traverse and verify the material that applies to a task.
 
+## Explore it
+
+Open the private [Porto Knowledge Explorer](https://porto-knowledge.r-v-melkonian.chatgpt.site) for a searchable, clickable view of the current graph.
+
 This repository is a knowledge projection, not a second product repository.
 The source repositories remain authoritative. Every graph claim records the
 source file, revision, classification and hash from which it was built.
@@ -61,4 +65,3 @@ or host paths just because this repository is private.
 - `graph/`: generated machine graph, JSON-LD and optional Neo4j Cypher export.
 - `human/obsidian/`: generated human-facing notes and map.
 - `scripts/`: refresh, query and validation tools.
-
