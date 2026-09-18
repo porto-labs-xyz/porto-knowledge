@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "domains": {
+    "mission_market": {"label": "Mission and Market", "description": "Why Porto exists, the market problem and artist ownership."},
+    "product_distribution": {"label": "Product and Distribution", "description": "Music delivery, app-chain architecture and node roles."},
+    "token_economics": {"label": "PRT and Token Economics", "description": "Issuance, utility, redemption, reserves and fees."},
+    "streaming_attestation": {"label": "Streaming and Attestation", "description": "Valid plays, evidence and the Beta-to-quorum trust transition."},
+    "payouts_rights": {"label": "Payouts and Rights", "description": "Listener-centric accrual, settlement and rights-holder allocation."},
+    "network_operations": {"label": "Network Operations", "description": "Operators, staking, unbonding and accountability."},
+    "governance_process": {"label": "Governance and Protocol Process", "description": "PIPs, parameters, upgrades and migration."},
+    "brand_public": {"label": "Brand and Public Messaging", "description": "Approved public narrative, voice and site copy."},
+    "design_system": {"label": "Design System", "description": "Released tokens, layouts, content rules and visual validation."},
+    "knowledge_ops": {"label": "Knowledge Operations", "description": "How organisational knowledge is refreshed, queried and kept connected."}
+  },
+  "concepts": {
+    "concept_artist_control": {"label": "Artist ownership and control", "domain": "mission_market", "aliases": ["artist ownership", "creator control", "artists run the network"], "sources": ["whitepaper/porto-whitepaper.md"]},
+    "concept_music_distribution": {"label": "Music distribution network", "domain": "product_distribution", "aliases": ["delivery layer", "CDN", "distribution infrastructure"], "sources": ["whitepaper/porto-whitepaper.md", "pips/PIP-2.md"]},
+    "concept_prt": {"label": "PRT utility token", "domain": "token_economics", "aliases": ["PRT", "token utility", "token economics"], "sources": ["pips/PIP-3.md", "pips/PIP-8.md"]},
+    "concept_valid_play": {"label": "Valid billable play", "domain": "streaming_attestation", "aliases": ["billable stream", "stream validity", "play threshold"], "sources": ["pips/PIP-4.md"]},
+    "concept_attestation": {"label": "Playback attestation", "domain": "streaming_attestation", "aliases": ["playback proof", "attestor", "stream attestation"], "sources": ["pips/PIP-4.md"]},
+    "concept_epoch_settlement": {"label": "Epoch settlement", "domain": "payouts_rights", "aliases": ["daily settlement", "payout epoch", "settlement timing"], "sources": ["pips/PIP-5.md"]},
+    "concept_rights_splits": {"label": "Multi-party rights-holder splits", "domain": "payouts_rights", "aliases": ["royalty splits", "rights splits", "artist label publisher split"], "sources": ["pips/PIP-5.md"]},
+    "concept_node_roles": {"label": "Node roles", "domain": "network_operations", "aliases": ["node operator", "operator roles", "run a node"], "sources": ["pips/PIP-2.md", "pips/PIP-6.md"]},
+    "concept_staking": {"label": "Registration and staking", "domain": "network_operations", "aliases": ["stake", "unbonding", "slashing"], "sources": ["pips/PIP-6.md"]},
+    "concept_governance": {"label": "Governed parameter registry", "domain": "governance_process", "aliases": ["protocol parameters", "parameter registry", "governance"], "sources": ["pips/PIP-7.md"]},
+    "concept_rollout": {"label": "Beta-to-Mainnet rollout", "domain": "streaming_attestation", "aliases": ["Beta", "Mainnet", "migration", "quorum"], "sources": ["whitepaper/porto-whitepaper.md", "pips/PIP-4.md"]},
+    "concept_brand_voice": {"label": "Porto brand voice", "domain": "brand_public", "aliases": ["marketing copy", "landing copy", "tone of voice"], "sources": ["porto-landing/CLAUDE.md"]},
+    "concept_design_system": {"label": "Released Porto Design System", "domain": "design_system", "aliases": ["design system", "marketing deck", "presentation", "visual system"], "sources": ["porto-design-system/README.md", "porto-design-system/specifications/foundations.md"]},
+    "concept_knowledge_refresh": {"label": "Knowledge refresh and impact review", "domain": "knowledge_ops", "aliases": ["graph refresh", "knowledge graph", "source changed", "documentation alert"], "sources": ["design/design-notes.md"]}
+  },
+  "relations": [
+    ["concept_music_distribution", "uses", "concept_node_roles"], ["concept_valid_play", "requires", "concept_attestation"], ["concept_attestation", "progresses_to", "concept_rollout"], ["concept_epoch_settlement", "allocates", "concept_rights_splits"], ["concept_node_roles", "requires", "concept_staking"], ["concept_governance", "controls", "concept_rollout"], ["concept_brand_voice", "requires", "concept_design_system"], ["concept_knowledge_refresh", "requires", "concept_design_system"]
+  ],
+  "routes": {
+    "marketing-deck": {"label": "Marketing deck", "start": ["concept_design_system", "concept_brand_voice", "concept_artist_control", "concept_music_distribution", "concept_epoch_settlement"], "instruction": "Read the released design system before creating visuals. Verify product and payout claims in cited canonical sources. Do not use private deck material as protocol evidence."},
+    "landing-page": {"label": "Landing page", "start": ["concept_brand_voice", "concept_design_system", "concept_music_distribution", "concept_artist_control"], "instruction": "Use approved public voice and released design system. Verify mechanics against PIPs before changing public copy."},
+    "protocol-change": {"label": "Protocol change", "start": ["concept_governance", "concept_rollout", "concept_attestation", "concept_epoch_settlement"], "instruction": "Start with the relevant normative PIP. Separate current Beta behaviour from Mainnet intent."},
+    "docs-update": {"label": "Documentation update", "start": ["concept_knowledge_refresh", "concept_brand_voice", "concept_governance"], "instruction": "Identify the canonical source, update published mirrors, refresh this graph, then review impact results."},
+    "design-change": {"label": "Design change", "start": ["concept_design_system", "concept_knowledge_refresh"], "instruction": "Use released package content and record an approved design decision. Do not materialise restricted visual sources."}
+  }
+}

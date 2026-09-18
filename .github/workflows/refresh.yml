@@ -1,0 +1,37 @@
+name: Refresh Porto Knowledge
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [porto-source-changed]
+  schedule:
+    - cron: '17 4 * * 1-5'
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check out authoritative sources
+        env:
+          TOKEN: ${{ secrets.PORTO_KNOWLEDGE_SOURCES_TOKEN }}
+        run: |
+          test -n "$TOKEN"
+          git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/whitepaper.git" workspace/whitepaper
+          git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/PIPs.git" workspace/pips
+          git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/docs.git" workspace/docs
+          git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/lander.git" workspace/porto-landing
+          git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/porto-design-system.git" workspace/porto-design-system
+      - name: Build and verify projections
+        run: |
+          python3 scripts/refresh.py --workspace workspace
+          python3 scripts/knowledge.py check
+      - name: Commit refreshed projection when changed
+        run: |
+          git config user.name "porto-knowledge[bot]"
+          git config user.email "porto-knowledge[bot]@users.noreply.github.com"
+          git add graph human
+          git diff --cached --quiet || git commit -m "Refresh knowledge graph"
+          git push

@@ -1,0 +1,33 @@
+---
+id: doc_docs_docs_intro_mdx
+type: document
+---
+
+# Porto Documentation
+
+--- id: intro title: Porto Docs slug: / sidebarposition: 0 --- Porto Docs Porto is decentralized streaming infrastructure that replaces platform-owned delivery and settlement with a network run by artists, labels, publishers, and independent node operators. This site has two sections, both pulled directly from their source-of-truth repos at build time , nothing here is hand-copied: - [Whitepaper](/whitepaper) , the.
+
+## Connected knowledge
+
+No outgoing links.
+
+## Source content
+
+---
+id: intro
+title: Porto Docs
+slug: /
+sidebar_position: 0
+---
+
+# Porto Docs
+
+Porto is decentralized streaming infrastructure that replaces platform-owned delivery and settlement with a network run by artists, labels, publishers, and independent node operators.
+
+This site has two sections, both pulled directly from their source-of-truth repos at build time , nothing here is hand-copied:
+
+- **[Whitepaper](/whitepaper)** , the canonical paper, from [`porto-labs-xyz/whitepaper`](https://github.com/porto-labs-xyz/whitepaper).
+- **[PIPs](/pips)** , Porto Improvement Proposals (protocol specs, EIP/RFC-style), from [`porto-labs-xyz/PIPs`](https://github.com/porto-labs-xyz/PIPs).
+
+To propose a change, open a PR against the relevant source repo , this site rebuilds automatically once it merges.
+
