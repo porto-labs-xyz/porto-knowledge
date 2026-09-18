@@ -15,26 +15,29 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check out authoritative sources
+        id: sources
         env:
           TOKEN: ${{ secrets.PORTO_KNOWLEDGE_SOURCES_TOKEN }}
         run: |
           if [ -z "$TOKEN" ]; then
+            echo "available=false" >> "$GITHUB_OUTPUT"
             echo "PORTO_KNOWLEDGE_SOURCES_TOKEN is not configured, so the private Design System source cannot be refreshed in CI." >> "$GITHUB_STEP_SUMMARY"
             echo "Skipping refresh without failing this workflow. Configure the repository or organisation secret to enable automatic refreshes."
             exit 0
           fi
+          echo "available=true" >> "$GITHUB_OUTPUT"
           git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/whitepaper.git" workspace/whitepaper
           git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/PIPs.git" workspace/pips
           git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/docs.git" workspace/docs
           git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/lander.git" workspace/porto-landing
           git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/porto-design-system.git" workspace/porto-design-system
       - name: Build and verify projections
-        if: ${{ secrets.PORTO_KNOWLEDGE_SOURCES_TOKEN != '' }}
+        if: ${{ steps.sources.outputs.available == 'true' }}
         run: |
           python3 scripts/refresh.py --workspace workspace
           python3 scripts/knowledge.py check
       - name: Commit refreshed projection when changed
-        if: ${{ secrets.PORTO_KNOWLEDGE_SOURCES_TOKEN != '' }}
+        if: ${{ steps.sources.outputs.available == 'true' }}
         run: |
           git config user.name "porto-knowledge[bot]"
           git config user.email "porto-knowledge[bot]@users.noreply.github.com"
