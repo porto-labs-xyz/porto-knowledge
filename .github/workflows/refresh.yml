@@ -29,10 +29,12 @@ jobs:
           git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/lander.git" workspace/porto-landing
           git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/porto-design-system.git" workspace/porto-design-system
       - name: Build and verify projections
+        if: ${{ secrets.PORTO_KNOWLEDGE_SOURCES_TOKEN != '' }}
         run: |
           python3 scripts/refresh.py --workspace workspace
           python3 scripts/knowledge.py check
       - name: Commit refreshed projection when changed
+        if: ${{ secrets.PORTO_KNOWLEDGE_SOURCES_TOKEN != '' }}
         run: |
           git config user.name "porto-knowledge[bot]"
           git config user.email "porto-knowledge[bot]@users.noreply.github.com"
