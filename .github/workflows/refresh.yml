@@ -18,7 +18,11 @@ jobs:
         env:
           TOKEN: ${{ secrets.PORTO_KNOWLEDGE_SOURCES_TOKEN }}
         run: |
-          test -n "$TOKEN"
+          if [ -z "$TOKEN" ]; then
+            echo "PORTO_KNOWLEDGE_SOURCES_TOKEN is not configured, so the private Design System source cannot be refreshed in CI." >> "$GITHUB_STEP_SUMMARY"
+            echo "Skipping refresh without failing this workflow. Configure the repository or organisation secret to enable automatic refreshes."
+            exit 0
+          fi
           git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/whitepaper.git" workspace/whitepaper
           git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/PIPs.git" workspace/pips
           git clone "https://x-access-token:${TOKEN}@github.com/porto-labs-xyz/docs.git" workspace/docs
