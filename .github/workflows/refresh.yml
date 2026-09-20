@@ -20,6 +20,10 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+      - name: Validate enrichment and committed graph
+        run: |
+          python3 -m unittest discover -s tests
+          python3 scripts/knowledge.py check
       - name: Check out authoritative sources
         run: |
           git clone https://github.com/porto-labs-xyz/whitepaper.git workspace/whitepaper

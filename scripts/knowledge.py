@@ -38,7 +38,7 @@ def print_json(value):
 
 def compact(node):
     """Keep query results useful without dumping the whole source corpus."""
-    return {key: value for key, value in node.items() if key != "content"}
+    return {key: value for key, value in node.items() if key not in {"content", "source_details"}}
 
 
 def search(g, query, limit):
@@ -102,6 +102,19 @@ def check(g):
     assert all(e["source"] in ids and e["target"] in ids for e in g["edges"]), "orphan edge"
     assert all(n.get("description") for n in g["nodes"]), "description missing"
     assert all(not (n["type"] == "document" and n.get("classification") == "restricted_metadata_only" and n.get("content")) for n in g["nodes"]), "restricted source materialised"
+    documents = {n.get("source_path"): n for n in g["nodes"] if n["type"] == "document"}
+    for node in g["nodes"]:
+        for detail in node.get("source_details", []):
+            source = documents.get(detail["source_path"])
+            assert source, "concept source is missing"
+            if detail.get("availability") == "restricted_metadata_only":
+                assert not source.get("materialized") and not detail.get("content"), "restricted concept text materialised"
+            else:
+                assert source.get("materialized"), "concept source is restricted"
+                assert detail.get("content") and detail["content"] in source["content"], "concept section is not source-backed"
+            assert detail["source_hash"] == source["source_hash"], "stale concept source hash"
+            assert detail["source_revision"] == source["source_revision"], "stale concept source revision"
+            assert any(e["source"] == source["id"] and e["target"] == node["id"] and e["relation"] == "describes" for e in g["edges"]), "concept source is not connected"
     assert not g.get("missing_allowlisted_sources"), "missing allowlisted source"
     print(f"OK: {len(g['nodes'])} nodes, {len(g['edges'])} directed edges, no restricted content materialised.")
 

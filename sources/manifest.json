@@ -2,32 +2,254 @@
   "schema_version": 1,
   "description": "Allowlisted Porto sources. Source repositories are authoritative; this graph is a private projection.",
   "repositories": [
-    {"id": "whitepaper", "url": "https://github.com/porto-labs-xyz/whitepaper.git", "workspace_path": "whitepaper", "authority": "company_product_intent", "classification": "public", "materialize": true, "discover": ["*.md"]},
-    {"id": "pips", "url": "https://github.com/porto-labs-xyz/PIPs.git", "workspace_path": "pips", "authority": "normative_protocol", "classification": "public", "materialize": true, "discover": ["*.md"]},
-    {"id": "docs", "url": "https://github.com/porto-labs-xyz/docs.git", "workspace_path": "docs", "authority": "published_documentation", "classification": "public", "materialize": true, "discover": ["docs/**/*.md", "docs/**/*.mdx"]},
-    {"id": "landing", "url": "https://github.com/porto-labs-xyz/lander.git", "workspace_path": "porto-landing", "authority": "approved_brand_voice", "classification": "public", "materialize": true, "discover": ["*.md", "src/**/*.jsx"]},
-    {"id": "design-system", "url": "https://github.com/porto-labs-xyz/porto-design-system.git", "workspace_path": "porto-design-system", "authority": "released_design_system", "classification": "restricted_metadata_only", "materialize": false},
-    {"id": "workspace-guidance", "url": null, "workspace_path": ".", "authority": "operating_guidance", "classification": "restricted_metadata_only", "materialize": false}
+    {
+      "id": "whitepaper",
+      "url": "https://github.com/porto-labs-xyz/whitepaper.git",
+      "workspace_path": "whitepaper",
+      "authority": "company_product_intent",
+      "classification": "public",
+      "materialize": true,
+      "discover": [
+        "*.md"
+      ]
+    },
+    {
+      "id": "pips",
+      "url": "https://github.com/porto-labs-xyz/PIPs.git",
+      "workspace_path": "pips",
+      "authority": "normative_protocol",
+      "classification": "public",
+      "materialize": true,
+      "discover": [
+        "*.md"
+      ]
+    },
+    {
+      "id": "docs",
+      "url": "https://github.com/porto-labs-xyz/docs.git",
+      "workspace_path": "docs",
+      "authority": "published_documentation",
+      "classification": "public",
+      "materialize": true,
+      "discover": [
+        "docs/**/*.md",
+        "docs/**/*.mdx"
+      ]
+    },
+    {
+      "id": "landing",
+      "url": "https://github.com/porto-labs-xyz/lander.git",
+      "workspace_path": "porto-landing",
+      "authority": "approved_brand_voice",
+      "classification": "public",
+      "materialize": true,
+      "discover": [
+        "*.md",
+        "src/**/*.jsx"
+      ]
+    },
+    {
+      "id": "design-system",
+      "url": "https://github.com/porto-labs-xyz/porto-design-system.git",
+      "workspace_path": "porto-design-system",
+      "authority": "released_design_system",
+      "classification": "restricted_metadata_only",
+      "materialize": false,
+      "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80"
+    },
+    {
+      "id": "workspace-guidance",
+      "url": null,
+      "workspace_path": ".",
+      "authority": "operating_guidance",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "id": "player-prototype",
+      "url": "https://github.com/porto-labs-xyz/player-prototype.git",
+      "workspace_path": "listening-app",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false,
+      "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1"
+    }
   ],
   "documents": [
-    {"path": "whitepaper/porto-whitepaper.md", "source": "whitepaper", "domain": "mission_market", "kind": "canonical", "title": "Porto Whitepaper"},
-    {"path": "whitepaper/README.md", "source": "whitepaper", "domain": "knowledge_ops", "kind": "index", "title": "Whitepaper Contents"},
-    {"path": "pips/README.md", "source": "pips", "domain": "governance_process", "kind": "index", "title": "Porto Improvement Proposals"},
-    {"path": "pips/PIP-1.md", "source": "pips", "domain": "governance_process", "kind": "normative", "title": "PIP-1: Process"},
-    {"path": "pips/PIP-2.md", "source": "pips", "domain": "product_distribution", "kind": "normative", "title": "PIP-2: Network Architecture"},
-    {"path": "pips/PIP-3.md", "source": "pips", "domain": "token_economics", "kind": "normative", "title": "PIP-3: PRT Token Model"},
-    {"path": "pips/PIP-4.md", "source": "pips", "domain": "streaming_attestation", "kind": "normative", "title": "PIP-4: Streaming and Attestation"},
-    {"path": "pips/PIP-5.md", "source": "pips", "domain": "payouts_rights", "kind": "normative", "title": "PIP-5: Listener-Centric Payouts"},
-    {"path": "pips/PIP-6.md", "source": "pips", "domain": "network_operations", "kind": "normative", "title": "PIP-6: Node Operations"},
-    {"path": "pips/PIP-7.md", "source": "pips", "domain": "governance_process", "kind": "normative", "title": "PIP-7: Governance"},
-    {"path": "porto-landing/CLAUDE.md", "source": "landing", "domain": "brand_public", "kind": "brand", "title": "Porto Brand Voice"},
-    {"path": "porto-landing/src/pages/index.jsx", "source": "landing", "domain": "brand_public", "kind": "public_copy", "title": "Porto Landing Page"},
-    {"path": "docs/docs/intro.mdx", "source": "docs", "domain": "knowledge_ops", "kind": "published", "title": "Porto Documentation"},
-    {"path": "porto-design-system/README.md", "source": "design-system", "domain": "design_system", "kind": "design", "title": "Porto Design System"},
-    {"path": "porto-design-system/specifications/foundations.md", "source": "design-system", "domain": "design_system", "kind": "design", "title": "Design Foundations"},
-    {"path": "porto-design-system/specifications/content.md", "source": "design-system", "domain": "design_system", "kind": "design", "title": "Design Content Rules"},
-    {"path": "porto-design-system/templates/marketing.md", "source": "design-system", "domain": "design_system", "kind": "design", "title": "Marketing Template"},
-    {"path": "porto-design-system/templates/presentations.md", "source": "design-system", "domain": "design_system", "kind": "design", "title": "Presentation Template"},
-    {"path": "design/design-notes.md", "source": "workspace-guidance", "domain": "design_system", "kind": "restricted_guidance", "title": "Private Design Guidance"}
+    {
+      "path": "whitepaper/porto-whitepaper.md",
+      "source": "whitepaper",
+      "domain": "mission_market",
+      "kind": "canonical",
+      "title": "Porto Whitepaper"
+    },
+    {
+      "path": "whitepaper/README.md",
+      "source": "whitepaper",
+      "domain": "knowledge_ops",
+      "kind": "index",
+      "title": "Whitepaper Contents"
+    },
+    {
+      "path": "pips/README.md",
+      "source": "pips",
+      "domain": "governance_process",
+      "kind": "index",
+      "title": "Porto Improvement Proposals"
+    },
+    {
+      "path": "pips/PIP-1.md",
+      "source": "pips",
+      "domain": "governance_process",
+      "kind": "normative",
+      "title": "PIP-1: Process"
+    },
+    {
+      "path": "pips/PIP-2.md",
+      "source": "pips",
+      "domain": "product_distribution",
+      "kind": "normative",
+      "title": "PIP-2: Network Architecture"
+    },
+    {
+      "path": "pips/PIP-3.md",
+      "source": "pips",
+      "domain": "token_economics",
+      "kind": "normative",
+      "title": "PIP-3: PRT Token Model"
+    },
+    {
+      "path": "pips/PIP-4.md",
+      "source": "pips",
+      "domain": "streaming_attestation",
+      "kind": "normative",
+      "title": "PIP-4: Streaming and Attestation"
+    },
+    {
+      "path": "pips/PIP-5.md",
+      "source": "pips",
+      "domain": "payouts_rights",
+      "kind": "normative",
+      "title": "PIP-5: Listener-Centric Payouts"
+    },
+    {
+      "path": "pips/PIP-6.md",
+      "source": "pips",
+      "domain": "network_operations",
+      "kind": "normative",
+      "title": "PIP-6: Node Operations"
+    },
+    {
+      "path": "pips/PIP-7.md",
+      "source": "pips",
+      "domain": "governance_process",
+      "kind": "normative",
+      "title": "PIP-7: Governance"
+    },
+    {
+      "path": "porto-landing/CLAUDE.md",
+      "source": "landing",
+      "domain": "brand_public",
+      "kind": "brand",
+      "title": "Porto Brand Voice"
+    },
+    {
+      "path": "porto-landing/src/pages/index.jsx",
+      "source": "landing",
+      "domain": "brand_public",
+      "kind": "public_copy",
+      "title": "Porto Landing Page"
+    },
+    {
+      "path": "docs/docs/intro.mdx",
+      "source": "docs",
+      "domain": "knowledge_ops",
+      "kind": "published",
+      "title": "Porto Documentation"
+    },
+    {
+      "path": "porto-design-system/README.md",
+      "source": "design-system",
+      "domain": "design_system",
+      "kind": "design",
+      "title": "Porto Design System"
+    },
+    {
+      "path": "porto-design-system/specifications/foundations.md",
+      "source": "design-system",
+      "domain": "design_system",
+      "kind": "design",
+      "title": "Design Foundations"
+    },
+    {
+      "path": "porto-design-system/specifications/content.md",
+      "source": "design-system",
+      "domain": "design_system",
+      "kind": "design",
+      "title": "Design Content Rules"
+    },
+    {
+      "path": "porto-design-system/templates/marketing.md",
+      "source": "design-system",
+      "domain": "design_system",
+      "kind": "design",
+      "title": "Marketing Template"
+    },
+    {
+      "path": "porto-design-system/templates/presentations.md",
+      "source": "design-system",
+      "domain": "design_system",
+      "kind": "design",
+      "title": "Presentation Template"
+    },
+    {
+      "path": "design/design-notes.md",
+      "source": "workspace-guidance",
+      "domain": "design_system",
+      "kind": "restricted_guidance",
+      "title": "Private Design Guidance"
+    },
+    {
+      "path": "listening-app/README.md",
+      "source": "player-prototype",
+      "domain": "product_distribution",
+      "kind": "prototype",
+      "title": "Player Prototype"
+    },
+    {
+      "path": "listening-app/docs/DESIGN_SYSTEM.md",
+      "source": "player-prototype",
+      "domain": "design_system",
+      "title": "Player Design Integration",
+      "kind": "supporting"
+    },
+    {
+      "path": "listening-app/docs/ARCHITECTURE.md",
+      "source": "player-prototype",
+      "domain": "product_distribution",
+      "title": "Player Architecture and Behaviour",
+      "kind": "supporting"
+    },
+    {
+      "path": "listening-app/CONTRIBUTING.md",
+      "source": "player-prototype",
+      "domain": "knowledge_ops",
+      "title": "Player Contribution Workflow",
+      "kind": "supporting"
+    },
+    {
+      "path": "porto-design-system/STYLEGUIDE.md",
+      "source": "design-system",
+      "domain": "design_system",
+      "title": "Porto Style Guide",
+      "kind": "supporting"
+    },
+    {
+      "path": "porto-design-system/figma/PLAYER_HANDOFF.md",
+      "source": "design-system",
+      "domain": "design_system",
+      "title": "Player Figma Handoff",
+      "kind": "supporting"
+    }
   ]
 }

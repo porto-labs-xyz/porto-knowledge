@@ -65,3 +65,12 @@ or host paths. Private source repositories may contribute metadata only.
 - `graph/`: generated machine graph, JSON-LD and optional Neo4j Cypher export.
 - `human/obsidian/`: generated human-facing notes and map.
 - `scripts/`: refresh, query and validation tools.
+
+
+## Player and style-guide route
+
+Use `python3 scripts/knowledge.py route player-prototype`, then traverse `concept_player_prototype` with `--direction both --depth 2`. Read the returned source documents. The player repository is checked out as `listening-app` in the source workspace. The manifest includes its README, design integration, architecture and contribution workflow, plus the design-system style guide and Figma handoff.
+
+Player concepts include meaningful public-safe descriptions and explicitly selected source-section pointers with revisions. Public source sections may include verified text; private player and design-system sections remain metadata only. Their content is never copied into the public graph. Missing headings in a materialised source stop enrichment. Typed relationships remain INFERRED navigation hints; the source documents establish implementation details and limitations.
+
+Always traverse, enrich and build meaning: record decisions, connect implementation to design guidance, distinguish prototype simulation from network evidence, review impact and pass graph validation. CI refreshes graph, human notes and the explorer from public authoritative checkouts. Private repositories are linked by metadata and pinned revisions without requiring CI credentials.

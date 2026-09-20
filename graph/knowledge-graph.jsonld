@@ -84,7 +84,7 @@
       "kind": "restricted_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "a9835083f0b965a56a1d39cf1a3ec0c10b259803",
+      "source_revision": null,
       "content": null
     },
     {
@@ -101,6 +101,66 @@
       "source_hash": "sha256:c4bcf9410d7a23dc996d971ca8f4a18800266152e81e61c6740663881e64d1b8",
       "source_revision": "f1ea0d975d1e530ba921ab6ac4b9c0423daa440d",
       "content": "---\nid: intro\ntitle: Porto Docs\nslug: /\nsidebar_position: 0\n---\n\n# Porto Docs\n\nPorto is decentralized streaming infrastructure that replaces platform-owned delivery and settlement with a network run by artists, labels, publishers, and independent node operators.\n\nThis site has two sections, both pulled directly from their source-of-truth repos at build time , nothing here is hand-copied:\n\n- **[Whitepaper](/whitepaper)** , the canonical paper, from [`porto-labs-xyz/whitepaper`](https://github.com/porto-labs-xyz/whitepaper).\n- **[PIPs](/pips)** , Porto Improvement Proposals (protocol specs, EIP/RFC-style), from [`porto-labs-xyz/PIPs`](https://github.com/porto-labs-xyz/PIPs).\n\nTo propose a change, open a PR against the relevant source repo , this site rebuilds automatically once it merges.\n"
+    },
+    {
+      "id": "doc_listening_app_contributing_md",
+      "type": "document",
+      "label": "Player Contribution Workflow",
+      "description": "supporting source. restricted_metadata_only.",
+      "source_path": "listening-app/CONTRIBUTING.md",
+      "source_repository": "player-prototype",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "kind": "supporting",
+      "materialized": false,
+      "source_hash": null,
+      "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+      "content": null
+    },
+    {
+      "id": "doc_listening_app_readme_md",
+      "type": "document",
+      "label": "Player Prototype",
+      "description": "prototype source. restricted_metadata_only.",
+      "source_path": "listening-app/README.md",
+      "source_repository": "player-prototype",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "kind": "prototype",
+      "materialized": false,
+      "source_hash": null,
+      "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+      "content": null
+    },
+    {
+      "id": "doc_listening_app_docs_architecture_md",
+      "type": "document",
+      "label": "Player Architecture and Behaviour",
+      "description": "supporting source. restricted_metadata_only.",
+      "source_path": "listening-app/docs/ARCHITECTURE.md",
+      "source_repository": "player-prototype",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "kind": "supporting",
+      "materialized": false,
+      "source_hash": null,
+      "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+      "content": null
+    },
+    {
+      "id": "doc_listening_app_docs_design_system_md",
+      "type": "document",
+      "label": "Player Design Integration",
+      "description": "supporting source. restricted_metadata_only.",
+      "source_path": "listening-app/docs/DESIGN_SYSTEM.md",
+      "source_repository": "player-prototype",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "kind": "supporting",
+      "materialized": false,
+      "source_hash": null,
+      "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+      "content": null
     },
     {
       "id": "doc_pips_pip_1_md",
@@ -234,7 +294,37 @@
       "kind": "design",
       "materialized": false,
       "source_hash": null,
-      "source_revision": null,
+      "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80",
+      "content": null
+    },
+    {
+      "id": "doc_porto_design_system_styleguide_md",
+      "type": "document",
+      "label": "Porto Style Guide",
+      "description": "supporting source. restricted_metadata_only.",
+      "source_path": "porto-design-system/STYLEGUIDE.md",
+      "source_repository": "design-system",
+      "authority": "released_design_system",
+      "classification": "restricted_metadata_only",
+      "kind": "supporting",
+      "materialized": false,
+      "source_hash": null,
+      "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80",
+      "content": null
+    },
+    {
+      "id": "doc_porto_design_system_figma_player_handoff_md",
+      "type": "document",
+      "label": "Player Figma Handoff",
+      "description": "supporting source. restricted_metadata_only.",
+      "source_path": "porto-design-system/figma/PLAYER_HANDOFF.md",
+      "source_repository": "design-system",
+      "authority": "released_design_system",
+      "classification": "restricted_metadata_only",
+      "kind": "supporting",
+      "materialized": false,
+      "source_hash": null,
+      "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80",
       "content": null
     },
     {
@@ -249,7 +339,7 @@
       "kind": "design",
       "materialized": false,
       "source_hash": null,
-      "source_revision": null,
+      "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80",
       "content": null
     },
     {
@@ -264,7 +354,7 @@
       "kind": "design",
       "materialized": false,
       "source_hash": null,
-      "source_revision": null,
+      "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80",
       "content": null
     },
     {
@@ -279,7 +369,7 @@
       "kind": "design",
       "materialized": false,
       "source_hash": null,
-      "source_revision": null,
+      "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80",
       "content": null
     },
     {
@@ -294,7 +384,7 @@
       "kind": "design",
       "materialized": false,
       "source_hash": null,
-      "source_revision": null,
+      "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80",
       "content": null
     },
     {
@@ -558,6 +648,169 @@
       "temporal_scope": "verify_source"
     },
     {
+      "id": "concept_player_prototype",
+      "type": "concept",
+      "label": "Record-led player prototype",
+      "description": "A static listening room with fictional records, unfolding sleeves, browser-local collections and freely selectable album tracks. Simulated ownership and node indicators do not establish live network activity.",
+      "aliases": [
+        "player prototype",
+        "listening room",
+        "vinyl shelf",
+        "album navigation"
+      ],
+      "authority": "source_grounded",
+      "temporal_scope": "verify_source",
+      "source_details": [
+        {
+          "source_path": "listening-app/README.md",
+          "heading": "Current behaviour",
+          "source_hash": null,
+          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "listening-app/README.md",
+          "heading": "Evidence and rights",
+          "source_hash": null,
+          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "listening-app/docs/ARCHITECTURE.md",
+          "heading": "Playback",
+          "source_hash": null,
+          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "listening-app/docs/ARCHITECTURE.md",
+          "heading": "Evidence limits",
+          "source_hash": null,
+          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        }
+      ],
+      "content": "Source: listening-app/README.md\nCurrent behaviour\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: listening-app/README.md\nEvidence and rights\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: listening-app/docs/ARCHITECTURE.md\nPlayback\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: listening-app/docs/ARCHITECTURE.md\nEvidence limits\nPrivate source: section pointer only. Read in its approved repository."
+    },
+    {
+      "id": "concept_player_style",
+      "type": "concept",
+      "label": "Architectural player style",
+      "description": "Matte varied-width record spines, a fine baseline, paper and charcoal typography, unfolding sleeves and spare transport controls extend the shared Porto foundations for the player.",
+      "aliases": [
+        "player style guide",
+        "record spines",
+        "gatefold",
+        "transport icons"
+      ],
+      "authority": "source_grounded",
+      "temporal_scope": "verify_source",
+      "source_details": [
+        {
+          "source_path": "porto-design-system/STYLEGUIDE.md",
+          "heading": "Record shelf",
+          "source_hash": null,
+          "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80",
+          "authority": "released_design_system",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "porto-design-system/STYLEGUIDE.md",
+          "heading": "Sleeve and artwork",
+          "source_hash": null,
+          "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80",
+          "authority": "released_design_system",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "porto-design-system/STYLEGUIDE.md",
+          "heading": "Track navigation and transport",
+          "source_hash": null,
+          "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80",
+          "authority": "released_design_system",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "listening-app/docs/DESIGN_SYSTEM.md",
+          "heading": "Token mapping",
+          "source_hash": null,
+          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        }
+      ],
+      "content": "Source: porto-design-system/STYLEGUIDE.md\nRecord shelf\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: porto-design-system/STYLEGUIDE.md\nSleeve and artwork\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: porto-design-system/STYLEGUIDE.md\nTrack navigation and transport\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: listening-app/docs/DESIGN_SYSTEM.md\nToken mapping\nPrivate source: section pointer only. Read in its approved repository."
+    },
+    {
+      "id": "concept_player_node_demo",
+      "type": "concept",
+      "label": "Simulated player node status",
+      "description": "The LND-001 badge follows local audio events and retains a visible DEMO NODE label. A pulse indicates demo playback, not proof of node delivery or attestation.",
+      "aliases": [
+        "LND-001",
+        "demo node",
+        "live indicator",
+        "node pulse"
+      ],
+      "authority": "source_grounded",
+      "temporal_scope": "verify_source",
+      "source_details": [
+        {
+          "source_path": "porto-design-system/STYLEGUIDE.md",
+          "heading": "Node status",
+          "source_hash": null,
+          "source_revision": "1f4b7a58bbee1fbe1b8b5d4726270947d355aa80",
+          "authority": "released_design_system",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "listening-app/docs/ARCHITECTURE.md",
+          "heading": "Playback",
+          "source_hash": null,
+          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        }
+      ],
+      "content": "Source: porto-design-system/STYLEGUIDE.md\nNode status\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: listening-app/docs/ARCHITECTURE.md\nPlayback\nPrivate source: section pointer only. Read in its approved repository."
+    },
+    {
+      "id": "concept_figma_handoff",
+      "type": "concept",
+      "label": "Player Figma implementation handoff",
+      "description": "The style guide maps working HTML patterns to proposed native Figma component states. A recorded partial library and overview exist; player node IDs, linked instances and a named release remain unverified.",
+      "aliases": [
+        "Figma player",
+        "component mapping",
+        "native library gaps"
+      ],
+      "authority": "source_grounded",
+      "temporal_scope": "verify_source",
+      "source_details": [
+        {
+          "source_path": "listening-app/docs/DESIGN_SYSTEM.md",
+          "heading": "Figma and source links",
+          "source_hash": null,
+          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "listening-app/docs/DESIGN_SYSTEM.md",
+          "heading": "Component mapping",
+          "source_hash": null,
+          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        }
+      ],
+      "content": "Source: listening-app/docs/DESIGN_SYSTEM.md\nFigma and source links\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: listening-app/docs/DESIGN_SYSTEM.md\nComponent mapping\nPrivate source: section pointer only. Read in its approved repository."
+    },
+    {
       "id": "route_marketing-deck",
       "type": "agent_route",
       "label": "Marketing deck",
@@ -586,6 +839,12 @@
       "type": "agent_route",
       "label": "Design change",
       "description": "Use released package content and record an approved design decision. Do not materialise restricted visual sources."
+    },
+    {
+      "id": "route_player-prototype",
+      "type": "agent_route",
+      "label": "Player prototype",
+      "description": "Traverse implementation and style sources, read their cited sections, and distinguish simulated behaviour from protocol evidence. Enrich source text and meaningful typed links after changes; verify both graphs and review impacts."
     },
     {
       "source": "porto_knowledge",
@@ -676,6 +935,42 @@
       }
     },
     {
+      "source": "domain_knowledge_ops",
+      "relation": "contains_source",
+      "target": "doc_listening_app_contributing_md",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "listening-app/CONTRIBUTING.md"
+      }
+    },
+    {
+      "source": "domain_product_distribution",
+      "relation": "contains_source",
+      "target": "doc_listening_app_readme_md",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "listening-app/README.md"
+      }
+    },
+    {
+      "source": "domain_product_distribution",
+      "relation": "contains_source",
+      "target": "doc_listening_app_docs_architecture_md",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "listening-app/docs/ARCHITECTURE.md"
+      }
+    },
+    {
+      "source": "domain_design_system",
+      "relation": "contains_source",
+      "target": "doc_listening_app_docs_design_system_md",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "listening-app/docs/DESIGN_SYSTEM.md"
+      }
+    },
+    {
       "source": "domain_governance_process",
       "relation": "contains_source",
       "target": "doc_pips_pip_1_md",
@@ -754,6 +1049,24 @@
       "confidence": "EXTRACTED",
       "evidence": {
         "source_path": "porto-design-system/README.md"
+      }
+    },
+    {
+      "source": "domain_design_system",
+      "relation": "contains_source",
+      "target": "doc_porto_design_system_styleguide_md",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "porto-design-system/STYLEGUIDE.md"
+      }
+    },
+    {
+      "source": "domain_design_system",
+      "relation": "contains_source",
+      "target": "doc_porto_design_system_figma_player_handoff_md",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "porto-design-system/figma/PLAYER_HANDOFF.md"
       }
     },
     {
@@ -1082,6 +1395,15 @@
       }
     },
     {
+      "source": "doc_porto_design_system_styleguide_md",
+      "relation": "describes",
+      "target": "concept_design_system",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "porto-design-system/STYLEGUIDE.md"
+      }
+    },
+    {
       "source": "domain_knowledge_ops",
       "relation": "contains",
       "target": "concept_knowledge_refresh",
@@ -1095,6 +1417,106 @@
       "confidence": "EXTRACTED",
       "evidence": {
         "source_path": "design/design-notes.md"
+      }
+    },
+    {
+      "source": "domain_product_distribution",
+      "relation": "contains",
+      "target": "concept_player_prototype",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "doc_listening_app_readme_md",
+      "relation": "describes",
+      "target": "concept_player_prototype",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "listening-app/README.md"
+      }
+    },
+    {
+      "source": "doc_listening_app_docs_architecture_md",
+      "relation": "describes",
+      "target": "concept_player_prototype",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "listening-app/docs/ARCHITECTURE.md"
+      }
+    },
+    {
+      "source": "domain_design_system",
+      "relation": "contains",
+      "target": "concept_player_style",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "doc_porto_design_system_styleguide_md",
+      "relation": "describes",
+      "target": "concept_player_style",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "porto-design-system/STYLEGUIDE.md"
+      }
+    },
+    {
+      "source": "doc_listening_app_docs_design_system_md",
+      "relation": "describes",
+      "target": "concept_player_style",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "listening-app/docs/DESIGN_SYSTEM.md"
+      }
+    },
+    {
+      "source": "domain_product_distribution",
+      "relation": "contains",
+      "target": "concept_player_node_demo",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "doc_porto_design_system_styleguide_md",
+      "relation": "describes",
+      "target": "concept_player_node_demo",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "porto-design-system/STYLEGUIDE.md"
+      }
+    },
+    {
+      "source": "doc_listening_app_docs_architecture_md",
+      "relation": "describes",
+      "target": "concept_player_node_demo",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "listening-app/docs/ARCHITECTURE.md"
+      }
+    },
+    {
+      "source": "domain_design_system",
+      "relation": "contains",
+      "target": "concept_figma_handoff",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "doc_porto_design_system_figma_player_handoff_md",
+      "relation": "describes",
+      "target": "concept_figma_handoff",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "porto-design-system/figma/PLAYER_HANDOFF.md"
+      }
+    },
+    {
+      "source": "doc_listening_app_docs_design_system_md",
+      "relation": "describes",
+      "target": "concept_figma_handoff",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "listening-app/docs/DESIGN_SYSTEM.md"
       }
     },
     {
@@ -1164,6 +1586,60 @@
       "source": "concept_knowledge_refresh",
       "relation": "requires",
       "target": "concept_design_system",
+      "confidence": "INFERRED",
+      "evidence": {
+        "note": "Curated traversal relation, verify against cited source."
+      }
+    },
+    {
+      "source": "concept_player_prototype",
+      "relation": "uses",
+      "target": "concept_player_style",
+      "confidence": "INFERRED",
+      "evidence": {
+        "note": "Curated traversal relation, verify against cited source."
+      }
+    },
+    {
+      "source": "concept_player_style",
+      "relation": "extends",
+      "target": "concept_design_system",
+      "confidence": "INFERRED",
+      "evidence": {
+        "note": "Curated traversal relation, verify against cited source."
+      }
+    },
+    {
+      "source": "concept_player_prototype",
+      "relation": "demonstrates",
+      "target": "concept_player_node_demo",
+      "confidence": "INFERRED",
+      "evidence": {
+        "note": "Curated traversal relation, verify against cited source."
+      }
+    },
+    {
+      "source": "concept_player_style",
+      "relation": "specified_for",
+      "target": "concept_figma_handoff",
+      "confidence": "INFERRED",
+      "evidence": {
+        "note": "Curated traversal relation, verify against cited source."
+      }
+    },
+    {
+      "source": "concept_figma_handoff",
+      "relation": "requires",
+      "target": "concept_design_system",
+      "confidence": "INFERRED",
+      "evidence": {
+        "note": "Curated traversal relation, verify against cited source."
+      }
+    },
+    {
+      "source": "concept_player_prototype",
+      "relation": "requires",
+      "target": "concept_knowledge_refresh",
       "confidence": "INFERRED",
       "evidence": {
         "note": "Curated traversal relation, verify against cited source."
@@ -1325,6 +1801,48 @@
     },
     {
       "source": "route_design-change",
+      "relation": "starts_with",
+      "target": "concept_knowledge_refresh",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "domain_knowledge_ops",
+      "relation": "provides_route",
+      "target": "route_player-prototype",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "route_player-prototype",
+      "relation": "starts_with",
+      "target": "concept_player_prototype",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "route_player-prototype",
+      "relation": "starts_with",
+      "target": "concept_player_style",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "route_player-prototype",
+      "relation": "starts_with",
+      "target": "concept_player_node_demo",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "route_player-prototype",
+      "relation": "starts_with",
+      "target": "concept_figma_handoff",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "route_player-prototype",
       "relation": "starts_with",
       "target": "concept_knowledge_refresh",
       "confidence": "EXTRACTED",

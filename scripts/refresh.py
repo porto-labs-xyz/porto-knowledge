@@ -42,6 +42,16 @@ def excerpt(text, limit=420):
     return text if len(text) <= limit else text[:limit].rsplit(" ", 1)[0] + "."
 
 
+def selected_section(text, heading):
+    """Return an explicitly curated heading and its body, never guessed content."""
+    matches = list(re.finditer(r"(?m)^(#{1,6}) +(.+?)\s*$", text))
+    for i, match in enumerate(matches):
+        if match.group(2).strip() == heading:
+            end = next((m.start() for m in matches[i + 1:] if len(m.group(1)) <= len(match.group(1))), len(text))
+            return text[match.start():end].strip()
+    raise ValueError(f"Curated source heading is missing: {heading}")
+
+
 def node_id(path):
     return "doc_" + re.sub(r"[^a-z0-9]+", "_", path.lower()).strip("_")
 
@@ -130,14 +140,35 @@ def main():
             "description": excerpt(text) if text else f"{doc['kind'].replace('_', ' ')} source. {repo['classification']}.",
             "source_path": doc["path"], "source_repository": doc["source"], "authority": repo["authority"],
             "classification": repo["classification"], "kind": doc["kind"], "materialized": materialized,
-            "source_hash": sha(raw_text) if raw_text else None, "source_revision": git_revision(repo_root),
+            "source_hash": sha(raw_text) if raw_text else None, "source_revision": repo.get("source_revision") or git_revision(repo_root),
             "content": text if materialized else None
         })
         add_edge(edges, f"domain_{doc['domain']}", "contains_source", node_id(doc["path"]), evidence={"source_path": doc["path"]})
     for cid, concept in curation["concepts"].items():
         nodes.append({"id": cid, "type": "concept", "label": concept["label"],
-                      "description": f"{concept['label']} is a curated Porto concept.", "aliases": concept["aliases"],
+                      "description": concept.get("description", f"{concept['label']} is a curated Porto concept."), "aliases": concept["aliases"],
                       "authority": "source_grounded", "temporal_scope": "verify_source"})
+        details = []
+        by_path = {n.get("source_path"): n for n in nodes if n["type"] == "document"}
+        for path, headings in concept.get("source_sections", {}).items():
+            if path not in concept["sources"]:
+                raise ValueError(f"Concept section is not connected to its source: {cid}: {path}")
+            document = by_path[path]
+            if not document.get("materialized"):
+                # Preserve a useful source pointer without copying private prose.
+                for heading in headings:
+                    details.append({"source_path": path, "heading": heading,
+                                    "source_hash": None, "source_revision": document["source_revision"],
+                                    "authority": document["authority"], "availability": "restricted_metadata_only"})
+                continue
+            for heading in headings:
+                details.append({"source_path": path, "heading": heading,
+                                "source_hash": document["source_hash"], "source_revision": document["source_revision"],
+                                "authority": document["authority"],
+                                "content": selected_section(document["content"], heading)})
+        if details:
+            nodes[-1]["source_details"] = details
+            nodes[-1]["content"] = "\n\n".join(f"Source: {d['source_path']}\n{d.get('content') or (d['heading'] + chr(10) + 'Private source: section pointer only. Read in its approved repository.')}" for d in details)
         add_edge(edges, f"domain_{concept['domain']}", "contains", cid)
         for path in concept["sources"]:
             if path in docs:
