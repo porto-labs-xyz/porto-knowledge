@@ -12,6 +12,7 @@ Listener-centric accrual, settlement and rights-holder allocation.
 - contains_source: [[PIP-5- Listener-Centric Payouts|PIP-5: Listener-Centric Payouts]] (EXTRACTED)
 - contains: [[Epoch settlement|Epoch settlement]] (EXTRACTED)
 - contains: [[Multi-party rights-holder splits|Multi-party rights-holder splits]] (EXTRACTED)
+- contains: [[London USDC settlement (DRAFT)|London USDC settlement (DRAFT)]] (EXTRACTED)
 
 ## Source content
 

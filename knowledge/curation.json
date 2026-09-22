@@ -311,6 +311,79 @@
           "Component mapping"
         ]
       }
+    },
+    "concept_london_architecture": {
+      "label": "London Mainnet architecture (DRAFT)",
+      "description": "PROPOSED FOR LONDON 0.1.0. Draft specification, not accepted policy, deployment or runtime evidence.",
+      "domain": "product_distribution",
+      "aliases": [
+        "London 0.1.0",
+        "london architecture"
+      ],
+      "sources": [
+        "docs/london-0.1.0/01-executive-architecture.md"
+      ],
+      "source_sections": {
+        "docs/london-0.1.0/01-executive-architecture.md": [
+          "Proposed architecture",
+          "Responsibilities and money"
+        ]
+      }
+    },
+    "concept_london_evidence": {
+      "label": "London delivery evidence (DRAFT)",
+      "description": "PROPOSED FOR LONDON 0.1.0. Draft specification, not accepted policy, deployment or runtime evidence.",
+      "domain": "streaming_attestation",
+      "aliases": [
+        "London 0.1.0",
+        "london evidence"
+      ],
+      "sources": [
+        "docs/london-0.1.0/06-streaming-delivery-and-attestation.md"
+      ],
+      "source_sections": {
+        "docs/london-0.1.0/06-streaming-delivery-and-attestation.md": [
+          "Duration and eligibility",
+          "Evidence custody"
+        ]
+      }
+    },
+    "concept_london_settlement": {
+      "label": "London USDC settlement (DRAFT)",
+      "description": "PROPOSED FOR LONDON 0.1.0. Draft specification, not accepted policy, deployment or runtime evidence.",
+      "domain": "payouts_rights",
+      "aliases": [
+        "London 0.1.0",
+        "london settlement"
+      ],
+      "sources": [
+        "docs/london-0.1.0/08-usdc-treasury-and-settlement.md"
+      ],
+      "source_sections": {
+        "docs/london-0.1.0/08-usdc-treasury-and-settlement.md": [
+          "Money states and ownership",
+          "Funded allocation algorithm"
+        ]
+      }
+    },
+    "concept_london_compatibility": {
+      "label": "London governance departures (DRAFT)",
+      "description": "PROPOSED FOR LONDON 0.1.0. Draft specification, not accepted policy, deployment or runtime evidence.",
+      "domain": "governance_process",
+      "aliases": [
+        "London 0.1.0",
+        "london compatibility"
+      ],
+      "sources": [
+        "docs/london-0.1.0/18-compatibility-with-existing-pips.md"
+      ],
+      "source_sections": {
+        "docs/london-0.1.0/18-compatibility-with-existing-pips.md": [
+          "Status",
+          "Unresolved cross-document claims",
+          "Governance and review impact"
+        ]
+      }
     }
   },
   "relations": [
@@ -383,6 +456,31 @@
       "concept_player_prototype",
       "requires",
       "concept_knowledge_refresh"
+    ],
+    [
+      "concept_london_architecture",
+      "uses",
+      "concept_london_evidence"
+    ],
+    [
+      "concept_london_evidence",
+      "informs",
+      "concept_london_settlement"
+    ],
+    [
+      "concept_london_architecture",
+      "requires_review",
+      "concept_london_compatibility"
+    ],
+    [
+      "concept_london_compatibility",
+      "compares_with",
+      "concept_prt"
+    ],
+    [
+      "concept_london_compatibility",
+      "compares_with",
+      "concept_rollout"
     ]
   ],
   "routes": {
@@ -444,6 +542,16 @@
         "concept_knowledge_refresh"
       ],
       "instruction": "Traverse implementation and style sources, read their cited sections, and distinguish simulated behaviour from protocol evidence. Enrich source text and meaningful typed links after changes; verify both graphs and review impacts."
+    },
+    "london-implementation": {
+      "label": "London 0.1.0 draft implementation",
+      "start": [
+        "concept_london_architecture",
+        "concept_london_evidence",
+        "concept_london_settlement",
+        "concept_london_compatibility"
+      ],
+      "instruction": "Read London as DRAFT PROPOSED IMPLEMENTATION SPECIFICATION. Verify canonical contrasts and open decisions. Do not treat proposal text as current implementation or approved economics. No publication without explicit permission."
     }
   }
 }

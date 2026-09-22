@@ -13,6 +13,7 @@ Valid plays, evidence and the Beta-to-quorum trust transition.
 - contains: [[Valid billable play|Valid billable play]] (EXTRACTED)
 - contains: [[Playback attestation|Playback attestation]] (EXTRACTED)
 - contains: [[Beta-to-Mainnet rollout|Beta-to-Mainnet rollout]] (EXTRACTED)
+- contains: [[London delivery evidence (DRAFT)|London delivery evidence (DRAFT)]] (EXTRACTED)
 
 ## Source content
 
