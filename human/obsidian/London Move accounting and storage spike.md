@@ -69,11 +69,11 @@ aptos move test --package-dir research/london-move-storage --instructions 100000
 Run from the docs repository. This package is disposable research, not an application module.
 
 Source: docs/london-0.1.0/index.mdx
-## Current direction: Move accounting, one streaming-node role
+## Approved direction: Move accounting, one streaming-node role
 
 The product owner has approved simplifying London to a player, small coordinator, private S3 audio origin, streaming nodes and Move-owned accounting/payout state. Any eligible artist or other participant can operate the same streaming-node software. A real node-to-node cache transfer remains part of the pilot.
 
-**Architecture revision in progress.** This direction supersedes the previous RocksDB-first priority and hash-only commitment contract. The detailed chapters below still describe that preceding revision and are not yet a consistent implementation handoff for the new design. Do not build the old ledger or commitment-only settlement path from them.
+The authoritative accounting and payout contract is [Move-owned accounting and payout protocol](09-move-contract-specification.md). It supersedes the preceding RocksDB-first priority and hash-only commitment contract. Where an older chapter conflicts with this protocol, the Move protocol prevails. Do not build the old local financial ledger or commitment-only settlement path.
 
 Start with the [Move storage spike](https://github.com/porto-labs-xyz/docs/blob/main/research/london-move-storage/README.md): Table and BigOrderedMap candidates, bounded accounting, Mainnet limits, local collection tests and explicit remaining benchmark gates. Collection selection is a research recommendation, not a production-scale result. The next specification revision must align accounting, privacy, USDC transfers, APIs and acceptance tests before implementation.
 

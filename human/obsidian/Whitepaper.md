@@ -1,19 +1,24 @@
 ---
-id: doc_whitepaper_porto_whitepaper_md
+id: doc_docs_docs_whitepaper_md
 type: document
 ---
 
-# Porto Whitepaper
+# Whitepaper
 
-Porto: A Network-Owned Infrastructure Layer for Music Distribution v0.1.0 , Draft Richard Melkonian, Porto Labs [redacted-email] This is the canonical Porto whitepaper , the single, in-depth narrative source. Normative technical specifications, written in an EIP/RFC-style format, live separately in the [Porto Improvement Proposal (PIP) series](../pips/README.md) and are referenced throughout this document for.
+--- id: "whitepaper" title: "Whitepaper" sidebarposition: 1 slug: "/whitepaper" --- Porto: A Network-Owned Infrastructure Layer for Music Distribution v0.1.0 , Draft Richard Melkonian, Porto Labs [redacted-email] This is the canonical Porto whitepaper , the single, in-depth narrative source. Normative technical specifications, written in an EIP/RFC-style format, live separately in the [Porto Improvement Proposal.
 
 ## Connected knowledge
 
-- describes: [[Artist ownership and control|Artist ownership and control]] (EXTRACTED)
-- describes: [[Music distribution network|Music distribution network]] (EXTRACTED)
-- describes: [[Beta-to-Mainnet rollout|Beta-to-Mainnet rollout]] (EXTRACTED)
+No outgoing links.
 
 ## Source content
+
+---
+id: "whitepaper"
+title: "Whitepaper"
+sidebar_position: 1
+slug: "/whitepaper"
+---
 
 # Porto: A Network-Owned Infrastructure Layer for Music Distribution
 
@@ -21,7 +26,7 @@ Porto: A Network-Owned Infrastructure Layer for Music Distribution v0.1.0 , Draf
 **Richard Melkonian, Porto Labs**
 **[redacted-email]**
 
-*This is the canonical Porto whitepaper , the single, in-depth narrative source. Normative technical specifications, written in an EIP/RFC-style format, live separately in the [Porto Improvement Proposal (PIP) series](../pips/README.md) and are referenced throughout this document for readers who want the exact on-chain interfaces.*
+*This is the canonical Porto whitepaper , the single, in-depth narrative source. Normative technical specifications, written in an EIP/RFC-style format, live separately in the [Porto Improvement Proposal (PIP) series](/pips) and are referenced throughout this document for readers who want the exact on-chain interfaces.*
 
 ---
 
@@ -139,7 +144,7 @@ Porto has four participant roles and one settlement layer connecting them:
 
 This is the point that most differentiates Porto's pitch from a typical "better royalties" product: **rights holders do not receive a materially larger nominal percentage than they already do.** What changes is where the remaining 30% goes. Today, it disappears into a platform's balance sheet as pure extraction with no path back to the artist, the listener, or anyone who contributed to the network that generated it. Under Porto, only 5% is retained by the protocol; the other 25% is redistributed to the people who operate the network , which can include the artists and superfans themselves. Value that used to leave the ecosystem now compounds within it. An artist who also runs a node earns both their 70% rights-holder share *and* a portion of the 25% operator pool; a superfan who runs a node earns from a network they helped build, not merely one they pay to access.
 
-*(An earlier design iteration of this split used 70/15/15 , rights holders/node operators/protocol treasury , before Porto Labs' own company take was separated out explicitly from the general protocol treasury line. 70/25/5 is the current model, and it is the one implemented in [PIP-5](../pips/PIP-5.md).)*
+*(An earlier design iteration of this split used 70/15/15 , rights holders/node operators/protocol treasury , before Porto Labs' own company take was separated out explicitly from the general protocol treasury line. 70/25/5 is the current model, and it is the one implemented in [PIP-5](/pips/pip-5).)*
 
 ### 3.4 Node roles
 
@@ -149,7 +154,7 @@ Nodes operate in one of three modes:
 - **Validator mode** , runs consensus and the accounting virtual machine.
 - **Full mode** , both. This is the default for every node at launch; specialization into CDN-only or validator-only roles is expected to emerge later as the operator base diversifies by hardware and geography.
 
-The full technical specification for node registration, staking, and slashing is in [PIP-6](../pips/PIP-6.md).
+The full technical specification for node registration, staking, and slashing is in [PIP-6](/pips/pip-6).
 
 ---
 
@@ -177,7 +182,7 @@ Consensus is the single hardest, easiest-to-subtly-break part of building a bloc
 
 **Rebrand scope.** The Aptos → Porto rename is deliberately narrow: on-chain module names, addresses, genesis configuration, user-facing CLI output, and branding text are renamed. Internal Rust crate names, file paths, and the `AptosMoveVm` identifier specifically are left as Aptos , because that is what they are. The codebase is honest about its own lineage rather than disguising it, down to the git history itself: rather than keep the code as a GitHub fork (which permanently displays "forked from aptos-labs/aptos-core" and is not a good look in front of investors evaluating engineering originality), the repository was cloned at the pinned stable tag, its git history stripped, and pushed fresh under Porto Labs , with the underlying Apache 2.0 license terms fully respected regardless.
 
-Full technical rationale, module inventory, and the exact rename policy are in the engineering `CLAUDE.md` governing the Porto Chain repository; the resulting on-chain modules are specified across [PIP-3](../pips/PIP-3.md) through [PIP-7](../pips/PIP-7.md).
+Full technical rationale, module inventory, and the exact rename policy are in the engineering `CLAUDE.md` governing the Porto Chain repository; the resulting on-chain modules are specified across [PIP-3](/pips/pip-3) through [PIP-7](/pips/pip-7).
 
 ---
 
@@ -185,7 +190,7 @@ Full technical rationale, module inventory, and the exact rename policy are in t
 
 ### 5.1 Design constraint
 
-The hardest question any token project has to answer honestly is: *where does the value of the token come from?* Two common answers are both weak on their own. A fixed, speculative supply asks holders to believe demand will simply outstrip an arbitrary supply curve. A block-reward emission schedule mints new tokens regardless of whether the network is actually being used, diluting holders unless adoption happens to outpace emission. Porto's design constraint is that PRT's value must come from **network throughput** , actual usage , not narrative. This section describes the mechanism that makes that structurally true rather than merely asserted; the full normative specification is [PIP-3](../pips/PIP-3.md).
+The hardest question any token project has to answer honestly is: *where does the value of the token come from?* Two common answers are both weak on their own. A fixed, speculative supply asks holders to believe demand will simply outstrip an arbitrary supply curve. A block-reward emission schedule mints new tokens regardless of whether the network is actually being used, diluting holders unless adoption happens to outpace emission. Porto's design constraint is that PRT's value must come from **network throughput** , actual usage , not narrative. This section describes the mechanism that makes that structurally true rather than merely asserted; the full normative specification is [PIP-3](/pips/pip-3).
 
 ### 5.2 Issuance: mint-on-subscription
 
@@ -222,7 +227,7 @@ Requiring users to hold and spend a token introduces real friction relative to a
 
 ### 6.1 What has to be proven
 
-Porto's central promise to artists is that royalties are transparent and auditable because every play is logged on-chain. That promise is only as strong as the process turning "a listener pressed play" into an on-chain fact. This section describes that process for Porto's initial Beta phase, and how it evolves toward a fully decentralized model. The full normative specification is [PIP-4](../pips/PIP-4.md).
+Porto's central promise to artists is that royalties are transparent and auditable because every play is logged on-chain. That promise is only as strong as the process turning "a listener pressed play" into an on-chain fact. This section describes that process for Porto's initial Beta phase, and how it evolves toward a fully decentralized model. The full normative specification is [PIP-4](/pips/pip-4).
 
 ### 6.2 Beta architecture: trusted, region-co-located S3 origin storage
 
@@ -251,7 +256,7 @@ Each musical work is registered on-chain before any stream can be attested again
 
 The Beta trust model , a single Trusted Attestor account, with no cross-checking , is a deliberately temporary bootstrap, not the end state. The migration path to a fully decentralized model is designed into the schema from day one: at mainnet, multiple independent, staked node operators serve the same content and independently submit stream events for the same listening session; the protocol requires **m-of-n matching attestations**, within a governance-set tolerance window, before finalizing an event and releasing payout. Events that fail to reach quorum enter a bounded dispute window rather than paying out.
 
-The important engineering property is that this migration changes only *who* may attest and *how* validity is decided , it does not change the on-chain event schema or the downstream payout interface. No wallet, artist dashboard, or third-party integration built against the Beta chain needs to change when the trust model is upgraded underneath it. Node operator staking and the slashing conditions that secure this quorum model , availability failures, attestation mismatches, and content-integrity failures , are specified in [PIP-6](../pips/PIP-6.md).
+The important engineering property is that this migration changes only *who* may attest and *how* validity is decided , it does not change the on-chain event schema or the downstream payout interface. No wallet, artist dashboard, or third-party integration built against the Beta chain needs to change when the trust model is upgraded underneath it. Node operator staking and the slashing conditions that secure this quorum model , availability failures, attestation mismatches, and content-integrity failures , are specified in [PIP-6](/pips/pip-6).
 
 ---
 
@@ -265,7 +270,7 @@ A naive design would pool all subscription revenue platform-wide and distribute 
 
 Porto instead attributes each listener's subscription value specifically to the works that listener actually streamed, weighted by their own listening time within a settlement period (Beta default: **daily**). Each listener's monthly subscription mint accrues into a per-listener balance across the period; at the epoch boundary, that balance is distributed across the specific works the listener played, proportional to time spent on each. Only then is the 70/25/5 split (§3.3) applied within each work's allocation, followed by any further multi-party split the work itself declares (§6.4).
 
-This is both fairer and more auditable: a specific listener's specific subscription payment can be traced, epoch by epoch, to the specific works it funded , a materially stronger transparency claim than "your payment went into a pool and came out somewhere." The full settlement algorithm, including rounding/dust handling and gas-bounding for listeners with very broad listening habits, is specified in [PIP-5](../pips/PIP-5.md).
+This is both fairer and more auditable: a specific listener's specific subscription payment can be traced, epoch by epoch, to the specific works it funded , a materially stronger transparency claim than "your payment went into a pool and came out somewhere." The full settlement algorithm, including rounding/dust handling and gas-bounding for listeners with very broad listening habits, is specified in [PIP-5](/pips/pip-5).
 
 ### 7.3 Settlement latency as a design parameter
 
@@ -279,7 +284,7 @@ Multiple parameters described throughout this paper , the revenue split, the PRT
 
 During Beta, governance is deliberately configured as **single-key**: a single, Porto-controlled signer is the sole account able to execute governance actions. This mirrors the same underlying trade-off Porto makes throughout its Beta architecture , the Trusted Attestor model in §6, the centralized price oracle behind stable redemption in §5.3 , ship a disclosed, centralized bootstrap version of a component whose fully decentralized version is a substantial, separable engineering effort, rather than gate the entire product proof-of-concept on solving every decentralization problem simultaneously. Even under single-key control, sensitive parameters like the PRT conversion rate are protected by hard, on-chain-enforced rate limits, so that even a compromised or mistaken governance action cannot reprice the token arbitrarily in a single transaction.
 
-Post-Beta, governance is intended to migrate toward stake-weighted voting , node operators voting on proposals weighted by their bonded stake, aligning governance power with the same economic bonding that already secures the network's attestation and consensus layers, rather than introducing a separate, unrelated governance token. The full parameter registry and migration design are specified in [PIP-7](../pips/PIP-7.md).
+Post-Beta, governance is intended to migrate toward stake-weighted voting , node operators voting on proposals weighted by their bonded stake, aligning governance power with the same economic bonding that already secures the network's attestation and consensus layers, rather than introducing a separate, unrelated governance token. The full parameter registry and migration design are specified in [PIP-7](/pips/pip-7).
 
 ---
 
@@ -343,14 +348,13 @@ This paper is the narrative source. The exact on-chain interfaces, data structur
 
 | PIP | Covers |
 |---|---|
-| [PIP-1](../pips/PIP-1.md) | PIP process itself |
-| [PIP-2](../pips/PIP-2.md) | Network overview (informational counterpart to this paper) |
-| [PIP-3](../pips/PIP-3.md) | PRT token: issuance, redemption, gas/fee model |
-| [PIP-4](../pips/PIP-4.md) | Stream accounting, Beta streaming architecture, attestation |
-| [PIP-5](../pips/PIP-5.md) | Payout splitter, user-centric settlement |
-| [PIP-6](../pips/PIP-6.md) | Node operator registration, roles, staking, slashing |
-| [PIP-7](../pips/PIP-7.md) | Governance parameters and upgrade process |
-| [PIP-8](../pips/PIP-8.md) | Cross-cutting PRT tokenomics and economic model |
+| [PIP-1](/pips/pip-1) | PIP process itself |
+| [PIP-2](/pips/pip-2) | Network overview (informational counterpart to this paper) |
+| [PIP-3](/pips/pip-3) | PRT token: issuance, redemption, gas/fee model |
+| [PIP-4](/pips/pip-4) | Stream accounting, Beta streaming architecture, attestation |
+| [PIP-5](/pips/pip-5) | Payout splitter, user-centric settlement |
+| [PIP-6](/pips/pip-6) | Node operator registration, roles, staking, slashing |
+| [PIP-7](/pips/pip-7) | Governance parameters and upgrade process |
 
 ---
 
