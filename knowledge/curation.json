@@ -314,7 +314,7 @@
     },
     "concept_london_architecture": {
       "label": "London Mainnet architecture (APPROVED)",
-      "description": "APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
+      "description": "PRECEDING SPECIFICATION, REQUIRES REVISION. Read the current London overview and Move storage spike first. APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
       "domain": "product_distribution",
       "aliases": [
         "London 0.1.0",
@@ -343,7 +343,7 @@
     },
     "concept_london_evidence": {
       "label": "London delivery evidence (APPROVED)",
-      "description": "APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
+      "description": "PRECEDING SPECIFICATION, REQUIRES REVISION. Read the current London overview and Move storage spike first. APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
       "domain": "streaming_attestation",
       "aliases": [
         "London 0.1.0",
@@ -372,7 +372,7 @@
     },
     "concept_london_settlement": {
       "label": "London USDC settlement (APPROVED)",
-      "description": "APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
+      "description": "PRECEDING SPECIFICATION, REQUIRES REVISION. Read the current London overview and Move storage spike first. APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
       "domain": "payouts_rights",
       "aliases": [
         "London 0.1.0",
@@ -396,7 +396,7 @@
     },
     "concept_london_compatibility": {
       "label": "London governance departures (APPROVED)",
-      "description": "APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
+      "description": "PRECEDING SPECIFICATION, REQUIRES REVISION. Read the current London overview and Move storage spike first. APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
       "domain": "governance_process",
       "aliases": [
         "London 0.1.0",
@@ -414,8 +414,8 @@
       }
     },
     "concept_london_ledger": {
-      "label": "London deterministic RocksDB ledger (APPROVED)",
-      "description": "APPROVED FIRST IMPLEMENTATION PRIORITY. RocksDB TransactionDB with one owner, deterministic commands, atomic journal/state/outbox, durable idempotency, replay and portable logical checkpoints. Replaces PostgreSQL for London. Future sovereign-chain compatibility is a logical execution boundary, not existing consensus or physical file compatibility.",
+      "label": "London RocksDB ledger (SUPERSEDED)",
+      "description": "PRECEDING SPECIFICATION, REQUIRES REVISION. Read the current London overview and Move storage spike first. SUPERSEDED ROCKSDB DIRECTION. RocksDB TransactionDB with one owner, deterministic commands, atomic journal/state/outbox, durable idempotency, replay and portable logical checkpoints. Replaces PostgreSQL for London. Future sovereign-chain compatibility is a logical execution boundary, not existing consensus or physical file compatibility.",
       "domain": "product_distribution",
       "aliases": [
         "RocksDB",
@@ -441,6 +441,33 @@
         ],
         "docs/london-0.1.0/15-migration-to-porto-app-chain.md": [
           "Deterministic ledger as the migration boundary"
+        ]
+      }
+    },
+    "concept_london_move_storage": {
+      "label": "London Move accounting and storage spike",
+      "description": "Current agreed direction: Move owns accounting and payouts, S3 stores audio, one streaming-node role. Table baseline and BigOrderedMap alternative remain research recommendations. Earlier RocksDB and commitment-only detailed specification requires coordinated revision. Local tests are not scale evidence.",
+      "domain": "product_distribution",
+      "aliases": [
+        "Move accounting",
+        "BigOrderedMap",
+        "HashSet",
+        "Table",
+        "London storage spike"
+      ],
+      "sources": [
+        "docs/research/london-move-storage/README.md",
+        "docs/london-0.1.0/index.mdx"
+      ],
+      "source_sections": {
+        "docs/research/london-move-storage/README.md": [
+          "Decision and scope",
+          "What the collections actually offer",
+          "Bounded accounting design",
+          "Executed spike and proof boundary"
+        ],
+        "docs/london-0.1.0/index.mdx": [
+          "Current direction: Move accounting, one streaming-node role"
         ]
       }
     }
@@ -555,6 +582,11 @@
       "concept_london_ledger",
       "informs",
       "concept_london_settlement"
+    ],
+    [
+      "concept_london_move_storage",
+      "informs",
+      "concept_london_settlement"
     ]
   ],
   "routes": {
@@ -620,22 +652,22 @@
     "london-implementation": {
       "label": "London 0.1.0 approved implementation",
       "start": [
-        "concept_london_ledger",
+        "concept_london_move_storage",
         "concept_london_architecture",
         "concept_london_evidence",
         "concept_london_settlement",
         "concept_london_compatibility"
       ],
-      "instruction": "APPROVED implementation baseline. FIRST PRIORITY: build the deterministic RocksDB ledger in chapter 27 and W0/W1 before real integrations. Use one owner, typed commands, synchronous atomic journal/state/outbox, replay and portable checkpoints. PostgreSQL is superseded. Preserve peer-delivery MVP scope, canonical contrasts, private evidence boundaries and launch gates. Do not claim consensus, deployment or runtime validation from specification approval."
+      "instruction": "Current agreed direction is Move accounting/payouts, S3 audio and one streaming-node role. Start with the storage spike. The RocksDB-first and hash-only commitment designs are superseded; detailed chapters await coordinated revision. Do not claim production scalability from local collection tests."
     },
     "london-ledger": {
-      "label": "London ledger first: RocksDB and deterministic execution",
+      "label": "London Move accounting and storage research",
       "start": [
-        "concept_london_ledger",
+        "concept_london_move_storage",
         "concept_london_settlement",
         "concept_london_evidence"
       ],
-      "instruction": "APPROVED implementation baseline. FIRST PRIORITY: build the deterministic RocksDB ledger in chapter 27 and W0/W1 before real integrations. Use one owner, typed commands, synchronous atomic journal/state/outbox, replay and portable checkpoints. PostgreSQL is superseded. Preserve peer-delivery MVP scope, canonical contrasts, private evidence boundaries and launch gates. Do not claim consensus, deployment or runtime validation from specification approval."
+      "instruction": "Current agreed direction is Move accounting/payouts, S3 audio and one streaming-node role. Start with the storage spike. The RocksDB-first and hash-only commitment designs are superseded; detailed chapters await coordinated revision. Do not claim production scalability from local collection tests."
     }
   }
 }

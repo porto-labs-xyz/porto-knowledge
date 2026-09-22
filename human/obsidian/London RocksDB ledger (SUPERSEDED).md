@@ -3,9 +3,9 @@ id: concept_london_ledger
 type: concept
 ---
 
-# London deterministic RocksDB ledger (APPROVED)
+# London RocksDB ledger (SUPERSEDED)
 
-APPROVED FIRST IMPLEMENTATION PRIORITY. RocksDB TransactionDB with one owner, deterministic commands, atomic journal/state/outbox, durable idempotency, replay and portable logical checkpoints. Replaces PostgreSQL for London. Future sovereign-chain compatibility is a logical execution boundary, not existing consensus or physical file compatibility.
+PRECEDING SPECIFICATION, REQUIRES REVISION. Read the current London overview and Move storage spike first. SUPERSEDED ROCKSDB DIRECTION. RocksDB TransactionDB with one owner, deterministic commands, atomic journal/state/outbox, durable idempotency, replay and portable logical checkpoints. Replaces PostgreSQL for London. Future sovereign-chain compatibility is a logical execution boundary, not existing consensus or physical file compatibility.
 
 ## Connected knowledge
 

@@ -5,13 +5,13 @@ type: concept
 
 # London Mainnet architecture (APPROVED)
 
-APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.
+PRECEDING SPECIFICATION, REQUIRES REVISION. Read the current London overview and Move storage spike first. APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.
 
 ## Connected knowledge
 
 - uses: [[London delivery evidence (APPROVED)|London delivery evidence (APPROVED)]] (INFERRED)
 - requires_review: [[London governance departures (APPROVED)|London governance departures (APPROVED)]] (INFERRED)
-- uses: [[London deterministic RocksDB ledger (APPROVED)|London deterministic RocksDB ledger (APPROVED)]] (INFERRED)
+- uses: [[London RocksDB ledger (SUPERSEDED)|London RocksDB ledger (SUPERSEDED)]] (INFERRED)
 
 ## Source content
 

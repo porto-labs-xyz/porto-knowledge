@@ -524,6 +524,13 @@
       "domain": "product_distribution",
       "kind": "approved_specification",
       "title": "London APPROVED: Ledger canonical hash fixtures"
+    },
+    {
+      "path": "docs/research/london-move-storage/README.md",
+      "source": "docs",
+      "domain": "product_distribution",
+      "kind": "research",
+      "title": "London Move storage spike (research)"
     }
   ]
 }

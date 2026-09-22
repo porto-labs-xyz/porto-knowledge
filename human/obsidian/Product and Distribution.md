@@ -46,6 +46,7 @@ Music delivery, app-chain architecture and node roles.
 - contains_source: [[London APPROVED- openapi|London APPROVED: openapi]] (EXTRACTED)
 - contains_source: [[London APPROVED- release-profile.schema|London APPROVED: release-profile.schema]] (EXTRACTED)
 - contains_source: [[London APPROVED- source-manifest|London APPROVED: source-manifest]] (EXTRACTED)
+- contains_source: [[London Move storage spike (research)|London Move storage spike (research)]] (EXTRACTED)
 - contains_source: [[Player Prototype (document)|Player Prototype]] (EXTRACTED)
 - contains_source: [[Player Architecture and Behaviour|Player Architecture and Behaviour]] (EXTRACTED)
 - contains_source: [[PIP-2- Network Architecture|PIP-2: Network Architecture]] (EXTRACTED)
@@ -53,7 +54,8 @@ Music delivery, app-chain architecture and node roles.
 - contains: [[Record-led player prototype|Record-led player prototype]] (EXTRACTED)
 - contains: [[Simulated player node status|Simulated player node status]] (EXTRACTED)
 - contains: [[London Mainnet architecture (APPROVED)|London Mainnet architecture (APPROVED)]] (EXTRACTED)
-- contains: [[London deterministic RocksDB ledger (APPROVED)|London deterministic RocksDB ledger (APPROVED)]] (EXTRACTED)
+- contains: [[London RocksDB ledger (SUPERSEDED)|London RocksDB ledger (SUPERSEDED)]] (EXTRACTED)
+- contains: [[London Move accounting and storage spike|London Move accounting and storage spike]] (EXTRACTED)
 
 ## Source content
 

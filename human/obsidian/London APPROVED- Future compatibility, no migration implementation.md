@@ -9,7 +9,7 @@ type: document
 
 ## Connected knowledge
 
-- describes: [[London deterministic RocksDB ledger (APPROVED)|London deterministic RocksDB ledger (APPROVED)]] (EXTRACTED)
+- describes: [[London RocksDB ledger (SUPERSEDED)|London RocksDB ledger (SUPERSEDED)]] (EXTRACTED)
 
 ## Source content
 

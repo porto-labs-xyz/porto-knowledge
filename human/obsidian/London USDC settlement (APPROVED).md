@@ -5,7 +5,7 @@ type: concept
 
 # London USDC settlement (APPROVED)
 
-APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.
+PRECEDING SPECIFICATION, REQUIRES REVISION. Read the current London overview and Move storage spike first. APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.
 
 ## Connected knowledge
 

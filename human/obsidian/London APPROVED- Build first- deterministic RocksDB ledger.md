@@ -5,14 +5,14 @@ type: document
 
 # London APPROVED: Build first: deterministic RocksDB ledger
 
---- id: 27-deterministic-rocksdb-ledger title: "Build first: deterministic RocksDB ledger" sidebarposition: 2.5 --- APPROVED · IMPLEMENTATION SPECIFICATION · London 0.1.0 First implementation priority Build the deterministic streaming and accounting ledger before the surrounding product integrations. This is the approved London storage architecture and the first engineering milestone. RocksDB replaces the earlier.
+--- id: 27-deterministic-rocksdb-ledger title: "Build first: deterministic RocksDB ledger" sidebarposition: 2.5 --- SUPERSEDED ARCHITECTURE · retained for revision history · London 0.1.0 The product owner has selected Move-owned accounting. This RocksDB-first chapter is no longer an implementation target. See the [current direction](index.mdx) and [storage.
 
 ## Connected knowledge
 
 - describes: [[London Mainnet architecture (APPROVED)|London Mainnet architecture (APPROVED)]] (EXTRACTED)
 - describes: [[London delivery evidence (APPROVED)|London delivery evidence (APPROVED)]] (EXTRACTED)
 - describes: [[London USDC settlement (APPROVED)|London USDC settlement (APPROVED)]] (EXTRACTED)
-- describes: [[London deterministic RocksDB ledger (APPROVED)|London deterministic RocksDB ledger (APPROVED)]] (EXTRACTED)
+- describes: [[London RocksDB ledger (SUPERSEDED)|London RocksDB ledger (SUPERSEDED)]] (EXTRACTED)
 
 ## Source content
 
@@ -22,7 +22,9 @@ title: "Build first: deterministic RocksDB ledger"
 sidebar_position: 2.5
 ---
 
-**APPROVED · IMPLEMENTATION SPECIFICATION · London 0.1.0**
+**SUPERSEDED ARCHITECTURE · retained for revision history · London 0.1.0**
+
+The product owner has selected Move-owned accounting. This RocksDB-first chapter is no longer an implementation target. See the [current direction](index.mdx) and [storage spike](https://github.com/porto-labs-xyz/docs/blob/main/research/london-move-storage/README.md).
 
 ## First implementation priority
 
