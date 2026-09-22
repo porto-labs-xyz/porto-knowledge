@@ -54,4 +54,3 @@ If London is accepted, propose amendments through the PIP process to PIP-2 rollo
 Review connected public copy, design routes, diagrams, dashboards and economic claims. This draft is not authority to alter approved deck or site copy. Do not silently merge proposal facts into current-state graph concepts; proposal nodes carry draft temporal scope and separate source relationships.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

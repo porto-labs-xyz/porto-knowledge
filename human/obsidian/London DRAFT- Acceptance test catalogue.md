@@ -62,4 +62,3 @@ sidebar_position: 23
 For each execution record expected/observed result, fixture hash, environment, build/package hash, policy version, chain ID if applicable, logs/transaction proof and reviewer. Synthetic amounts and test assets are never real-settlement evidence.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

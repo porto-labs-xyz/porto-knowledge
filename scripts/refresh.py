@@ -84,7 +84,7 @@ def write_human(graph):
         if node["type"] == "document" and not node.get("materialized"):
             content = "Source is restricted metadata only. Read it in its approved location."
         else:
-            content = node.get("content") or node.get("description", "")
+            content = (node.get("content") or node.get("description", "")).rstrip()
         links = []
         for edge in outgoing.get(node["id"], []):
             target = by_id[edge["target"]]

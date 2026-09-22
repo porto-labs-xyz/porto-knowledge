@@ -50,4 +50,3 @@ The whitepaper is licensed under the [Creative Commons Attribution 4.0 Internati
 ## Author
 
 Richard Melkonian, Porto Labs
-

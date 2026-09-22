@@ -39,4 +39,3 @@ Each ADR is `PROPOSED FOR LONDON 0.1.0`, unaccepted pending listed decisions.
 Acceptance records must include rationale, reviewers, affected policy/schema version and dissent/risks. Do not mark accepted merely because implementation begins.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

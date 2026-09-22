@@ -42,4 +42,3 @@ Browser authentication uses secure same-site HttpOnly cookies, CSRF tokens on wr
 Every call emits the catalogue's named audit event with actor/service ID, operation, target, request hash, correlation ID, outcome and policy version. Never log tokens, signed query strings, card data, full IPs in general logs or raw evidence in dashboards. List responses use opaque cursor and `limit` 1..100, default 50. GET rate limits apply per principal, with separate tenant budget; 429 includes Retry-After. Authorization checks object ownership on every ID, including status and export endpoints.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

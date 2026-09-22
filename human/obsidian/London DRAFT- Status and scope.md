@@ -46,4 +46,3 @@ A static specification establishes intended behaviour. A prototype establishes o
 Keep this version immutable after approval. Before approval, change the draft and record decisions in the risk register. Breaking field, allocation, eligibility or trust changes require a new specification version and an ADR. Version API envelopes, evidence, policies, allocation rules and contract package independently. A launch manifest pins every version, source digest, chain identity, asset, signer role and signed review receipt.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

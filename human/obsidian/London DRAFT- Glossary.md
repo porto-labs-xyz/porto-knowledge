@@ -42,4 +42,3 @@ sidebar_position: 100
 | Recovery | A separate correction/receivable/return workflow after error; cannot erase a completed transfer. |
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

@@ -136,4 +136,3 @@ These references support only the narrow technical facts identified; they are no
 - [RFC 8785 JSON Canonicalization Scheme](https://www.rfc-editor.org/rfc/rfc8785), §3.2: canonical JSON serialization. London adds NFC validation explicitly.
 
 [Compatibility matrix](18-compatibility-with-existing-pips.md) · [London contents](index.mdx)
-

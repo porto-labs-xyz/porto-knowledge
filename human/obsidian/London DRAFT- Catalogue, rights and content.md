@@ -42,4 +42,3 @@ A set is one work only if clearance covers every constituent recording/compositi
 `LEGAL/COMPLIANCE REVIEW REQUIRED`: recording, publishing, performer and territorial permissions, takedown process, DJ set permissions and payee contracts. These specifications do not establish any music licence. `CURRENT SOURCE`: PIP-4 §7 defines content-addressed work registration and split basis points; PIP-5 §3 distinguishes internal rights allocation from the network split.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

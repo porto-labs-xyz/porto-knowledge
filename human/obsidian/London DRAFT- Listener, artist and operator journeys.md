@@ -46,4 +46,3 @@ Submit endpoint, region, receipt public key and verified payout account. Admissi
 Frontend acceptance: keyboard-accessible controls, explicit pending/error/stale states, no false paid badge on submission, no private listener data in artist/operator views. Use the released design system during later UI implementation. This document does not change the prototype or approve new presentation copy.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

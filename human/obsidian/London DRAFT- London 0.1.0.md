@@ -73,4 +73,3 @@ This is proposed positioning, not proof of approval or launch. The files are imp
 [OpenAPI contract](./openapi.json) defines endpoint schemas and examples; [source manifest](./source-manifest.json) pins reviewed sources. Both are stored next to these documents. The [validation report](24-validation-and-impact.md) records documentation checks and their proof boundaries.
 
 Build integration uses the existing site with this source folder, not a copied `docs/docs/london-0.1.0` tree. No publication is authorised by the existence of this section.
-

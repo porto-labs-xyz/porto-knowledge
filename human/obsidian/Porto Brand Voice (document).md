@@ -72,4 +72,3 @@ Gatsby static landing page. Light.
 Copy changes only unless explicitly told otherwise.
 Do not touch layout, structure, components, styles, or images without instruction.
 Always show a diff before applying copy changes and wait for go-ahead.
-

@@ -30,4 +30,3 @@ This site has two sections, both pulled directly from their source-of-truth repo
 - **[PIPs](/pips)** , Porto Improvement Proposals (protocol specs, EIP/RFC-style), from [`porto-labs-xyz/PIPs`](https://github.com/porto-labs-xyz/PIPs).
 
 To propose a change, open a PR against the relevant source repo , this site rebuilds automatically once it merges.
-

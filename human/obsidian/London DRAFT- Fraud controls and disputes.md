@@ -70,4 +70,3 @@ Operator lifecycle: `pending -> active -> suspended -> probation -> active|remov
 ZK can demonstrate execution of a defined computation over committed inputs. It does not make fabricated delivery inputs truthful. MVP priorities are input provenance, access control, independent review and bounded funds. `OUT OF SCOPE`: a launch ZK system. Optional research can evaluate private allocation proofs against fixed inputs and independently measured costs after the input trust problem is addressed.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

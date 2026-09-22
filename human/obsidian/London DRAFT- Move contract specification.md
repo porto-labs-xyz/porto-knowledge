@@ -128,4 +128,3 @@ Events: `ChangeProposed`, `ChangeExecuted`, `ChangeCancelled`, `Paused`, `Unpaus
 Tests: timelock edge time, changed payload, repeated execute, revoked signer, hot-key upgrade attempt, unpause without review, policy change mid-epoch, incompatible upgrade and role overlap. Governance changes cannot retroactively alter allocation snapshots.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

@@ -55,4 +55,3 @@ The documentation content is licensed under the [Creative Commons Attribution 4.
 ## London draft validation
 
 Run `npm exec docusaurus build` to validate the current local site, including London, without pulling or modifying generated PIP/whitepaper mirrors. The normal `npm run build` includes London too, and retains its existing upstream content-pull step. See `london-0.1.0/index.mdx`.
-

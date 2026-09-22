@@ -55,4 +55,3 @@ Before G1, two independent implementations must agree on canonical grant/receipt
 `CURRENT SOURCE`: [RFC 8785](https://www.rfc-editor.org/rfc/rfc8785) defines JCS. RFC 8785 does not itself apply Unicode normalization; this contract requires NFC before canonicalization and rejects received non-NFC strings rather than changing signed content silently.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

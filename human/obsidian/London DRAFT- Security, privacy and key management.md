@@ -53,4 +53,3 @@ Encrypted database point-in-time recovery plus daily immutable snapshots; eviden
 A database restore never resets on-chain payout uniqueness. Chain is authoritative for paid state. Rebuild paid projection before issuing any new transfer. Never restore an old signer role blindly. See [incidents](13-operations-observability-and-incidents.md).
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

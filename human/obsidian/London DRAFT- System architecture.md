@@ -61,4 +61,3 @@ Separate identity/payment, delivery/evidence, finance, and public read-model sto
 `ASSUMPTION`: initial region is London, `eu-west-2`, with multi-AZ compute and managed regional S3. Region selection and DR destination require privacy and operations approval. S3 is regional storage; do not assume a bucket belongs to a selected compute availability zone. `CURRENT SOURCE`: PIP-4 §1 and whitepaper §6.2 establish the private London-origin intent, not an implemented topology.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

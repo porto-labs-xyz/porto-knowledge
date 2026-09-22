@@ -57,4 +57,3 @@ USDC already paid on Aptos remains with its recipient. USDC held by Porto on Apt
 Before cutover, rollback can unfreeze the unchanged Aptos path. After destination obligations become payable, rollback must reconcile claims on both rails and lock spent IDs; never re-enable the original payout blindly. Keep portable audit data and read-only historical APIs. `CURRENT SOURCE`: whitepaper §§4,6.5,9, PIP-4 §8 and PIP-7 §4 describe future decentralisation intent, not this migration mechanism.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

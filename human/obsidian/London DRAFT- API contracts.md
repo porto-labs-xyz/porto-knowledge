@@ -942,4 +942,3 @@ Response example:
 ```
 
 [London contents](index.mdx) · [Data model](11-data-model-and-event-schemas.md) · [Wire contracts](21-wire-and-commitment-contracts.md)
-

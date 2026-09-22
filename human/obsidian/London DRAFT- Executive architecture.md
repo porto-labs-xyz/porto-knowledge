@@ -44,4 +44,3 @@ Only salted commitments, opaque application identifiers, settlement amounts, sta
 `CURRENT SOURCE`: whitepaper sections 3.2, 4.2, 6.2, 6.5, 7.2 and 9 describe a different Porto Chain/PRT rollout. See [compatibility](18-compatibility-with-existing-pips.md) for the explicit replacement candidates and [source register](23-source-register.md) for pinned evidence.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

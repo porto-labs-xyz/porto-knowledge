@@ -94,4 +94,3 @@ Porto funds the APT gas account from its own operating budget, separately from U
 Chargeback before funding reduces unallocated availability under approved policy. After accrual it holds affected unpaid allocations. After payment it uses company reserve then recovery review; it cannot reverse the chain. Stablecoin issuer controls, custody, depeg, liquidity, redemption eligibility, tax and jurisdictions remain D01-D04 decisions. `LEGAL/COMPLIANCE REVIEW REQUIRED`: no legal conclusion or regulated-service exemption follows from this proposed ownership model.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

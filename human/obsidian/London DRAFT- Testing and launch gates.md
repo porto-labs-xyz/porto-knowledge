@@ -58,4 +58,3 @@ Mainnet rehearsal is future work, not authorization to deploy or move money now.
 Any unchecked item is no-go. A business override cannot silently relabel missing technical/security/legal evidence as passed.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

@@ -49,4 +49,3 @@ Clients, operator clocks, cache contents, webhooks before signature verification
 Aptos consensus governance is outside Porto's administrative authority. Porto application administration does not create a Porto validator network. `CURRENT SOURCE`: PIP-6 §§1,2,5 and PIP-7 §§2,3 are supersession candidates, not London permissions.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

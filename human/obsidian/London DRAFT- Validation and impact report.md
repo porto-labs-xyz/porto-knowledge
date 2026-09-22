@@ -101,4 +101,3 @@ Modified integration sources: `docs/README.md`, `docs/docusaurus.config.ts`, `do
 | Knowledge operations and documentation route | Added explicit London draft corpus, concepts and local build integration |
 
 All 12 D01-D12 decisions remain open. Legal/compliance, tax/finance, rights, provider and independent security reviews are required as assigned in the [decision register](17-open-decisions-and-risk-register.md). The documentation is ready for implementation planning and specialist review, not approved for production deployment.
-

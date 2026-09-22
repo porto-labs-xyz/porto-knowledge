@@ -55,4 +55,3 @@ Incident commander records UTC timeline, affected IDs, containment actions and a
 Off-chain image/config can roll back if persisted schema/policy compatibility holds. Replaying workers uses business-ID deduplication. An on-chain committed transfer is irreversible by Porto; never label a compensating payment a rollback. Pause, audit and use a reviewed forward package upgrade or new settlement correction. A package upgrade cannot erase balances already transferred. Immutable source roots and paid tombstones survive all recovery paths.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

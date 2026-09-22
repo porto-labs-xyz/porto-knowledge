@@ -139,4 +139,3 @@ Copyright © 2026 Entropy Tech Ltd.
 
 This document is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 Porto names, logos, and other trademarks are not licensed under this license.
-

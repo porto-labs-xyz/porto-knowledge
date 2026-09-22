@@ -81,4 +81,3 @@ Consumers enforce per-aggregate monotonically increasing revision. Out-of-order 
 See [wire contracts](21-wire-and-commitment-contracts.md) for receipt fields, signed bytes and commitment encoding; see `openapi.json` for endpoint request/response validation.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

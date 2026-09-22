@@ -54,4 +54,3 @@ The canonical files remain at `docs/london-0.1.0/` relative to the Porto workspa
 This task does not commit, push, deploy or notify a publication workflow. Graph refresh is local documentation maintenance, not publication.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

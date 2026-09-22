@@ -93,4 +93,3 @@ Encrypted raw receipts and signed manifests are immutable with content hashes an
 See [glossary](glossary.md) for exact state meanings. `CURRENT SOURCE`: PIP-4 §§2,3,5 supplies threshold, server-evidence intent and batching context; London changes the byte accounting, schema and trust boundary.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-

@@ -49,4 +49,3 @@ R01 operator signatures can authenticate fabricated receipts: permissioning, pro
 F01 app-chain trigger thresholds and security funding; F02 independent attestor observation/quorum design; F03 validator admission/staking/governance; F04 new-chain asset strategy and any bridge; F05 optional ZK research; F06 later bank payout rail. All require new proposals and reviews. No future date or provider commitment is assumed.
 
 [London 0.1.0 contents](index.mdx) · [Decision register](17-open-decisions-and-risk-register.md)
-
