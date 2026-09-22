@@ -20,7 +20,7 @@ How organisational knowledge is refreshed, queried and kept connected.
 - provides_route: [[Documentation update|Documentation update]] (EXTRACTED)
 - provides_route: [[Design change|Design change]] (EXTRACTED)
 - provides_route: [[Player prototype (agent_route)|Player prototype]] (EXTRACTED)
-- provides_route: [[London 0.1.0 draft implementation|London 0.1.0 draft implementation]] (EXTRACTED)
+- provides_route: [[London 0.1.0 approved implementation|London 0.1.0 approved implementation]] (EXTRACTED)
 
 ## Source content
 

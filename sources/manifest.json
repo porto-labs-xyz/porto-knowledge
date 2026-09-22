@@ -75,10 +75,10 @@
       "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1"
     },
     {
-      "id": "london-draft",
+      "id": "london-implementation",
       "url": "https://github.com/porto-labs-xyz/docs.git",
       "workspace_path": "docs",
-      "authority": "proposed_implementation_specification",
+      "authority": "approved_implementation_specification",
       "classification": "public",
       "materialize": true
     }
@@ -260,214 +260,249 @@
       "kind": "supporting"
     },
     {
-      "path": "docs/london-0.1.0/00-status-and-scope.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Status and scope"
-    },
-    {
-      "path": "docs/london-0.1.0/01-executive-architecture.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Executive architecture"
-    },
-    {
-      "path": "docs/london-0.1.0/02-system-architecture.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: System architecture"
-    },
-    {
-      "path": "docs/london-0.1.0/03-roles-and-trust-model.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Roles and trust model"
-    },
-    {
-      "path": "docs/london-0.1.0/04-listener-and-artist-journeys.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Listener, artist and operator journeys"
-    },
-    {
-      "path": "docs/london-0.1.0/05-catalogue-rights-and-content.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Catalogue, rights and content"
-    },
-    {
-      "path": "docs/london-0.1.0/06-streaming-delivery-and-attestation.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Streaming, delivery and attestation"
-    },
-    {
-      "path": "docs/london-0.1.0/07-fraud-controls-and-disputes.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Fraud controls and disputes"
-    },
-    {
-      "path": "docs/london-0.1.0/08-usdc-treasury-and-settlement.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: USDC treasury and settlement"
-    },
-    {
-      "path": "docs/london-0.1.0/09-move-contract-specification.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Move contract specification"
-    },
-    {
-      "path": "docs/london-0.1.0/10-off-chain-services-and-apis.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Off-chain services and APIs"
-    },
-    {
-      "path": "docs/london-0.1.0/11-data-model-and-event-schemas.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Data model and event schemas"
-    },
-    {
-      "path": "docs/london-0.1.0/12-security-privacy-and-key-management.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Security, privacy and key management"
-    },
-    {
-      "path": "docs/london-0.1.0/13-operations-observability-and-incidents.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Operations, observability and incidents"
-    },
-    {
-      "path": "docs/london-0.1.0/14-testing-and-launch-gates.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Testing and launch gates"
-    },
-    {
-      "path": "docs/london-0.1.0/15-migration-to-porto-app-chain.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Future Porto app-chain migration"
-    },
-    {
-      "path": "docs/london-0.1.0/16-implementation-plan.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Implementation plan"
-    },
-    {
-      "path": "docs/london-0.1.0/17-open-decisions-and-risk-register.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Open decisions and risk register"
-    },
-    {
-      "path": "docs/london-0.1.0/18-compatibility-with-existing-pips.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Compatibility with existing PIPs"
-    },
-    {
-      "path": "docs/london-0.1.0/19-architecture-decisions.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Architecture decision records"
-    },
-    {
-      "path": "docs/london-0.1.0/20-api-contracts.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: API contracts"
-    },
-    {
-      "path": "docs/london-0.1.0/21-wire-and-commitment-contracts.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Wire encoding and commitment contracts"
-    },
-    {
-      "path": "docs/london-0.1.0/22-acceptance-test-catalogue.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Acceptance test catalogue"
-    },
-    {
-      "path": "docs/london-0.1.0/23-source-register.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Source register and evidence boundaries"
-    },
-    {
-      "path": "docs/london-0.1.0/24-validation-and-impact.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Validation and impact report"
-    },
-    {
-      "path": "docs/london-0.1.0/glossary.md",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: Glossary"
-    },
-    {
-      "path": "docs/london-0.1.0/index.mdx",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: London 0.1.0"
-    },
-    {
-      "path": "docs/london-0.1.0/openapi.json",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: openapi"
-    },
-    {
-      "path": "docs/london-0.1.0/source-manifest.json",
-      "source": "london-draft",
-      "domain": "product_distribution",
-      "kind": "draft_proposal",
-      "title": "London DRAFT: source-manifest"
-    },
-    {
       "path": "docs/README.md",
       "source": "docs",
       "domain": "knowledge_ops",
       "kind": "supporting",
       "title": "Documentation build guidance"
+    },
+    {
+      "path": "docs/london-0.1.0/00-status-and-scope.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Status, approval and exact scope"
+    },
+    {
+      "path": "docs/london-0.1.0/01-executive-architecture.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Executive architecture"
+    },
+    {
+      "path": "docs/london-0.1.0/02-system-architecture.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: System architecture and ownership"
+    },
+    {
+      "path": "docs/london-0.1.0/03-roles-and-trust-model.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Roles and trust model"
+    },
+    {
+      "path": "docs/london-0.1.0/04-listener-and-artist-journeys.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Listener, artist and operator journeys"
+    },
+    {
+      "path": "docs/london-0.1.0/05-catalogue-rights-and-content.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Catalogue, rights and content"
+    },
+    {
+      "path": "docs/london-0.1.0/06-streaming-delivery-and-attestation.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Playback, peer delivery and usage evidence"
+    },
+    {
+      "path": "docs/london-0.1.0/07-fraud-controls-and-disputes.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Basic integrity controls and manual exceptions"
+    },
+    {
+      "path": "docs/london-0.1.0/08-usdc-treasury-and-settlement.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Funding, accounting and real payouts"
+    },
+    {
+      "path": "docs/london-0.1.0/09-move-contract-specification.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: One append-only commitment contract"
+    },
+    {
+      "path": "docs/london-0.1.0/10-off-chain-services-and-apis.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Backend modules, APIs and provider boundaries"
+    },
+    {
+      "path": "docs/london-0.1.0/11-data-model-and-event-schemas.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Data model, state machines and ledger"
+    },
+    {
+      "path": "docs/london-0.1.0/12-security-privacy-and-key-management.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Security, privacy and key management"
+    },
+    {
+      "path": "docs/london-0.1.0/13-operations-observability-and-incidents.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Operations, recovery and incidents"
+    },
+    {
+      "path": "docs/london-0.1.0/14-testing-and-launch-gates.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Testing, proof levels and launch gates"
+    },
+    {
+      "path": "docs/london-0.1.0/15-migration-to-porto-app-chain.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Future compatibility, no migration implementation"
+    },
+    {
+      "path": "docs/london-0.1.0/16-implementation-plan.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Implementation plan and agent handoff"
+    },
+    {
+      "path": "docs/london-0.1.0/17-open-decisions-and-risk-register.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Required launch inputs and residual risks"
+    },
+    {
+      "path": "docs/london-0.1.0/18-compatibility-with-existing-pips.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Compatibility with existing Porto sources"
+    },
+    {
+      "path": "docs/london-0.1.0/19-architecture-decisions.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Architecture decision records"
+    },
+    {
+      "path": "docs/london-0.1.0/20-api-contracts.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: API contracts and endpoint catalogue"
+    },
+    {
+      "path": "docs/london-0.1.0/21-wire-and-commitment-contracts.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Canonical wire formats, artifacts and verification"
+    },
+    {
+      "path": "docs/london-0.1.0/22-acceptance-test-catalogue.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Acceptance test catalogue"
+    },
+    {
+      "path": "docs/london-0.1.0/23-source-register.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Source register and authority"
+    },
+    {
+      "path": "docs/london-0.1.0/24-validation-and-impact.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Documentation validation and impact"
+    },
+    {
+      "path": "docs/london-0.1.0/glossary.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Glossary"
+    },
+    {
+      "path": "docs/london-0.1.0/index.mdx",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: London 0.1.0"
+    },
+    {
+      "path": "docs/london-0.1.0/openapi.json",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: openapi"
+    },
+    {
+      "path": "docs/london-0.1.0/source-manifest.json",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: source-manifest"
+    },
+    {
+      "path": "docs/london-0.1.0/25-node-package-and-pilot.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Node package and participation pilot"
+    },
+    {
+      "path": "docs/london-0.1.0/26-configuration-and-release-profile.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Configuration and release profile"
+    },
+    {
+      "path": "docs/london-0.1.0/artifact-schemas.json",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: artifact-schemas"
+    },
+    {
+      "path": "docs/london-0.1.0/fixtures.json",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: fixtures"
+    },
+    {
+      "path": "docs/london-0.1.0/release-profile.schema.json",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: release-profile.schema"
     }
   ]
 }

@@ -313,44 +313,55 @@
       }
     },
     "concept_london_architecture": {
-      "label": "London Mainnet architecture (DRAFT)",
-      "description": "PROPOSED FOR LONDON 0.1.0. Draft specification, not accepted policy, deployment or runtime evidence.",
+      "label": "London Mainnet architecture (APPROVED)",
+      "description": "APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
       "domain": "product_distribution",
       "aliases": [
         "London 0.1.0",
         "london architecture"
       ],
       "sources": [
-        "docs/london-0.1.0/01-executive-architecture.md"
+        "docs/london-0.1.0/01-executive-architecture.md",
+        "docs/london-0.1.0/25-node-package-and-pilot.md"
       ],
       "source_sections": {
         "docs/london-0.1.0/01-executive-architecture.md": [
-          "Proposed architecture",
-          "Responsibilities and money"
+          "Approved architecture",
+          "Smallest implementation"
+        ],
+        "docs/london-0.1.0/25-node-package-and-pilot.md": [
+          "Pilot procedure",
+          "Pilot report"
         ]
       }
     },
     "concept_london_evidence": {
-      "label": "London delivery evidence (DRAFT)",
-      "description": "PROPOSED FOR LONDON 0.1.0. Draft specification, not accepted policy, deployment or runtime evidence.",
+      "label": "London delivery evidence (APPROVED)",
+      "description": "APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
       "domain": "streaming_attestation",
       "aliases": [
         "London 0.1.0",
         "london evidence"
       ],
       "sources": [
-        "docs/london-0.1.0/06-streaming-delivery-and-attestation.md"
+        "docs/london-0.1.0/06-streaming-delivery-and-attestation.md",
+        "docs/london-0.1.0/25-node-package-and-pilot.md"
       ],
       "source_sections": {
         "docs/london-0.1.0/06-streaming-delivery-and-attestation.md": [
           "Duration and eligibility",
-          "Evidence custody"
+          "Peer cache fill, required pilot path",
+          "Receipt to batch"
+        ],
+        "docs/london-0.1.0/25-node-package-and-pilot.md": [
+          "Pilot procedure",
+          "Pilot report"
         ]
       }
     },
     "concept_london_settlement": {
-      "label": "London USDC settlement (DRAFT)",
-      "description": "PROPOSED FOR LONDON 0.1.0. Draft specification, not accepted policy, deployment or runtime evidence.",
+      "label": "London USDC settlement (APPROVED)",
+      "description": "APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
       "domain": "payouts_rights",
       "aliases": [
         "London 0.1.0",
@@ -362,13 +373,14 @@
       "source_sections": {
         "docs/london-0.1.0/08-usdc-treasury-and-settlement.md": [
           "Money states and ownership",
-          "Funded allocation algorithm"
+          "Deterministic allocation",
+          "Safe transfer execution"
         ]
       }
     },
     "concept_london_compatibility": {
-      "label": "London governance departures (DRAFT)",
-      "description": "PROPOSED FOR LONDON 0.1.0. Draft specification, not accepted policy, deployment or runtime evidence.",
+      "label": "London governance departures (APPROVED)",
+      "description": "APPROVED FOR LONDON 0.1.0. Product-owner-approved implementation scope, not deployment, security clearance or observed pilot evidence.",
       "domain": "governance_process",
       "aliases": [
         "London 0.1.0",
@@ -380,8 +392,8 @@
       "source_sections": {
         "docs/london-0.1.0/18-compatibility-with-existing-pips.md": [
           "Status",
-          "Unresolved cross-document claims",
-          "Governance and review impact"
+          "Superseded London draft",
+          "Impact on messaging and design"
         ]
       }
     }
@@ -544,14 +556,14 @@
       "instruction": "Traverse implementation and style sources, read their cited sections, and distinguish simulated behaviour from protocol evidence. Enrich source text and meaningful typed links after changes; verify both graphs and review impacts."
     },
     "london-implementation": {
-      "label": "London 0.1.0 draft implementation",
+      "label": "London 0.1.0 approved implementation",
       "start": [
         "concept_london_architecture",
         "concept_london_evidence",
         "concept_london_settlement",
         "concept_london_compatibility"
       ],
-      "instruction": "Read London as DRAFT PROPOSED IMPLEMENTATION SPECIFICATION. Verify canonical contrasts and open decisions. Do not treat proposal text as current implementation or approved economics. No publication without explicit permission."
+      "instruction": "Read London as APPROVED IMPLEMENTATION SPECIFICATION. Implement only the bounded peer-delivery MVP. Verify canonical departures and required launch inputs. Approval is product scope, not runtime evidence, provider approval or production launch clearance. Preserve excluded-feature boundaries."
     }
   }
 }

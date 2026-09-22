@@ -1,0 +1,7327 @@
+---
+id: doc_docs_london_0_1_0_openapi_json
+type: document
+---
+
+# London APPROVED: openapi
+
+{ "openapi": "3.1.0", "info": { "title": "Porto London 0.1.0 approved MVP contracts", "version": "0.1.0", "description": "Approved implementation specification. Synthetic examples are structural, not valid signatures or real funds. Provider-specific webhook transport is defined by the selected adapter, not a universal invented API." }, "servers": [ { "url": "https://coordinator.example.invalid", "description":.
+
+## Connected knowledge
+
+No outgoing links.
+
+## Source content
+
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Porto London 0.1.0 approved MVP contracts",
+    "version": "0.1.0",
+    "description": "Approved implementation specification. Synthetic examples are structural, not valid signatures or real funds. Provider-specific webhook transport is defined by the selected adapter, not a universal invented API."
+  },
+  "servers": [
+    {
+      "url": "https://coordinator.example.invalid",
+      "description": "Placeholder; node paths use the approved node base URL"
+    }
+  ],
+  "paths": {
+    "/v1/me": {
+      "get": {
+        "operationId": "me",
+        "summary": "Read session and access state",
+        "description": "Read session and access state",
+        "security": [
+          {
+            "browser": []
+          }
+        ],
+        "parameters": [],
+        "x-authorization": "Own authenticated account",
+        "x-rate-limit": "60/min/account",
+        "x-pii-classification": "personal",
+        "x-audit-events": [
+          "me.requested",
+          "me.completed",
+          "me.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Account"
+                },
+                "example": {
+                  "id": "11111111-1111-4111-8111-111111111111",
+                  "roles": [],
+                  "entitlement": "active",
+                  "access_ends_ms": null
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/billing/checkout": {
+      "post": {
+        "operationId": "checkout",
+        "summary": "Create hosted checkout; never grants entitlement",
+        "description": "Create hosted checkout; never grants entitlement",
+        "security": [
+          {
+            "browser": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Listener; server-selected approved plan",
+        "x-rate-limit": "5/min/account",
+        "x-pii-classification": "financial",
+        "x-audit-events": [
+          "checkout.requested",
+          "checkout.completed",
+          "checkout.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/URLResponse"
+                },
+                "example": {
+                  "url": "https://example.invalid/resource",
+                  "expires_ms": "60000"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckoutRequest"
+              },
+              "example": {
+                "plan_id": "fixture"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/billing/portal": {
+      "post": {
+        "operationId": "portal",
+        "summary": "Create hosted subscription-management URL",
+        "description": "Create hosted subscription-management URL",
+        "security": [
+          {
+            "browser": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Own billing account",
+        "x-rate-limit": "5/min/account",
+        "x-pii-classification": "financial",
+        "x-audit-events": [
+          "portal.requested",
+          "portal.completed",
+          "portal.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/URLResponse"
+                },
+                "example": {
+                  "url": "https://example.invalid/resource",
+                  "expires_ms": "60000"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Empty"
+              },
+              "example": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/catalogue": {
+      "get": {
+        "operationId": "catalogue",
+        "summary": "List active works",
+        "description": "List active works",
+        "security": [],
+        "parameters": [
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 50
+            }
+          }
+        ],
+        "x-authorization": "Public available catalogue",
+        "x-rate-limit": "120/min/IP",
+        "x-pii-classification": "public",
+        "x-audit-events": [
+          "catalogue.requested",
+          "catalogue.completed",
+          "catalogue.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Catalogue"
+                },
+                "example": {
+                  "items": [],
+                  "next_cursor": null
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/renditions/{rendition_id}/manifest": {
+      "get": {
+        "operationId": "manifest",
+        "summary": "Read signed manifest without private storage references",
+        "description": "Read signed manifest without private storage references",
+        "security": [
+          {
+            "browser": []
+          },
+          {
+            "nodeToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "rendition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Entitled listener or approved node",
+        "x-rate-limit": "120/min/principal",
+        "x-pii-classification": "restricted",
+        "x-audit-events": [
+          "manifest.requested",
+          "manifest.completed",
+          "manifest.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Manifest"
+                },
+                "example": {
+                  "schema_version": "london.v1",
+                  "work_id": "11111111-1111-4111-8111-111111111111",
+                  "rendition_id": "11111111-1111-4111-8111-111111111111",
+                  "manifest_version": "0",
+                  "codec": "mp4a.40.2",
+                  "duration_ms": "0",
+                  "init": {
+                    "index": "0",
+                    "media_start_ms": "0",
+                    "media_end_ms": "0",
+                    "byte_length": "32000",
+                    "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+                  },
+                  "chunks": [],
+                  "key_id": "11111111-1111-4111-8111-111111111111",
+                  "signature": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/sessions": {
+      "post": {
+        "operationId": "createSession",
+        "summary": "Open rights-bound session",
+        "description": "Open rights-bound session",
+        "security": [
+          {
+            "browser": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Own entitled listener; one active session",
+        "x-rate-limit": "10/min/account",
+        "x-pii-classification": "restricted",
+        "x-audit-events": [
+          "createSession.requested",
+          "createSession.completed",
+          "createSession.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "201": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Session"
+                },
+                "example": {
+                  "id": "11111111-1111-4111-8111-111111111111",
+                  "work_id": "11111111-1111-4111-8111-111111111111",
+                  "rendition_id": "11111111-1111-4111-8111-111111111111",
+                  "rights_version": "0",
+                  "expires_ms": "60000",
+                  "status": "active",
+                  "manifest_url": "https://example.invalid/resource"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionRequest"
+              },
+              "example": {
+                "work_id": "11111111-1111-4111-8111-111111111111"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/sessions/{session_id}/close": {
+      "post": {
+        "operationId": "closeSession",
+        "summary": "Close once; receipts remain ingestible until deadline",
+        "description": "Close once; receipts remain ingestible until deadline",
+        "security": [
+          {
+            "browser": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Owner of session",
+        "x-rate-limit": "30/min/account",
+        "x-pii-classification": "restricted",
+        "x-audit-events": [
+          "closeSession.requested",
+          "closeSession.completed",
+          "closeSession.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ack"
+                },
+                "example": {
+                  "id": "11111111-1111-4111-8111-111111111111",
+                  "status": "recorded",
+                  "reason": null
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Empty"
+              },
+              "example": {}
+            }
+          }
+        }
+      }
+    },
+    "/v1/sessions/{session_id}/grants": {
+      "post": {
+        "operationId": "issueGrant",
+        "summary": "Issue one chunk grant or bounded retry",
+        "description": "Issue one chunk grant or bounded retry",
+        "security": [
+          {
+            "browser": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Session owner; entitlement and prebuffer checks",
+        "x-rate-limit": "120/min/session",
+        "x-pii-classification": "restricted",
+        "x-audit-events": [
+          "issueGrant.requested",
+          "issueGrant.completed",
+          "issueGrant.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "201": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrantResponse"
+                },
+                "example": {
+                  "grant": {
+                    "schema_version": "london.v1",
+                    "grant_id": "11111111-1111-4111-8111-111111111111",
+                    "purpose": "playback",
+                    "session_id": null,
+                    "source_node_id": "11111111-1111-4111-8111-111111111111",
+                    "destination_node_id": null,
+                    "rendition_id": "11111111-1111-4111-8111-111111111111",
+                    "chunk_index": "0",
+                    "manifest_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "nonce": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "issued_ms": "0",
+                    "expires_ms": "60000",
+                    "key_id": "11111111-1111-4111-8111-111111111111",
+                    "signature": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  "content_url": "https://example.invalid/resource"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrantRequest"
+              },
+              "example": {
+                "chunk_index": "0",
+                "retry_of_grant_id": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/nodes/{node_id}/health": {
+      "post": {
+        "operationId": "heartbeat",
+        "summary": "Report verified inventory and receive withdrawals",
+        "description": "Report verified inventory and receive withdrawals",
+        "security": [
+          {
+            "nodeToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "node_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Token node equals path/body node",
+        "x-rate-limit": "6/min/node",
+        "x-pii-classification": "restricted",
+        "x-audit-events": [
+          "heartbeat.requested",
+          "heartbeat.completed",
+          "heartbeat.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                },
+                "example": {
+                  "status": "active",
+                  "server_ms": "0",
+                  "withdraw_renditions": [],
+                  "next_heartbeat_seconds": 20
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HealthRequest"
+              },
+              "example": {
+                "schema_version": "london.v1",
+                "node_id": "11111111-1111-4111-8111-111111111111",
+                "image_digest": "fixture",
+                "observed_ms": "0",
+                "free_cache_bytes": "0",
+                "pending_receipts": "0",
+                "inventory": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/nodes/{node_id}/fills": {
+      "post": {
+        "operationId": "fill",
+        "summary": "Select source and issue authorised peer-fill grant",
+        "description": "Select source and issue authorised peer-fill grant",
+        "security": [
+          {
+            "nodeToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "node_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Pending or active destination node equals path; bootstrap allowed; source is active peer or named origin",
+        "x-rate-limit": "120/min/node",
+        "x-pii-classification": "restricted",
+        "x-audit-events": [
+          "fill.requested",
+          "fill.completed",
+          "fill.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "201": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GrantResponse"
+                },
+                "example": {
+                  "grant": {
+                    "schema_version": "london.v1",
+                    "grant_id": "11111111-1111-4111-8111-111111111111",
+                    "purpose": "playback",
+                    "session_id": null,
+                    "source_node_id": "11111111-1111-4111-8111-111111111111",
+                    "destination_node_id": null,
+                    "rendition_id": "11111111-1111-4111-8111-111111111111",
+                    "chunk_index": "0",
+                    "manifest_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "nonce": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "issued_ms": "0",
+                    "expires_ms": "60000",
+                    "key_id": "11111111-1111-4111-8111-111111111111",
+                    "signature": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  "content_url": "https://example.invalid/resource"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FillRequest"
+              },
+              "example": {
+                "rendition_id": "11111111-1111-4111-8111-111111111111",
+                "chunk_index": "0"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/grants/{grant_id}/consume": {
+      "post": {
+        "operationId": "consume",
+        "summary": "Atomically consume authorisation",
+        "description": "Atomically consume authorisation",
+        "security": [
+          {
+            "nodeToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "grant_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Selected source node; destination proof on peer fills",
+        "x-rate-limit": "2400/min/node",
+        "x-pii-classification": "restricted",
+        "x-audit-events": [
+          "consume.requested",
+          "consume.completed",
+          "consume.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Consumed"
+                },
+                "example": {
+                  "grant_id": "11111111-1111-4111-8111-111111111111",
+                  "request_id": "11111111-1111-4111-8111-111111111111",
+                  "consume_sequence": "0",
+                  "consumed_ms": "0",
+                  "deadline_ms": "30000",
+                  "expected_bytes": "0",
+                  "chunk_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsumeRequest"
+              },
+              "example": {
+                "request_id": "11111111-1111-4111-8111-111111111111",
+                "peer_proof": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/receipts": {
+      "post": {
+        "operationId": "receipt",
+        "summary": "Durably retain receipt and decision",
+        "description": "Durably retain receipt and decision",
+        "security": [
+          {
+            "nodeToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Source node token and receipt key match grant",
+        "x-rate-limit": "2400/min/node",
+        "x-pii-classification": "restricted",
+        "x-audit-events": [
+          "receipt.requested",
+          "receipt.completed",
+          "receipt.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ack"
+                },
+                "example": {
+                  "id": "11111111-1111-4111-8111-111111111111",
+                  "status": "recorded",
+                  "reason": null
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Receipt"
+              },
+              "example": {
+                "schema_version": "london.v1",
+                "receipt_id": "11111111-1111-4111-8111-111111111111",
+                "grant_id": "11111111-1111-4111-8111-111111111111",
+                "request_id": "11111111-1111-4111-8111-111111111111",
+                "node_id": "11111111-1111-4111-8111-111111111111",
+                "key_id": "11111111-1111-4111-8111-111111111111",
+                "rendition_id": "11111111-1111-4111-8111-111111111111",
+                "chunk_index": "0",
+                "purpose": "playback",
+                "consume_sequence": "0",
+                "bytes_written": "32000",
+                "chunk_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+                "started_ms": "0",
+                "ended_ms": "0",
+                "outcome": "complete",
+                "signature": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/peer-results": {
+      "post": {
+        "operationId": "peerResult",
+        "summary": "Record verified cache result, no monetary credit",
+        "description": "Record verified cache result, no monetary credit",
+        "security": [
+          {
+            "nodeToken": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Destination node token/key bound to grant",
+        "x-rate-limit": "120/min/node",
+        "x-pii-classification": "restricted",
+        "x-audit-events": [
+          "peerResult.requested",
+          "peerResult.completed",
+          "peerResult.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ack"
+                },
+                "example": {
+                  "id": "11111111-1111-4111-8111-111111111111",
+                  "status": "recorded",
+                  "reason": null
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PeerResult"
+              },
+              "example": {
+                "schema_version": "london.v1",
+                "result_id": "11111111-1111-4111-8111-111111111111",
+                "grant_id": "11111111-1111-4111-8111-111111111111",
+                "request_id": "11111111-1111-4111-8111-111111111111",
+                "source_node_id": "11111111-1111-4111-8111-111111111111",
+                "destination_node_id": "11111111-1111-4111-8111-111111111111",
+                "rendition_id": "11111111-1111-4111-8111-111111111111",
+                "chunk_index": "0",
+                "bytes_received": "0",
+                "chunk_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+                "verified": true,
+                "key_id": "11111111-1111-4111-8111-111111111111",
+                "signature": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/statements": {
+      "get": {
+        "operationId": "statements",
+        "summary": "List own allocation and payment summaries",
+        "description": "List own allocation and payment summaries",
+        "security": [
+          {
+            "browser": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 50
+            }
+          }
+        ],
+        "x-authorization": "Own artist/operator beneficiary only",
+        "x-rate-limit": "60/min/account",
+        "x-pii-classification": "financial",
+        "x-audit-events": [
+          "statements.requested",
+          "statements.completed",
+          "statements.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Statements"
+                },
+                "example": {
+                  "items": [],
+                  "next_cursor": null
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/statements/{statement_id}/proof": {
+      "get": {
+        "operationId": "statementProof",
+        "summary": "Download own proof bundle with confirmed journal references",
+        "description": "Download own proof bundle with confirmed journal references",
+        "security": [
+          {
+            "browser": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "statement_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Statement beneficiary or authorised finance auditor",
+        "x-rate-limit": "10/min/account",
+        "x-pii-classification": "financial",
+        "x-audit-events": [
+          "statementProof.requested",
+          "statementProof.completed",
+          "statementProof.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProofBundle"
+                },
+                "example": {
+                  "statement": {
+                    "schema_version": "london.v1",
+                    "kind": "statement",
+                    "batch_uuid": "11111111-1111-4111-8111-111111111111",
+                    "window_start_ms": "0",
+                    "window_end_ms": "86400000",
+                    "salt": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "payload": {
+                      "beneficiary_id": "11111111-1111-4111-8111-111111111111",
+                      "accounting_batch_id": "11111111-1111-4111-8111-111111111111",
+                      "proof_id": "11111111-1111-4111-8111-111111111111",
+                      "recipient_address": "0x1111111111111111111111111111111111111111111111111111111111111111",
+                      "asset_metadata": "0x1111111111111111111111111111111111111111111111111111111111111111",
+                      "chain_id": "0",
+                      "lines": [],
+                      "allocated_micro_usdc": "0"
+                    }
+                  },
+                  "index": {
+                    "schema_version": "london.v1",
+                    "kind": "statement-index",
+                    "batch_uuid": "11111111-1111-4111-8111-111111111111",
+                    "window_start_ms": "0",
+                    "window_end_ms": "86400000",
+                    "salt": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "payload": {
+                      "accounting_batch_id": "11111111-1111-4111-8111-111111111111",
+                      "entries": []
+                    }
+                  },
+                  "index_commitment": {
+                    "id": "11111111-1111-4111-8111-111111111111",
+                    "kind": "evidence",
+                    "status": "preparing",
+                    "artifact_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "chain_id": "0",
+                    "package_address": "0x1111111111111111111111111111111111111111111111111111111111111111",
+                    "chain_batch_id": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "transaction_hash": null,
+                    "ledger_version": null
+                  },
+                  "accounting_commitment": {
+                    "id": "11111111-1111-4111-8111-111111111111",
+                    "kind": "evidence",
+                    "status": "preparing",
+                    "artifact_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "chain_id": "0",
+                    "package_address": "0x1111111111111111111111111111111111111111111111111111111111111111",
+                    "chain_batch_id": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "transaction_hash": null,
+                    "ledger_version": null
+                  },
+                  "payment_journals": [],
+                  "payment_commitments": []
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/operator": {
+      "get": {
+        "operationId": "operatorView",
+        "summary": "Read node status and earned/paid amounts",
+        "description": "Read node status and earned/paid amounts",
+        "security": [
+          {
+            "browser": []
+          }
+        ],
+        "parameters": [],
+        "x-authorization": "Own operator account",
+        "x-rate-limit": "60/min/account",
+        "x-pii-classification": "financial",
+        "x-audit-events": [
+          "operatorView.requested",
+          "operatorView.completed",
+          "operatorView.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperatorView"
+                },
+                "example": {
+                  "operator_id": "11111111-1111-4111-8111-111111111111",
+                  "node_ids": [],
+                  "status": "pending",
+                  "accepted_duration_ms": "0",
+                  "peer_fill_bytes": "0",
+                  "earned_micro_usdc": "0",
+                  "paid_micro_usdc": "0",
+                  "unpaid_micro_usdc": "0",
+                  "missing_receipts": "0",
+                  "rejected_receipts": "0"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/batches/{batch_id}": {
+      "get": {
+        "operationId": "batchStatus",
+        "summary": "Read commitment status",
+        "description": "Read commitment status",
+        "security": [],
+        "parameters": [
+          {
+            "name": "batch_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Public metadata only, no raw private evidence",
+        "x-rate-limit": "60/min/IP",
+        "x-pii-classification": "public",
+        "x-audit-events": [
+          "batchStatus.requested",
+          "batchStatus.completed",
+          "batchStatus.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchStatus"
+                },
+                "example": {
+                  "id": "11111111-1111-4111-8111-111111111111",
+                  "kind": "evidence",
+                  "status": "preparing",
+                  "artifact_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+                  "chain_id": "0",
+                  "package_address": "0x1111111111111111111111111111111111111111111111111111111111111111",
+                  "chain_batch_id": "1111111111111111111111111111111111111111111111111111111111111111",
+                  "transaction_hash": null,
+                  "ledger_version": null
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/indexes/{batch_id}": {
+      "get": {
+        "operationId": "statementIndex",
+        "summary": "Download exact public canonical index",
+        "description": "Download exact public canonical index",
+        "security": [],
+        "parameters": [
+          {
+            "name": "batch_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "x-authorization": "Public confirmed statement-index only",
+        "x-rate-limit": "30/min/IP",
+        "x-pii-classification": "public",
+        "x-audit-events": [
+          "statementIndex.requested",
+          "statementIndex.completed",
+          "statementIndex.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexArtifact"
+                },
+                "example": {
+                  "schema_version": "london.v1",
+                  "kind": "statement-index",
+                  "batch_uuid": "11111111-1111-4111-8111-111111111111",
+                  "window_start_ms": "0",
+                  "window_end_ms": "86400000",
+                  "salt": "1111111111111111111111111111111111111111111111111111111111111111",
+                  "payload": {
+                    "accounting_batch_id": "11111111-1111-4111-8111-111111111111",
+                    "entries": []
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/node/v1/content/{rendition_id}/{chunk_index}": {
+      "get": {
+        "operationId": "nodeContent",
+        "summary": "Serve exactly one complete authorised chunk",
+        "description": "Serve exactly one complete authorised chunk",
+        "security": [
+          {
+            "portoGrant": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "rendition_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "chunk_index",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^(init|0|[1-9][0-9]*)$"
+            }
+          },
+          {
+            "name": "X-Request-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Peer-Proof",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "description": "Base64url JCS PeerProof, required only for peer_fill."
+          }
+        ],
+        "x-authorization": "Grant bound to path/source; request ID; peer proof for fills",
+        "x-rate-limit": "2400/min/node",
+        "x-pii-classification": "restricted",
+        "x-audit-events": [
+          "nodeContent.requested",
+          "nodeContent.completed",
+          "nodeContent.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Complete authorised immutable chunk; no ranges or redirects",
+            "headers": {
+              "Content-Length": {
+                "schema": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "Digest": {
+                "schema": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1024
+                }
+              }
+            },
+            "content": {
+              "audio/mp4": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "416": {
+            "description": "Range unsupported",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/node/v1/health": {
+      "get": {
+        "operationId": "nodeHealth",
+        "summary": "Expose ready boolean and release version",
+        "description": "Expose ready boolean and release version",
+        "security": [],
+        "parameters": [],
+        "x-authorization": "Public liveness only; detailed status private",
+        "x-rate-limit": "30/min/IP",
+        "x-pii-classification": "public",
+        "x-audit-events": [
+          "nodeHealth.requested",
+          "nodeHealth.completed",
+          "nodeHealth.denied"
+        ],
+        "x-idempotency": "POST requires principal/route-scoped key; GET read-only",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NodeHealth"
+                },
+                "example": {
+                  "ready": true,
+                  "version": "fixture"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Error, see endpoint guide",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                },
+                "example": {
+                  "code": "fixture",
+                  "message": "fixture",
+                  "correlation_id": "11111111-1111-4111-8111-111111111111",
+                  "retryable": true
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "browser": {
+        "type": "apiKey",
+        "in": "cookie",
+        "name": "porto_session"
+      },
+      "nodeToken": {
+        "type": "http",
+        "scheme": "bearer"
+      },
+      "portoGrant": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Authorization",
+        "description": "PortoGrant followed by base64url JCS signed Grant"
+      }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "correlation_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "retryable": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "correlation_id",
+          "retryable"
+        ]
+      },
+      "Ack": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "recorded",
+              "accepted",
+              "partial",
+              "rejected",
+              "held",
+              "late",
+              "consumed",
+              "closed",
+              "ready"
+            ]
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "reason"
+        ]
+      },
+      "Account": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "listener",
+                "artist",
+                "operator",
+                "admin",
+                "finance"
+              ]
+            }
+          },
+          "entitlement": {
+            "type": "string",
+            "enum": [
+              "active",
+              "pending",
+              "expired",
+              "none"
+            ]
+          },
+          "access_ends_ms": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)$",
+                "maxLength": 20,
+                "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "roles",
+          "entitlement",
+          "access_ends_ms"
+        ]
+      },
+      "CheckoutRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "plan_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          }
+        },
+        "required": [
+          "plan_id"
+        ]
+      },
+      "URLResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "expires_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          }
+        },
+        "required": [
+          "url",
+          "expires_ms"
+        ]
+      },
+      "BillingEvent": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "provider": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "event_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "event_type": {
+            "type": "string",
+            "enum": [
+              "access_active",
+              "access_ended",
+              "payment_cleared",
+              "payment_refunded",
+              "chargeback"
+            ]
+          },
+          "account_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "payment_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "subscription_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "period_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "occurred_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "service_start_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "service_end_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "currency": {
+            "type": "string",
+            "enum": [
+              "GBP"
+            ]
+          },
+          "gross_pence": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "provider_evidence_ref": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          }
+        },
+        "required": [
+          "schema_version",
+          "provider",
+          "event_id",
+          "event_type",
+          "account_id",
+          "payment_id",
+          "subscription_id",
+          "period_id",
+          "occurred_ms",
+          "service_start_ms",
+          "service_end_ms",
+          "currency",
+          "gross_pence",
+          "provider_evidence_ref"
+        ]
+      },
+      "Work": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "artist": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "duration_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "rendition_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rights_version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "available": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "artist",
+          "duration_ms",
+          "rendition_id",
+          "rights_version",
+          "available"
+        ]
+      },
+      "Catalogue": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Work"
+            }
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "items",
+          "next_cursor"
+        ]
+      },
+      "Chunk": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "index": {
+            "type": "string",
+            "pattern": "^(init|0|[1-9][0-9]*)$"
+          },
+          "media_start_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "media_end_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "byte_length": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "index",
+          "media_start_ms",
+          "media_end_ms",
+          "byte_length",
+          "sha256"
+        ]
+      },
+      "Manifest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "work_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rendition_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "manifest_version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "codec": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "duration_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "init": {
+            "$ref": "#/components/schemas/Chunk"
+          },
+          "chunks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Chunk"
+            }
+          },
+          "key_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "signature": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{86}$",
+            "description": "Base64url unpadded Ed25519 64-byte signature; decode and verify canonical trailing bits."
+          }
+        },
+        "required": [
+          "schema_version",
+          "work_id",
+          "rendition_id",
+          "manifest_version",
+          "codec",
+          "duration_ms",
+          "init",
+          "chunks",
+          "key_id",
+          "signature"
+        ]
+      },
+      "SessionRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "work_id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "work_id"
+        ]
+      },
+      "Session": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "work_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rendition_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rights_version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "expires_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "closed"
+            ]
+          },
+          "manifest_url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "id",
+          "work_id",
+          "rendition_id",
+          "rights_version",
+          "expires_ms",
+          "status",
+          "manifest_url"
+        ]
+      },
+      "Empty": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {},
+        "required": []
+      },
+      "GrantRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "chunk_index": {
+            "type": "string",
+            "pattern": "^(init|0|[1-9][0-9]*)$"
+          },
+          "retry_of_grant_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "chunk_index",
+          "retry_of_grant_id"
+        ]
+      },
+      "Grant": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "grant_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "playback",
+              "peer_fill",
+              "probe"
+            ]
+          },
+          "session_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "source_node_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "destination_node_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "rendition_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "chunk_index": {
+            "type": "string",
+            "pattern": "^(init|0|[1-9][0-9]*)$"
+          },
+          "manifest_hash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "nonce": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "issued_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "expires_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "key_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "signature": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{86}$",
+            "description": "Base64url unpadded Ed25519 64-byte signature; decode and verify canonical trailing bits."
+          }
+        },
+        "required": [
+          "schema_version",
+          "grant_id",
+          "purpose",
+          "session_id",
+          "source_node_id",
+          "destination_node_id",
+          "rendition_id",
+          "chunk_index",
+          "manifest_hash",
+          "nonce",
+          "issued_ms",
+          "expires_ms",
+          "key_id",
+          "signature"
+        ]
+      },
+      "GrantResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "grant": {
+            "$ref": "#/components/schemas/Grant"
+          },
+          "content_url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "grant",
+          "content_url"
+        ]
+      },
+      "Inventory": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "rendition_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "manifest_hash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "ready_chunks": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^(init|0|[1-9][0-9]*)$"
+            }
+          }
+        },
+        "required": [
+          "rendition_id",
+          "manifest_hash",
+          "ready_chunks"
+        ]
+      },
+      "HealthRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "node_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "image_digest": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "observed_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "free_cache_bytes": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "pending_receipts": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "inventory": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Inventory"
+            }
+          }
+        },
+        "required": [
+          "schema_version",
+          "node_id",
+          "image_digest",
+          "observed_ms",
+          "free_cache_bytes",
+          "pending_receipts",
+          "inventory"
+        ]
+      },
+      "HealthResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "pending",
+              "suspended",
+              "retired"
+            ]
+          },
+          "server_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "withdraw_renditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "next_heartbeat_seconds": {
+            "type": "integer",
+            "const": 20
+          }
+        },
+        "required": [
+          "status",
+          "server_ms",
+          "withdraw_renditions",
+          "next_heartbeat_seconds"
+        ]
+      },
+      "FillRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "rendition_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "chunk_index": {
+            "type": "string",
+            "pattern": "^(init|0|[1-9][0-9]*)$"
+          }
+        },
+        "required": [
+          "rendition_id",
+          "chunk_index"
+        ]
+      },
+      "PeerProof": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "grant_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "request_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "destination_node_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "GET"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "key_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "signature": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{86}$",
+            "description": "Base64url unpadded Ed25519 64-byte signature; decode and verify canonical trailing bits."
+          }
+        },
+        "required": [
+          "schema_version",
+          "grant_id",
+          "request_id",
+          "destination_node_id",
+          "method",
+          "path",
+          "key_id",
+          "signature"
+        ]
+      },
+      "ConsumeRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "peer_proof": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PeerProof"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "request_id",
+          "peer_proof"
+        ]
+      },
+      "Consumed": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "grant_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "request_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "consume_sequence": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "consumed_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "deadline_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "expected_bytes": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "chunk_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "grant_id",
+          "request_id",
+          "consume_sequence",
+          "consumed_ms",
+          "deadline_ms",
+          "expected_bytes",
+          "chunk_sha256"
+        ]
+      },
+      "Receipt": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "receipt_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "grant_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "request_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "node_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "key_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rendition_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "chunk_index": {
+            "type": "string",
+            "pattern": "^(init|0|[1-9][0-9]*)$"
+          },
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "playback",
+              "peer_fill",
+              "probe"
+            ]
+          },
+          "consume_sequence": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "bytes_written": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "chunk_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "started_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "ended_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "outcome": {
+            "type": "string",
+            "enum": [
+              "complete",
+              "partial",
+              "failed"
+            ]
+          },
+          "signature": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{86}$",
+            "description": "Base64url unpadded Ed25519 64-byte signature; decode and verify canonical trailing bits."
+          }
+        },
+        "required": [
+          "schema_version",
+          "receipt_id",
+          "grant_id",
+          "request_id",
+          "node_id",
+          "key_id",
+          "rendition_id",
+          "chunk_index",
+          "purpose",
+          "consume_sequence",
+          "bytes_written",
+          "chunk_sha256",
+          "started_ms",
+          "ended_ms",
+          "outcome",
+          "signature"
+        ]
+      },
+      "PeerResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "result_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "grant_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "request_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "source_node_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "destination_node_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rendition_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "chunk_index": {
+            "type": "string",
+            "pattern": "^(init|0|[1-9][0-9]*)$"
+          },
+          "bytes_received": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "chunk_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "verified": {
+            "type": "boolean"
+          },
+          "key_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "signature": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{86}$",
+            "description": "Base64url unpadded Ed25519 64-byte signature; decode and verify canonical trailing bits."
+          }
+        },
+        "required": [
+          "schema_version",
+          "result_id",
+          "grant_id",
+          "request_id",
+          "source_node_id",
+          "destination_node_id",
+          "rendition_id",
+          "chunk_index",
+          "bytes_received",
+          "chunk_sha256",
+          "verified",
+          "key_id",
+          "signature"
+        ]
+      },
+      "StatementSummary": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "day_start_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "asset_metadata": {
+            "type": "string",
+            "pattern": "^0x[0-9a-f]{64}$"
+          },
+          "allocated_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "paid_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "unpaid_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "provisional",
+              "allocated",
+              "committed",
+              "held",
+              "partially_paid",
+              "paid"
+            ]
+          },
+          "proof_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "day_start_ms",
+          "asset_metadata",
+          "allocated_micro_usdc",
+          "paid_micro_usdc",
+          "unpaid_micro_usdc",
+          "status",
+          "proof_id"
+        ]
+      },
+      "Statements": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StatementSummary"
+            }
+          },
+          "next_cursor": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "items",
+          "next_cursor"
+        ]
+      },
+      "OperatorView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "operator_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "node_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "active",
+              "stale",
+              "suspended",
+              "retired"
+            ]
+          },
+          "accepted_duration_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "peer_fill_bytes": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "earned_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "paid_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "unpaid_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "missing_receipts": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "rejected_receipts": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          }
+        },
+        "required": [
+          "operator_id",
+          "node_ids",
+          "status",
+          "accepted_duration_ms",
+          "peer_fill_bytes",
+          "earned_micro_usdc",
+          "paid_micro_usdc",
+          "unpaid_micro_usdc",
+          "missing_receipts",
+          "rejected_receipts"
+        ]
+      },
+      "BatchStatus": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "evidence",
+              "accounting",
+              "statement-index",
+              "payment-journal",
+              "correction"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "preparing",
+              "frozen",
+              "submitted",
+              "confirmed",
+              "failed",
+              "uncertain"
+            ]
+          },
+          "artifact_hash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "chain_id": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "package_address": {
+            "type": "string",
+            "pattern": "^0x[0-9a-f]{64}$"
+          },
+          "chain_batch_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "transaction_hash": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^0x[0-9a-f]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "ledger_version": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)$",
+                "maxLength": 20,
+                "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "status",
+          "artifact_hash",
+          "chain_id",
+          "package_address",
+          "chain_batch_id",
+          "transaction_hash",
+          "ledger_version"
+        ]
+      },
+      "ObjectRef": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "object_id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "sha256",
+          "object_id"
+        ]
+      },
+      "GrantInventory": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "grant_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "playback",
+              "peer_fill",
+              "probe"
+            ]
+          },
+          "consume_sequence": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)$",
+                "maxLength": 20,
+                "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "issued",
+              "consumed",
+              "cancelled",
+              "expired",
+              "complete",
+              "partial",
+              "missing"
+            ]
+          },
+          "receipt_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        },
+        "required": [
+          "grant_id",
+          "purpose",
+          "consume_sequence",
+          "status",
+          "receipt_ids"
+        ]
+      },
+      "ReceiptDecision": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "receipt_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "raw_receipt": {
+            "$ref": "#/components/schemas/ObjectRef"
+          },
+          "revision": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "disposition": {
+            "type": "string",
+            "enum": [
+              "accepted",
+              "rejected",
+              "partial",
+              "held",
+              "late"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "grant_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "node_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "session_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "chunk_index": {
+            "type": "string",
+            "pattern": "^(init|0|[1-9][0-9]*)$"
+          },
+          "credited_duration_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          }
+        },
+        "required": [
+          "receipt_id",
+          "raw_receipt",
+          "revision",
+          "disposition",
+          "reason",
+          "grant_id",
+          "node_id",
+          "session_id",
+          "chunk_index",
+          "credited_duration_ms"
+        ]
+      },
+      "SessionSummary": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "listener_day_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "work_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rights_version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "closed_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "eligible": {
+            "type": "boolean"
+          },
+          "unique_duration_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "held": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "session_id",
+          "listener_day_id",
+          "work_id",
+          "rights_version",
+          "closed_ms",
+          "eligible",
+          "unique_duration_ms",
+          "held"
+        ]
+      },
+      "BudgetInput": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "budget_day_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "listener_day_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "period_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "funding_refs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ObjectRef"
+            }
+          },
+          "budget_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "policy_hash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "held": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "budget_day_id",
+          "listener_day_id",
+          "period_id",
+          "funding_refs",
+          "budget_micro_usdc",
+          "policy_hash",
+          "held"
+        ]
+      },
+      "RightsRecipient": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "beneficiary_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "address": {
+            "type": "string",
+            "pattern": "^0x[0-9a-f]{64}$"
+          },
+          "bps": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10000
+          }
+        },
+        "required": [
+          "beneficiary_id",
+          "address",
+          "bps"
+        ]
+      },
+      "RightsSnapshot": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "work_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rights_version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "effective_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "licence_ref": {
+            "$ref": "#/components/schemas/ObjectRef"
+          },
+          "recipients": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RightsRecipient"
+            }
+          }
+        },
+        "required": [
+          "work_id",
+          "rights_version",
+          "effective_ms",
+          "licence_ref",
+          "recipients"
+        ]
+      },
+      "EconomicPolicy": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "policy_hash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "rights_bps": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10000
+          },
+          "operator_bps": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10000
+          },
+          "porto_bps": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10000
+          },
+          "deduction_policy_ref": {
+            "$ref": "#/components/schemas/ObjectRef"
+          },
+          "unused_budget_policy_ref": {
+            "$ref": "#/components/schemas/ObjectRef"
+          }
+        },
+        "required": [
+          "policy_hash",
+          "rights_bps",
+          "operator_bps",
+          "porto_bps",
+          "deduction_policy_ref",
+          "unused_budget_policy_ref"
+        ]
+      },
+      "Contribution": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "listener_day_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "session_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "work_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rights_version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "node_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "operator_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "receipt_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "duration_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          }
+        },
+        "required": [
+          "id",
+          "listener_day_id",
+          "session_id",
+          "work_id",
+          "rights_version",
+          "node_id",
+          "operator_id",
+          "receipt_id",
+          "duration_ms"
+        ]
+      },
+      "AllocationLine": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "budget_day_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "work_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "rights_version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "rights",
+              "operator",
+              "porto"
+            ]
+          },
+          "beneficiary_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "recipient_address": {
+            "type": "string",
+            "pattern": "^0x[0-9a-f]{64}$"
+          },
+          "contribution_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "duration_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "amount_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "reverses_line_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "budget_day_id",
+          "work_id",
+          "rights_version",
+          "role",
+          "beneficiary_id",
+          "recipient_address",
+          "contribution_ids",
+          "duration_ms",
+          "amount_micro_usdc",
+          "reverses_line_id"
+        ]
+      },
+      "Reserve": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "budget_day_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "unallocated_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "held_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          }
+        },
+        "required": [
+          "budget_day_id",
+          "unallocated_micro_usdc",
+          "held_micro_usdc"
+        ]
+      },
+      "StatementLine": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "allocation_line_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "day_start_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "work_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "rights",
+              "operator"
+            ]
+          },
+          "accepted_duration_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "amount_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          }
+        },
+        "required": [
+          "allocation_line_id",
+          "day_start_ms",
+          "work_id",
+          "role",
+          "accepted_duration_ms",
+          "amount_micro_usdc"
+        ]
+      },
+      "IndexEntry": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "proof_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "statement_hash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "proof_id",
+          "statement_hash"
+        ]
+      },
+      "PaymentEntry": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "payment_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "allocation_line_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "recipient": {
+            "type": "string",
+            "pattern": "^0x[0-9a-f]{64}$"
+          },
+          "amount_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "asset_metadata": {
+            "type": "string",
+            "pattern": "^0x[0-9a-f]{64}$"
+          },
+          "chain_id": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "prepared",
+              "approved",
+              "signed",
+              "submitted",
+              "confirmed",
+              "held",
+              "failed",
+              "uncertain",
+              "cancelled"
+            ]
+          },
+          "attempt_index": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "transaction_hash": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^0x[0-9a-f]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "ledger_version": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)$",
+                "maxLength": 20,
+                "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "payment_id",
+          "allocation_line_ids",
+          "recipient",
+          "amount_micro_usdc",
+          "asset_metadata",
+          "chain_id",
+          "status",
+          "attempt_index",
+          "transaction_hash",
+          "ledger_version"
+        ]
+      },
+      "EvidenceArtifact": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "evidence"
+            ]
+          },
+          "batch_uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "window_start_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "window_end_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "salt": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "grants": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/GrantInventory"
+                }
+              },
+              "receipts": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ReceiptDecision"
+                }
+              },
+              "sessions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SessionSummary"
+                }
+              },
+              "manifest_refs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ObjectRef"
+                }
+              },
+              "rights_refs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ObjectRef"
+                }
+              },
+              "policy_hashes": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                }
+              }
+            },
+            "required": [
+              "grants",
+              "receipts",
+              "sessions",
+              "manifest_refs",
+              "rights_refs",
+              "policy_hashes"
+            ]
+          }
+        },
+        "required": [
+          "schema_version",
+          "kind",
+          "batch_uuid",
+          "window_start_ms",
+          "window_end_ms",
+          "salt",
+          "payload"
+        ]
+      },
+      "AccountingArtifact": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "accounting"
+            ]
+          },
+          "batch_uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "window_start_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "window_end_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "salt": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "evidence_batch_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              "budgets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/BudgetInput"
+                }
+              },
+              "rights": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/RightsSnapshot"
+                }
+              },
+              "policies": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/EconomicPolicy"
+                }
+              },
+              "contributions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Contribution"
+                }
+              },
+              "allocations": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AllocationLine"
+                }
+              },
+              "reserves": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Reserve"
+                }
+              },
+              "correction_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "required": [
+              "evidence_batch_ids",
+              "budgets",
+              "rights",
+              "policies",
+              "contributions",
+              "allocations",
+              "reserves",
+              "correction_ids"
+            ]
+          }
+        },
+        "required": [
+          "schema_version",
+          "kind",
+          "batch_uuid",
+          "window_start_ms",
+          "window_end_ms",
+          "salt",
+          "payload"
+        ]
+      },
+      "StatementArtifact": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "statement"
+            ]
+          },
+          "batch_uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "window_start_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "window_end_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "salt": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "beneficiary_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "accounting_batch_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "proof_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "recipient_address": {
+                "type": "string",
+                "pattern": "^0x[0-9a-f]{64}$"
+              },
+              "asset_metadata": {
+                "type": "string",
+                "pattern": "^0x[0-9a-f]{64}$"
+              },
+              "chain_id": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)$",
+                "maxLength": 20,
+                "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+              },
+              "lines": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/StatementLine"
+                }
+              },
+              "allocated_micro_usdc": {
+                "type": "string",
+                "pattern": "^(0|[1-9][0-9]*)$",
+                "maxLength": 20,
+                "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+              }
+            },
+            "required": [
+              "beneficiary_id",
+              "accounting_batch_id",
+              "proof_id",
+              "recipient_address",
+              "asset_metadata",
+              "chain_id",
+              "lines",
+              "allocated_micro_usdc"
+            ]
+          }
+        },
+        "required": [
+          "schema_version",
+          "kind",
+          "batch_uuid",
+          "window_start_ms",
+          "window_end_ms",
+          "salt",
+          "payload"
+        ]
+      },
+      "IndexArtifact": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "statement-index"
+            ]
+          },
+          "batch_uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "window_start_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "window_end_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "salt": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "accounting_batch_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "entries": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IndexEntry"
+                }
+              }
+            },
+            "required": [
+              "accounting_batch_id",
+              "entries"
+            ]
+          }
+        },
+        "required": [
+          "schema_version",
+          "kind",
+          "batch_uuid",
+          "window_start_ms",
+          "window_end_ms",
+          "salt",
+          "payload"
+        ]
+      },
+      "PaymentArtifact": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "payment-journal"
+            ]
+          },
+          "batch_uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "window_start_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "window_end_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "salt": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "accounting_batch_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "run_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "approved_run_hash": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "entries": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PaymentEntry"
+                }
+              }
+            },
+            "required": [
+              "accounting_batch_id",
+              "run_id",
+              "approved_run_hash",
+              "entries"
+            ]
+          }
+        },
+        "required": [
+          "schema_version",
+          "kind",
+          "batch_uuid",
+          "window_start_ms",
+          "window_end_ms",
+          "salt",
+          "payload"
+        ]
+      },
+      "CorrectionArtifact": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "enum": [
+              "london.v1"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "correction"
+            ]
+          },
+          "batch_uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "window_start_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "window_end_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "salt": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "payload": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "target_batch_id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "prior_correction_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "reason_code": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1024
+              },
+              "replacement_refs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ObjectRef"
+                }
+              },
+              "ledger_entry_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              },
+              "approval_ref": {
+                "$ref": "#/components/schemas/ObjectRef"
+              }
+            },
+            "required": [
+              "target_batch_id",
+              "prior_correction_id",
+              "reason_code",
+              "replacement_refs",
+              "ledger_entry_ids",
+              "approval_ref"
+            ]
+          }
+        },
+        "required": [
+          "schema_version",
+          "kind",
+          "batch_uuid",
+          "window_start_ms",
+          "window_end_ms",
+          "salt",
+          "payload"
+        ]
+      },
+      "ProofBundle": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "statement": {
+            "$ref": "#/components/schemas/StatementArtifact"
+          },
+          "index": {
+            "$ref": "#/components/schemas/IndexArtifact"
+          },
+          "index_commitment": {
+            "$ref": "#/components/schemas/BatchStatus"
+          },
+          "accounting_commitment": {
+            "$ref": "#/components/schemas/BatchStatus"
+          },
+          "payment_journals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentArtifact"
+            }
+          },
+          "payment_commitments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BatchStatus"
+            }
+          }
+        },
+        "required": [
+          "statement",
+          "index",
+          "index_commitment",
+          "accounting_commitment",
+          "payment_journals",
+          "payment_commitments"
+        ]
+      },
+      "NodeHealth": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ready": {
+            "type": "boolean"
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          }
+        },
+        "required": [
+          "ready",
+          "version"
+        ]
+      },
+      "FundingAssignment": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "period_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "approved_net_pence": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "allocated_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          }
+        },
+        "required": [
+          "period_id",
+          "approved_net_pence",
+          "allocated_micro_usdc"
+        ]
+      },
+      "FundingImport": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "provider_ref": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "currency": {
+            "type": "string",
+            "enum": [
+              "GBP"
+            ]
+          },
+          "gross_pence": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "tax_pence": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "fees_pence": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "refund_pence": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "reserve_pence": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "approved_net_pence": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "received_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "asset_metadata": {
+            "type": "string",
+            "pattern": "^0x[0-9a-f]{64}$"
+          },
+          "deposit_tx_hash": {
+            "type": "string",
+            "pattern": "^0x[0-9a-f]{64}$"
+          },
+          "deposit_event_index": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "chain_id": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "assignments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FundingAssignment"
+            }
+          },
+          "approver_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "evidence_ref": {
+            "$ref": "#/components/schemas/ObjectRef"
+          }
+        },
+        "required": [
+          "id",
+          "provider_ref",
+          "currency",
+          "gross_pence",
+          "tax_pence",
+          "fees_pence",
+          "refund_pence",
+          "reserve_pence",
+          "approved_net_pence",
+          "received_micro_usdc",
+          "asset_metadata",
+          "deposit_tx_hash",
+          "deposit_event_index",
+          "chain_id",
+          "assignments",
+          "approver_id",
+          "evidence_ref"
+        ]
+      },
+      "HoldCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "target_type": {
+            "type": "string",
+            "enum": [
+              "listener_day",
+              "payment",
+              "operator"
+            ]
+          },
+          "target_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "open",
+              "released",
+              "closed_no_credit"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "private_note_ref": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ObjectRef"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "predecessor_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "target_type",
+          "target_id",
+          "action",
+          "reason",
+          "private_note_ref",
+          "predecessor_id"
+        ]
+      },
+      "PayoutApproval": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "run_hash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "accounting_hash": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "max_micro_usdc": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "approver_id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "run_id",
+          "run_hash",
+          "accounting_hash",
+          "max_micro_usdc",
+          "approver_id"
+        ]
+      },
+      "NodeChallenge": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schema_version": {
+            "const": "london.v1"
+          },
+          "node_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "operator_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "public_base_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "public_key_hex": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "nonce": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "issued_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "expires_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "signature": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{86}$",
+            "description": "Base64url unpadded Ed25519 64-byte signature; decode and verify canonical trailing bits."
+          }
+        },
+        "required": [
+          "schema_version",
+          "node_id",
+          "operator_id",
+          "public_base_url",
+          "public_key_hex",
+          "nonce",
+          "issued_ms",
+          "expires_ms",
+          "signature"
+        ]
+      },
+      "NodeAdmission": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "node_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "operator_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "public_base_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "public_key_hex": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "key_id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "recipient_address": {
+            "type": "string",
+            "pattern": "^0x[0-9a-f]{64}$"
+          },
+          "ownership_evidence": {
+            "$ref": "#/components/schemas/ObjectRef"
+          },
+          "terms_evidence": {
+            "$ref": "#/components/schemas/ObjectRef"
+          },
+          "challenge": {
+            "$ref": "#/components/schemas/NodeChallenge"
+          },
+          "approved_by": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "node_id",
+          "operator_id",
+          "public_base_url",
+          "public_key_hex",
+          "key_id",
+          "recipient_address",
+          "ownership_evidence",
+          "terms_evidence",
+          "challenge",
+          "approved_by"
+        ]
+      },
+      "CatalogueImport": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "work": {
+            "$ref": "#/components/schemas/Work"
+          },
+          "rights": {
+            "$ref": "#/components/schemas/RightsSnapshot"
+          },
+          "manifest": {
+            "$ref": "#/components/schemas/Manifest"
+          },
+          "allowed_territories": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$"
+            }
+          },
+          "available_from_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "available_until_ms": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 20,
+            "description": "Unsigned u64 decimal; semantic validator enforces maximum 18446744073709551615."
+          },
+          "master_evidence": {
+            "$ref": "#/components/schemas/ObjectRef"
+          },
+          "approved_by": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "work",
+          "rights",
+          "manifest",
+          "allowed_territories",
+          "available_from_ms",
+          "available_until_ms",
+          "master_evidence",
+          "approved_by"
+        ]
+      }
+    }
+  }
+}

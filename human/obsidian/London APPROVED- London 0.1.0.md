@@ -1,0 +1,86 @@
+---
+id: doc_docs_london_0_1_0_index_mdx
+type: document
+---
+
+# London APPROVED: London 0.1.0
+
+--- id: index title: "London 0.1.0" sidebarposition: 0 sidebarlabel: "Start here (Approved)" slug: /overview --- APPROVED · IMPLEMENTATION SPECIFICATION · London 0.1.0 London is approved for implementation as a bounded real-money music and infrastructure pilot. A listener pays, an independently operated node serves licensed music, Porto records and commits the evidence, and artists and operators receive explainable.
+
+## Connected knowledge
+
+No outgoing links.
+
+## Source content
+
+---
+id: index
+title: "London 0.1.0"
+sidebar_position: 0
+sidebar_label: "Start here (Approved)"
+slug: /overview
+---
+
+**APPROVED · IMPLEMENTATION SPECIFICATION · London 0.1.0**
+
+London is approved for implementation as a bounded real-money music and infrastructure pilot. A listener pays, an independently operated node serves licensed music, Porto records and commits the evidence, and artists and operators receive explainable USDC payouts. An artist node also supplies verified cached content to another participant node.
+
+**Approved scope, not a claim of deployment.** Product-owner approval is recorded on 22 September 2026. Runtime tests, real participant observations and launch authorisations remain separately evidenced. This specification replaces the broader earlier draft without changing canonical PIPs or claiming those proposals were globally amended.
+
+## Start with the whole story
+
+Read [scope](00-status-and-scope.md), [executive architecture](01-executive-architecture.md) and [the pilot](25-node-package-and-pilot.md). The complete implementation is one music product, one coordinated participant-node network, one accounting backend, one commitment contract and real transfers. There is no token, custom chain, independent attestor network or six-module settlement system.
+
+## Read by responsibility
+
+| Reader | Start here | Then implement against |
+|---|---|---|
+| Product / human overview | Scope, executive architecture, journeys, pilot | Launch inputs and measured success boundaries |
+| Backend | Architecture, streaming, accounting, data model | API, artifact schemas, fixtures and acceptance cases |
+| Node / infrastructure | Streaming, node package, security, operations | Peer authorisation, durability and failure tests |
+| Frontend | Journeys and human-facing states | OpenAPI and browser acceptance matrix |
+| Move / verifier | Commitment module and wire formats | Golden fixtures, append invariants and proof verdicts |
+| Finance / legal / security | Funding, rights, trust and required launch inputs | Production profile and G5 sign-offs |
+| Any implementing agent | Implementation plan and scope exclusions | W0-W7 and A01-A40 traceability |
+
+## Complete specification
+
+- [Status, approval and exact scope](00-status-and-scope.md)
+- [Executive architecture](01-executive-architecture.md)
+- [System architecture and ownership](02-system-architecture.md)
+- [Roles and trust model](03-roles-and-trust-model.md)
+- [Listener, artist and operator journeys](04-listener-and-artist-journeys.md)
+- [Catalogue, rights and content](05-catalogue-rights-and-content.md)
+- [Playback, peer delivery and usage evidence](06-streaming-delivery-and-attestation.md)
+- [Basic integrity controls and manual exceptions](07-fraud-controls-and-disputes.md)
+- [Funding, accounting and real payouts](08-usdc-treasury-and-settlement.md)
+- [One append-only commitment contract](09-move-contract-specification.md)
+- [Backend modules, APIs and provider boundaries](10-off-chain-services-and-apis.md)
+- [Data model, state machines and ledger](11-data-model-and-event-schemas.md)
+- [Security, privacy and key management](12-security-privacy-and-key-management.md)
+- [Operations, recovery and incidents](13-operations-observability-and-incidents.md)
+- [Testing, proof levels and launch gates](14-testing-and-launch-gates.md)
+- [Future compatibility, no migration implementation](15-migration-to-porto-app-chain.md)
+- [Implementation plan and agent handoff](16-implementation-plan.md)
+- [Required launch inputs and residual risks](17-open-decisions-and-risk-register.md)
+- [Compatibility with existing Porto sources](18-compatibility-with-existing-pips.md)
+- [Architecture decision records](19-architecture-decisions.md)
+- [API contracts and endpoint catalogue](20-api-contracts.md)
+- [Canonical wire formats, artifacts and verification](21-wire-and-commitment-contracts.md)
+- [Acceptance test catalogue](22-acceptance-test-catalogue.md)
+- [Source register and authority](23-source-register.md)
+- [Validation and impact report](24-validation-and-impact.md)
+- [Node package and participation pilot](25-node-package-and-pilot.md)
+- [Configuration and release profile](26-configuration-and-release-profile.md)
+
+- [Glossary](glossary.md)
+
+## Machine-readable handoff
+
+- [OpenAPI](openapi.json): complete coordinator/node HTTP surface and schemas.
+- [Artifact schemas](artifact-schemas.json): evidence, accounting, statements, indexes, payment journals and corrections.
+- [Release profile schema](release-profile.schema.json): mandatory production inputs, no invented commercial defaults.
+- [Fixtures](fixtures.json): synthetic canonical hash and allocation vectors.
+- [Source manifest](source-manifest.json): pinned canonical source evidence.
+
+Canonical source directory is `porto/docs/london-0.1.0/`. The existing Docusaurus build reads it directly and publishes this section under `/london-0.1.0/overview`. Documentation and schema validation do not establish application security, Mainnet deployment or successful pilot results.

@@ -13,7 +13,7 @@ PIPs, parameters, upgrades and migration.
 - contains_source: [[PIP-7- Governance|PIP-7: Governance]] (EXTRACTED)
 - contains_source: [[Porto Improvement Proposals|Porto Improvement Proposals]] (EXTRACTED)
 - contains: [[Governed parameter registry|Governed parameter registry]] (EXTRACTED)
-- contains: [[London governance departures (DRAFT)|London governance departures (DRAFT)]] (EXTRACTED)
+- contains: [[London governance departures (APPROVED)|London governance departures (APPROVED)]] (EXTRACTED)
 
 ## Source content
 
