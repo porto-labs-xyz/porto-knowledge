@@ -21,6 +21,7 @@ How organisational knowledge is refreshed, queried and kept connected.
 - provides_route: [[Design change|Design change]] (EXTRACTED)
 - provides_route: [[Player prototype (agent_route)|Player prototype]] (EXTRACTED)
 - provides_route: [[London 0.1.0 approved implementation|London 0.1.0 approved implementation]] (EXTRACTED)
+- provides_route: [[London ledger first- RocksDB and deterministic execution|London ledger first: RocksDB and deterministic execution]] (EXTRACTED)
 
 ## Source content
 

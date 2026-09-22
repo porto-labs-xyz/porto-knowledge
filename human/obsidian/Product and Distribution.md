@@ -36,10 +36,13 @@ Music delivery, app-chain architecture and node roles.
 - contains_source: [[London APPROVED- Documentation validation and impact|London APPROVED: Documentation validation and impact]] (EXTRACTED)
 - contains_source: [[London APPROVED- Node package and participation pilot|London APPROVED: Node package and participation pilot]] (EXTRACTED)
 - contains_source: [[London APPROVED- Configuration and release profile|London APPROVED: Configuration and release profile]] (EXTRACTED)
+- contains_source: [[London APPROVED- Build first- deterministic RocksDB ledger|London APPROVED: Build first: deterministic RocksDB ledger]] (EXTRACTED)
 - contains_source: [[London APPROVED- artifact-schemas|London APPROVED: artifact-schemas]] (EXTRACTED)
 - contains_source: [[London APPROVED- fixtures|London APPROVED: fixtures]] (EXTRACTED)
 - contains_source: [[London APPROVED- Glossary|London APPROVED: Glossary]] (EXTRACTED)
 - contains_source: [[London APPROVED- London 0.1.0|London APPROVED: London 0.1.0]] (EXTRACTED)
+- contains_source: [[London APPROVED- Ledger canonical hash fixtures|London APPROVED: Ledger canonical hash fixtures]] (EXTRACTED)
+- contains_source: [[London APPROVED- Ledger command, journal and checkpoint schemas|London APPROVED: Ledger command, journal and checkpoint schemas]] (EXTRACTED)
 - contains_source: [[London APPROVED- openapi|London APPROVED: openapi]] (EXTRACTED)
 - contains_source: [[London APPROVED- release-profile.schema|London APPROVED: release-profile.schema]] (EXTRACTED)
 - contains_source: [[London APPROVED- source-manifest|London APPROVED: source-manifest]] (EXTRACTED)
@@ -50,6 +53,7 @@ Music delivery, app-chain architecture and node roles.
 - contains: [[Record-led player prototype|Record-led player prototype]] (EXTRACTED)
 - contains: [[Simulated player node status|Simulated player node status]] (EXTRACTED)
 - contains: [[London Mainnet architecture (APPROVED)|London Mainnet architecture (APPROVED)]] (EXTRACTED)
+- contains: [[London deterministic RocksDB ledger (APPROVED)|London deterministic RocksDB ledger (APPROVED)]] (EXTRACTED)
 
 ## Source content
 

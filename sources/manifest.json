@@ -503,6 +503,27 @@
       "domain": "product_distribution",
       "kind": "approved_specification",
       "title": "London APPROVED: release-profile.schema"
+    },
+    {
+      "path": "docs/london-0.1.0/27-deterministic-rocksdb-ledger.md",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Build first: deterministic RocksDB ledger"
+    },
+    {
+      "path": "docs/london-0.1.0/ledger-schemas.json",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Ledger command, journal and checkpoint schemas"
+    },
+    {
+      "path": "docs/london-0.1.0/ledger-fixtures.json",
+      "source": "london-implementation",
+      "domain": "product_distribution",
+      "kind": "approved_specification",
+      "title": "London APPROVED: Ledger canonical hash fixtures"
     }
   ]
 }

@@ -322,16 +322,22 @@
       ],
       "sources": [
         "docs/london-0.1.0/01-executive-architecture.md",
-        "docs/london-0.1.0/25-node-package-and-pilot.md"
+        "docs/london-0.1.0/25-node-package-and-pilot.md",
+        "docs/london-0.1.0/27-deterministic-rocksdb-ledger.md"
       ],
       "source_sections": {
         "docs/london-0.1.0/01-executive-architecture.md": [
+          "Build the ledger first",
           "Approved architecture",
           "Smallest implementation"
         ],
         "docs/london-0.1.0/25-node-package-and-pilot.md": [
           "Pilot procedure",
           "Pilot report"
+        ],
+        "docs/london-0.1.0/27-deterministic-rocksdb-ledger.md": [
+          "First implementation priority",
+          "Atomic commit procedure"
         ]
       }
     },
@@ -345,7 +351,8 @@
       ],
       "sources": [
         "docs/london-0.1.0/06-streaming-delivery-and-attestation.md",
-        "docs/london-0.1.0/25-node-package-and-pilot.md"
+        "docs/london-0.1.0/25-node-package-and-pilot.md",
+        "docs/london-0.1.0/27-deterministic-rocksdb-ledger.md"
       ],
       "source_sections": {
         "docs/london-0.1.0/06-streaming-delivery-and-attestation.md": [
@@ -356,6 +363,10 @@
         "docs/london-0.1.0/25-node-package-and-pilot.md": [
           "Pilot procedure",
           "Pilot report"
+        ],
+        "docs/london-0.1.0/27-deterministic-rocksdb-ledger.md": [
+          "First implementation priority",
+          "Atomic commit procedure"
         ]
       }
     },
@@ -368,13 +379,18 @@
         "london settlement"
       ],
       "sources": [
-        "docs/london-0.1.0/08-usdc-treasury-and-settlement.md"
+        "docs/london-0.1.0/08-usdc-treasury-and-settlement.md",
+        "docs/london-0.1.0/27-deterministic-rocksdb-ledger.md"
       ],
       "source_sections": {
         "docs/london-0.1.0/08-usdc-treasury-and-settlement.md": [
           "Money states and ownership",
           "Deterministic allocation",
           "Safe transfer execution"
+        ],
+        "docs/london-0.1.0/27-deterministic-rocksdb-ledger.md": [
+          "First implementation priority",
+          "Atomic commit procedure"
         ]
       }
     },
@@ -394,6 +410,37 @@
           "Status",
           "Superseded London draft",
           "Impact on messaging and design"
+        ]
+      }
+    },
+    "concept_london_ledger": {
+      "label": "London deterministic RocksDB ledger (APPROVED)",
+      "description": "APPROVED FIRST IMPLEMENTATION PRIORITY. RocksDB TransactionDB with one owner, deterministic commands, atomic journal/state/outbox, durable idempotency, replay and portable logical checkpoints. Replaces PostgreSQL for London. Future sovereign-chain compatibility is a logical execution boundary, not existing consensus or physical file compatibility.",
+      "domain": "product_distribution",
+      "aliases": [
+        "RocksDB",
+        "deterministic ledger",
+        "ledger first",
+        "sovereign chain migration",
+        "London storage engine"
+      ],
+      "sources": [
+        "docs/london-0.1.0/27-deterministic-rocksdb-ledger.md",
+        "docs/london-0.1.0/16-implementation-plan.md",
+        "docs/london-0.1.0/15-migration-to-porto-app-chain.md"
+      ],
+      "source_sections": {
+        "docs/london-0.1.0/27-deterministic-rocksdb-ledger.md": [
+          "First implementation priority",
+          "Pure state-transition contract",
+          "Atomic commit procedure",
+          "Recovery and future chain boundary"
+        ],
+        "docs/london-0.1.0/16-implementation-plan.md": [
+          "Attack this first: W0 and W1 ledger engine"
+        ],
+        "docs/london-0.1.0/15-migration-to-porto-app-chain.md": [
+          "Deterministic ledger as the migration boundary"
         ]
       }
     }
@@ -493,6 +540,21 @@
       "concept_london_compatibility",
       "compares_with",
       "concept_rollout"
+    ],
+    [
+      "concept_london_architecture",
+      "uses",
+      "concept_london_ledger"
+    ],
+    [
+      "concept_london_ledger",
+      "informs",
+      "concept_london_evidence"
+    ],
+    [
+      "concept_london_ledger",
+      "informs",
+      "concept_london_settlement"
     ]
   ],
   "routes": {
@@ -558,12 +620,22 @@
     "london-implementation": {
       "label": "London 0.1.0 approved implementation",
       "start": [
+        "concept_london_ledger",
         "concept_london_architecture",
         "concept_london_evidence",
         "concept_london_settlement",
         "concept_london_compatibility"
       ],
-      "instruction": "Read London as APPROVED IMPLEMENTATION SPECIFICATION. Implement only the bounded peer-delivery MVP. Verify canonical departures and required launch inputs. Approval is product scope, not runtime evidence, provider approval or production launch clearance. Preserve excluded-feature boundaries."
+      "instruction": "APPROVED implementation baseline. FIRST PRIORITY: build the deterministic RocksDB ledger in chapter 27 and W0/W1 before real integrations. Use one owner, typed commands, synchronous atomic journal/state/outbox, replay and portable checkpoints. PostgreSQL is superseded. Preserve peer-delivery MVP scope, canonical contrasts, private evidence boundaries and launch gates. Do not claim consensus, deployment or runtime validation from specification approval."
+    },
+    "london-ledger": {
+      "label": "London ledger first: RocksDB and deterministic execution",
+      "start": [
+        "concept_london_ledger",
+        "concept_london_settlement",
+        "concept_london_evidence"
+      ],
+      "instruction": "APPROVED implementation baseline. FIRST PRIORITY: build the deterministic RocksDB ledger in chapter 27 and W0/W1 before real integrations. Use one owner, typed commands, synchronous atomic journal/state/outbox, replay and portable checkpoints. PostgreSQL is superseded. Preserve peer-delivery MVP scope, canonical contrasts, private evidence boundaries and launch gates. Do not claim consensus, deployment or runtime validation from specification approval."
     }
   }
 }
