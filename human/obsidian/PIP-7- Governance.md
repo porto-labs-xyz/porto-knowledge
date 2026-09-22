@@ -43,7 +43,6 @@ Porto's underlying Aptos-core fork retains its full governance module, unmodifie
 |---|---|---|---|
 | Network split (rights holders / operators / treasury) | [PIP-2](./PIP-2.md) §Revenue split | 70% / 25% / 5% | Must sum to 100%; no single-transaction change permitted, see §3 |
 | `ConversionRate.rate` (mint-side, fiat→PRT) | [PIP-3](./PIP-3.md) §2 | Set at Beta launch, disclosed separately | `MAX_RATE_DELTA_BPS` per epoch |
-| `DefaultStableRedemptionBps` | [PIP-8](./PIP-8.md) §5 | 8000 bps (80%) | 0–10000 bps; account holders may override |
 | `GasFeePolicy` (burn vs. treasury split) | [PIP-3](./PIP-3.md) §6 | 100% burn | 0–100% either direction |
 | Attestation quorum size (m-of-n) | [PIP-4](./PIP-4.md) §6 | N/A during Beta (single attestor) | Activated at V1 migration |
 | `EPOCH_LENGTH_MS` | [PIP-5](./PIP-5.md) §2 | 86,400,000 (24h) | Minimum bound TBD by gas-cost analysis |

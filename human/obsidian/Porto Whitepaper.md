@@ -350,7 +350,6 @@ This paper is the narrative source. The exact on-chain interfaces, data structur
 | [PIP-5](../pips/PIP-5.md) | Payout splitter, user-centric settlement |
 | [PIP-6](../pips/PIP-6.md) | Node operator registration, roles, staking, slashing |
 | [PIP-7](../pips/PIP-7.md) | Governance parameters and upgrade process |
-| [PIP-8](../pips/PIP-8.md) | Cross-cutting PRT tokenomics and economic model |
 
 ---
 
