@@ -84,7 +84,7 @@
       "kind": "restricted_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "23122edf1ee60865e7404ab98362e523c708f88e",
+      "source_revision": null,
       "content": null
     },
     {
@@ -699,7 +699,7 @@
       "kind": "supporting",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+      "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
       "content": null
     },
     {
@@ -714,7 +714,7 @@
       "kind": "prototype",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+      "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
       "content": null
     },
     {
@@ -729,7 +729,7 @@
       "kind": "supporting",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+      "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
       "content": null
     },
     {
@@ -744,7 +744,7 @@
       "kind": "supporting",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+      "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
       "content": null
     },
     {
@@ -1250,7 +1250,7 @@
           "source_path": "listening-app/README.md",
           "heading": "Current behaviour",
           "source_hash": null,
-          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -1258,7 +1258,7 @@
           "source_path": "listening-app/README.md",
           "heading": "Evidence and rights",
           "source_hash": null,
-          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -1266,7 +1266,7 @@
           "source_path": "listening-app/docs/ARCHITECTURE.md",
           "heading": "Playback",
           "source_hash": null,
-          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -1274,7 +1274,7 @@
           "source_path": "listening-app/docs/ARCHITECTURE.md",
           "heading": "Evidence limits",
           "source_hash": null,
-          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         }
@@ -1323,7 +1323,7 @@
           "source_path": "listening-app/docs/DESIGN_SYSTEM.md",
           "heading": "Token mapping",
           "source_hash": null,
-          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         }
@@ -1356,7 +1356,7 @@
           "source_path": "listening-app/docs/ARCHITECTURE.md",
           "heading": "Playback",
           "source_hash": null,
-          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         }
@@ -1380,7 +1380,7 @@
           "source_path": "listening-app/docs/DESIGN_SYSTEM.md",
           "heading": "Figma and source links",
           "source_hash": null,
-          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -1388,7 +1388,7 @@
           "source_path": "listening-app/docs/DESIGN_SYSTEM.md",
           "heading": "Component mapping",
           "source_hash": null,
-          "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1",
+          "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         }

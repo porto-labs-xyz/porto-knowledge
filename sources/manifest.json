@@ -72,7 +72,7 @@
       "authority": "prototype_implementation",
       "classification": "restricted_metadata_only",
       "materialize": false,
-      "source_revision": "d6f2f0045a404f8be041bbb2e8f805eeddc2e8e1"
+      "source_revision": "87dcb357d8c0805f343b34e6d51e3118b8905f0a"
     },
     {
       "id": "london-implementation",
