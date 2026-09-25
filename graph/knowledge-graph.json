@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "directed": true,
-  "generated_at": "2026-09-24T23:10:02.176100+00:00",
+  "generated_at": "2026-09-25T09:34:59.333993+00:00",
   "workspace_fingerprint": "sha256:04d9ed0730f3d96ea15b0067734b22af591ad682c516e937a4b5d62b5e7d85d7",
   "missing_allowlisted_sources": [],
   "nodes": [
@@ -84,7 +84,7 @@
       "kind": "restricted_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "015b786588bf32cc6ee9650c5bd95a78aea2182d",
+      "source_revision": "60c3d2308919fc3ccb744a7a7efbad2d0b548165",
       "content": null
     },
     {
