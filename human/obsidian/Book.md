@@ -106,9 +106,17 @@ export const Head = () => (
     <meta property="og:description" content="Book a 20 minute call with Porto's co-founders." />
     <meta property="og:site_name" content="Porto" />
     <meta property="og:locale" content="en_GB" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://www.portolabs.xyz/images/og-book-dark-p-1200x630.png" />
+    <meta property="og:image:secure_url" content="https://www.portolabs.xyz/images/og-book-dark-p-1200x630.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Porto's hand-drawn P centered on charcoal" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Book a call with Porto" />
     <meta name="twitter:description" content="Book a 20 minute call with Porto's co-founders." />
+    <meta name="twitter:image" content="https://www.portolabs.xyz/images/og-book-dark-p-1200x630.png" />
+    <meta name="twitter:image:alt" content="Porto's hand-drawn P centered on charcoal" />
     <link rel="preconnect" href="https://assets.calendly.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
