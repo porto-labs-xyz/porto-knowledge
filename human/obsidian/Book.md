@@ -5,7 +5,7 @@ type: document
 
 # Book
 
-import React, { useEffect, useRef } from 'react' const calendlyUrl = 'https://calendly.com/d/dz7f-tjf-km7/20-min-meeting-porto-meeting?backgroundcolor=090a0a&textcolor=eee8dc&primarycolor=ee6251' const widgetScriptUrl = 'https://assets.calendly.com/assets/external/widget.js' function CalendlyInlineEmbed() { const widgetRef = useRef(null) useEffect(() = { const container = widgetRef.current if (!container) return.
+import React, { useEffect, useRef } from 'react' const calendlyUrl = 'https://calendly.com/d/dz7f-tjf-km7/20-min-meeting-porto-meeting?backgroundcolor=101313&textcolor=eee8dc&primarycolor=ee6251' const widgetScriptUrl = 'https://assets.calendly.com/assets/external/widget.js' function CalendlyInlineEmbed() { const widgetRef = useRef(null) useEffect(() = { const container = widgetRef.current if (!container) return.
 
 ## Connected knowledge
 
@@ -15,7 +15,7 @@ No outgoing links.
 
 import React, { useEffect, useRef } from 'react'
 
-const calendlyUrl = 'https://calendly.com/d/dz7f-tjf-km7/20-min-meeting-porto-meeting?background_color=090a0a&text_color=eee8dc&primary_color=ee6251'
+const calendlyUrl = 'https://calendly.com/d/dz7f-tjf-km7/20-min-meeting-porto-meeting?background_color=101313&text_color=eee8dc&primary_color=ee6251'
 const widgetScriptUrl = 'https://assets.calendly.com/assets/external/widget.js'
 
 function CalendlyInlineEmbed() {
