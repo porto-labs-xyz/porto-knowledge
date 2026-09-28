@@ -232,7 +232,7 @@ const IndexPage = () => {
           <p>Artists, labels, node operators and listeners.<br /> Get early access to Porto.</p>
           <form onSubmit={handleSubmit} className="join-form">
             <label htmlFor="join-email">Email address</label>
-            <div className="form-row"><input id="join-email" name="email" type="email" autoComplete="email" placeholder="[redacted-email]" required value={email} onChange={(event) => setEmail(event.target.value)} disabled={status === 'sending'} /><button className="button button-primary" type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Joining…' : 'Join the waitlist'}<span aria-hidden="true">↗</span></button></div>
+            <div className="form-row"><input id="join-email" name="email" type="email" autoComplete="email" placeholder="[redacted-email]" required value={email} onChange={(event) => setEmail(event.target.value)} disabled={status === 'sending'} /><button className="button button-primary" type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Joining…' : 'Join The Network'}<span aria-hidden="true">↗</span></button><a className="button button-secondary" href="/book/">Book A Call<span aria-hidden="true">↗</span></a></div>
             <div className="form-status" role="status" aria-live="polite">{status === 'success' && 'You’re on the list. We’ll be in touch.'}{status === 'error' && <>We couldn’t send that. Please try again or <a href={contact}>email us</a>.</>}</div>
           </form>
           <p className="investor-contact">Interested in the round? <a className="text-link" href={`${contact}?subject=Porto%20pitch%20deck`}>Request the deck <span aria-hidden="true">↗</span></a></p>
