@@ -112,7 +112,7 @@ const IndexPage = () => {
     <>
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
-        <a className="wordmark" href="#home" aria-label="Porto home"><img className="brand-mark" src="/images/porto-mark-handdrawn.webp" width="64" height="64" alt="Porto" /></a>
+        <a className="wordmark" href="#home" aria-label="Porto home"><img className="brand-mark" src="/images/porto-mark-dark-branded.webp" width="64" height="64" alt="Porto" /></a>
         <nav aria-label="Main navigation">
           <a href="#how">The Network</a>
           <a href="#litepaper">Litepaper</a>
@@ -125,7 +125,7 @@ const IndexPage = () => {
       <main id="main">
         <section className="hero section" id="home">
           <img className="scene hero-scene" src="/images/deck/arch-right.webp" alt="" fetchPriority="high" />
-          <img className="hero-brand-mark" src="/images/porto-mark-handdrawn.webp" width="240" height="240" alt="" aria-hidden="true" />
+          <img className="hero-brand-mark" src="/images/porto-mark-dark-branded.webp" width="240" height="240" alt="" aria-hidden="true" />
           <div className="hero-content">
             <p className="eyebrow">Streaming infrastructure for artists and labels</p>
             <h1>Spotify takes 30%.<br /><span className="accent">You get pennies.</span></h1>
@@ -239,7 +239,7 @@ const IndexPage = () => {
         </section>
       </main>
 
-      <footer className="site-footer"><a className="wordmark footer-brand" href="#home" aria-label="Porto home"><img className="brand-mark" src="/images/porto-mark-handdrawn.webp" width="80" height="80" alt="" /><span>PORTO</span></a><p>Music is the foundation.<br />Distribution ownership is the change.</p><div><a href="https://docs.portolabs.xyz" target="_blank" rel="noopener noreferrer">Docs ↗</a><a href="https://github.com/porto-labs-xyz/porto-core" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href={contact}>Contact ↗</a></div><div className="partner-footer" aria-label="Partners"><a href="https://www.prsformusic.com" target="_blank" rel="noopener noreferrer"><img src="/images/prs-for-music-wordmark.svg" alt="PRS for Music" /></a><a href="https://altalab.ai" target="_blank" rel="noopener noreferrer"><img src="/images/altalab-logo.png" alt="AltaLab" /><span>Autumn Cohort</span></a></div><span className="copyright">© {new Date().getFullYear()} Porto Labs Ltd.<br />UK Registered Company</span></footer>
+      <footer className="site-footer"><a className="wordmark footer-brand" href="#home" aria-label="Porto home"><img className="brand-mark" src="/images/porto-mark-dark-branded.webp" width="80" height="80" alt="" /><span>PORTO</span></a><p>Music is the foundation.<br />Distribution ownership is the change.</p><div><a href="https://docs.portolabs.xyz" target="_blank" rel="noopener noreferrer">Docs ↗</a><a href="https://github.com/porto-labs-xyz/porto-core" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href={contact}>Contact ↗</a></div><div className="partner-footer" aria-label="Partners"><a href="https://www.prsformusic.com" target="_blank" rel="noopener noreferrer"><img src="/images/prs-for-music-wordmark.svg" alt="PRS for Music" /></a><a href="https://altalab.ai" target="_blank" rel="noopener noreferrer"><img src="/images/altalab-logo.png" alt="AltaLab" /><span>Autumn Cohort</span></a></div><span className="copyright">© {new Date().getFullYear()} Porto Labs Ltd.<br />UK Registered Company</span></footer>
     </>
   )
 }
