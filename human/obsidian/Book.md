@@ -102,7 +102,7 @@ export const Head = () => (
     <link rel="icon" href="/images/porto-mark-dark-branded.webp" type="image/webp" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.portolabs.xyz/book/" />
-    <meta property="og:title" content="Book a call with Porto" />
+    <meta property="og:title" content="20 minutes with Peter &amp; Richard" />
     <meta property="og:description" content="Book a 20 minute call with Porto's co-founders." />
     <meta property="og:site_name" content="Porto" />
     <meta property="og:locale" content="en_GB" />
@@ -113,7 +113,7 @@ export const Head = () => (
     <meta property="og:image:height" content="256" />
     <meta property="og:image:alt" content="Porto's hand-drawn P centered on charcoal" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Book a call with Porto" />
+    <meta name="twitter:title" content="20 minutes with Peter &amp; Richard" />
     <meta name="twitter:description" content="Book a 20 minute call with Porto's co-founders." />
     <meta name="twitter:image" content="https://www.portolabs.xyz/images/og-book-dark-p-thumb-256.png" />
     <meta name="twitter:image:alt" content="Porto's hand-drawn P centered on charcoal" />
