@@ -76,7 +76,7 @@ const IndexPage = () => {
         <section className="p-hero p-wrap" aria-labelledby="hero-heading">
           <div className="p-hero-copy">
             <p className="p-kicker">Streaming + music generation</p>
-            <img className="p-hero-mark" src="/images/porto-mark-dark-branded.webp" width="144" height="144" alt="Porto" />
+            <img className="p-hero-mark" src="/images/porto-mark-transparent.webp" width="144" height="144" alt="Porto" />
             <h1 id="hero-heading"><span>Co-create</span></h1>
             <p className="p-lead">Licensed originals. Personal variations.<br />More income to fund the next original.</p>
             <div className="p-actions"><PrototypeLink /><a className="p-text-link" href="#product">Meet Porto <span aria-hidden="true">↓</span></a></div>
