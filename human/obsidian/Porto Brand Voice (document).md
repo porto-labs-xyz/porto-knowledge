@@ -19,7 +19,7 @@ Gatsby static site for Porto. The founder requested a complete homepage redesign
 
 ## Current product story
 
-Porto brings streaming and music generation into one experience: licensed originals, personal User Variation Tracks, creator discovery and connected royalty accounting. The headline is “More music, made to be listened to.” The product invitation is “Press play. Then talk to Porto.”
+Porto brings streaming and music generation into one experience: licensed originals, personal User Variation Tracks, creator discovery and connected royalty accounting. The main slogan is “Co-create”, as requested by the founder on 12 October 2026. The product invitation is “Press play. Then talk to Porto.”
 
 Artists and labels provide catalogue permissions and approve artist-specific models. Artists and rights holders retain control over creative permissions, rights and release decisions. Paid listening to originals and permitted variations funds the source rights holders. Creator credit is not an automatic royalty entitlement.
 

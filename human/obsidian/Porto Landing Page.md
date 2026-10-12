@@ -76,7 +76,7 @@ const IndexPage = () => {
         <section className="p-hero p-wrap" aria-labelledby="hero-heading">
           <div className="p-hero-copy">
             <p className="p-kicker">Streaming + music generation</p>
-            <h1 id="hero-heading">More music,<br />made to be<br /><span>listened to.</span></h1>
+            <h1 id="hero-heading"><span>Co-create</span></h1>
             <p className="p-lead">Licensed originals. Personal variations.<br />More income to fund the next original.</p>
             <div className="p-actions"><PrototypeLink /><a className="p-text-link" href="#product">Meet Porto <span aria-hidden="true">↓</span></a></div>
             <p className="p-micro">Explore the interactive listening prototype.</p>
@@ -164,26 +164,26 @@ export default IndexPage
 export const Head = () => (
   <>
     <html lang="en" />
-    <title>Porto | More music, made to be listened to.</title>
+    <title>Porto | Co-create</title>
     <meta name="description" content={seoDescription} />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.portolabs.xyz/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.portolabs.xyz/" />
-    <meta property="og:title" content="Porto | More music, made to be listened to." />
+    <meta property="og:title" content="Porto | Co-create" />
     <meta property="og:description" content={seoDescription} />
     <meta property="og:site_name" content="Porto" />
     <meta property="og:locale" content="en_GB" />
-    <meta property="og:image" content="https://www.portolabs.xyz/images/october/porto-listening-1200x630.png" />
+    <meta property="og:image" content="https://www.portolabs.xyz/images/october/porto-co-create-1200x630.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Porto. More music, made to be listened to. The listening concept with licensed originals and personal variations." />
+    <meta property="og:image:alt" content="Porto. Co-create. The listening concept with licensed originals and personal variations." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Porto | More music, made to be listened to." />
+    <meta name="twitter:title" content="Porto | Co-create" />
     <meta name="twitter:description" content={seoDescription} />
-    <meta name="twitter:image" content="https://www.portolabs.xyz/images/october/porto-listening-1200x630.png" />
-    <meta name="twitter:image:alt" content="Porto. More music, made to be listened to. The listening concept with licensed originals and personal variations." />
+    <meta name="twitter:image" content="https://www.portolabs.xyz/images/october/porto-co-create-1200x630.png" />
+    <meta name="twitter:image:alt" content="Porto. Co-create. The listening concept with licensed originals and personal variations." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
