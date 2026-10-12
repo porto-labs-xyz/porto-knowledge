@@ -5,7 +5,7 @@ type: document
 
 # Porto Brand Voice
 
-CLAUDE.md Context for Claude Code working in the Porto Labs landing page repo. This is a Gatsby static site. Lightweight. Copy and presentation only. What Porto Is Porto is streaming infrastructure for artists and record labels. Artists and labels own and run the network that delivers their music. Valid plays are logged on-chain. Revenue accrues during an epoch and splits automatically at settlement. PIP-5 specifies.
+Porto landing page Gatsby static site for Porto. The founder requested a complete homepage redesign on 12 October 2026, using the latest October product presentation. That instruction supersedes the former copy-only constraint and CDN-first narrative. Current product story Porto brings streaming and music generation into one experience: licensed originals, personal User Variation Tracks, creator discovery and.
 
 ## Connected knowledge
 
@@ -13,62 +13,42 @@ CLAUDE.md Context for Claude Code working in the Porto Labs landing page repo. T
 
 ## Source content
 
-# CLAUDE.md
+# Porto landing page
 
-Context for Claude Code working in the Porto Labs landing page repo.
-This is a Gatsby static site. Lightweight. Copy and presentation only.
+Gatsby static site for Porto. The founder requested a complete homepage redesign on 12 October 2026, using the latest October product presentation. That instruction supersedes the former copy-only constraint and CDN-first narrative.
 
-## What Porto Is
+## Current product story
 
-Porto is streaming infrastructure for artists and record labels.
-Artists and labels own and run the network that delivers their music.
-Valid plays are logged on-chain. Revenue accrues during an epoch and splits automatically at settlement. PIP-5 specifies daily epochs for Beta.
+Porto brings streaming and music generation into one experience: licensed originals, personal User Variation Tracks, creator discovery and connected royalty accounting. The headline is “More music, made to be listened to.” The product invitation is “Press play. Then talk to Porto.”
 
-Porto is not an NFT project. It is not a fintech wrapper on the existing model.
-It is infrastructure reform: replacing the delivery layer, not tokenizing on top of it.
+Artists and labels provide catalogue permissions and approve artist-specific models. Artists and rights holders retain control over creative permissions, rights and release decisions. Paid listening to originals and permitted variations funds the source rights holders. Creator credit is not an automatic royalty entitlement.
 
-## Mission Statement
+Show listening, voice/text requests, discovery and sharing through the October concept screens. Label them as concepts featuring fictional artists and creators. The interactive prototype is https://porto-prototype.vercel.app/. It demonstrates product interactions; it is not proof of production generation, a licensed commercial catalogue or live settlement.
 
-We help artists and record labels earn more from streaming by letting them own
-the network that delivers their music, so they earn from distribution, not just plays.
+## Proposed commercial model
 
-## The Problem
+The October product proposal has no subscription. On allocated track revenue, the rights-holder pool is 90% for originals and 70% for User Variation Tracks, with Porto fees of 10% and 30% respectively. These are pool shares, not guaranteed receipts for an individual artist. Agreed label, publisher and other rights splits still apply.
 
-Platforms own the distribution layer. Artists and labels do not.
-Spotify takes 30% because they own the pipes.
-Porto replaces those pipes with a network owned by the industry it serves.
+At the proposed £10 monthly listening cap, variations pause and originals remain available. A listener explicitly tops up or waits for the monthly reset. No automatic extra charges. Launch pricing, generation costs and funding for original listening beyond the cap remain unresolved and must stay qualified.
 
-## The Split
+This public product proposal does not revise the normative protocol documents. Do not combine it with older £5 subscription, 70/25/5 node economics or 8p-versus-70p comparisons.
 
-70% to rights holders (artists, labels, publishers)
-25% to node operators
-5% to Porto protocol treasury
+## Porto Ledger
 
-Shares of settled listener revenue. The 70% rights-holder pool is divided by registered rights splits, not guaranteed entirely to an individual performer.
+Porto Ledger connects paid listening to the source rights holders. Show what was paid, who receives it, how allocation was calculated and when payment arrived. Daily payouts on Aptos in USDC are a product target. Mock Ledger amounts are illustrative; private listening data and audio stay off chain. Do not claim a live payment, transaction, licence or guaranteed settlement speed without evidence.
 
-## Voice and Tone
+## Design and voice
 
-- Direct. No filler.
-- Confident but not aggressive.
-- The audience is artists, labels, and investors simultaneously.
-- Avoid: "decentralized", "web3", "blockchain", "crypto", "NFT" in hero or above-the-fold copy.
-  These words belong in the litepaper section only, if at all.
-- No em dashes.
-- The site is snappy. The deck carries the detail. Do not let the site do the deck's job.
+- Follow the released Porto Design System. Charcoal, warm paper and coral #EE6251; violet supports voice interaction.
+- DM Sans for body and section headings; IBM Plex Mono for the hero, labels, navigation, buttons and financial figures.
+- Use the approved drawn P. Preserve image proportions. Reuse the October product graphics instead of the old infrastructure, ownership and city-rollout diagrams.
+- Put primary copy and revenue shares in accessible HTML. Product images can be enlarged and have meaningful alternative text.
+- Direct, concise language for listeners, artists and labels. No em dashes.
+- Show the current product stages: listening prototype, controlled artist pilot, then expansion following evidence. Do not invent launch dates.
+- Exclude raise amounts, valuation, runway, use of funds and fundraising calls to action.
+- Keep prototype links prominent. Preserve the email signup and /book/ appointment route.
+- Current public contact: [redacted-email]. Retain the Porto X link.
 
-## Key Lines (do not change without instruction)
+## Sources and maintenance
 
-Hero headline: "One artist. One licensed model."
-Restored 10 September 2026 at the user’s request. Keep DM Sans for body text and most section headings. Use IBM Plex Mono in the hero headline, navigation, labels, buttons and percentage figures, plus red monospaced product and join headings and network/product feature headings. Do not use monospace everywhere. Use near-black directional gradients with subtle warm light, following deck slides 14 and 15. The listener preview uses the corrected `player-responsive.svg` at its natural 154:332 ratio; never squash the interface to fit a phone silhouette. Use the hand-drawn P from the “Enhance glassy panels and typography” task as the logo, preserving its square proportions.
-Footer tagline: "Music is the foundation. Distribution ownership is the change."
-Keep detailed economics comparisons in the investor deck. The public site uses the Litepaper for the product and protocol explanation.
-Mission: "Porto brings artist and label acquisition, licensed artist-specific models, exclusive new music, listening and transparent revenue accounting into one whole solution, with daily payouts as a product target."
-Prototype: https://porto-prototype.vercel.app
-Anchor line: "One artist. One model. An exclusive catalogue built with them."
-
-## What This Repo Is
-
-Gatsby static landing page. Light.
-Copy changes only unless explicitly told otherwise.
-Do not touch layout, structure, components, styles, or images without instruction.
-Always show a diff before applying copy changes and wait for go-ahead.
+See docs/CONTENT-SOURCES.md for the page-to-asset mapping. Do not ship the private presentation itself. Refresh the Porto workspace and organisation graphs after content changes, following the workspace agent instructions.

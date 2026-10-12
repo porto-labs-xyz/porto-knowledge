@@ -5,7 +5,7 @@ type: document
 
 # Porto Landing Page
 
-import React, { useState } from 'react' const mission = 'Porto brings artist and label acquisition, licensed artist-specific models, exclusive new music, listening and transparent revenue accounting into one whole solution, with daily payouts as a product target.' const seoDescription = 'Porto is building licensed artist-specific music models, exclusive catalogue and an integrated listening and revenue experience.
+import React, { useState } from 'react' const prototype = 'https://porto-prototype.vercel.app/' const contact = 'mailto:[redacted-email]' const seoDescription = 'Streaming + music generation. Discover Porto: licensed originals, personal variations, artist control and connected royalties. Explore the listening prototype.' const Arrow = () = <span aria-hidden="true"↗</span function PrototypeLink({ className =.
 
 ## Connected knowledge
 
@@ -15,74 +15,23 @@ No outgoing links.
 
 import React, { useState } from 'react'
 
-const mission = 'Porto brings artist and label acquisition, licensed artist-specific models, exclusive new music, listening and transparent revenue accounting into one whole solution, with daily payouts as a product target.'
-const seoDescription = 'Porto is building licensed artist-specific music models, exclusive catalogue and an integrated listening and revenue experience for artists and labels.'
-const prototype = 'https://porto-prototype.vercel.app'
+const prototype = 'https://porto-prototype.vercel.app/'
 const contact = 'mailto:[redacted-email]'
+const seoDescription = 'Streaming + music generation. Discover Porto: licensed originals, personal variations, artist control and connected royalties. Explore the listening prototype.'
 
-function OwnershipDiagram() {
-  return (
-    <figure className="ownership-figure">
-      <svg viewBox="0 0 560 350" role="img" aria-labelledby="ownership-title ownership-description">
-        <title id="ownership-title">One artist. One model. One whole solution.</title>
-        <desc id="ownership-description">Porto connects artist and label relationships, licensed artist-specific models, exclusive music, listening and revenue accounting.</desc>
-        <defs>
-          <pattern id="ownership-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(40)">
-            <line x1="0" y1="0" x2="0" y2="12" stroke="#c1b49b" strokeWidth="1" opacity=".45" />
-          </pattern>
-          <pattern id="distribution-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="translate(5 -2) rotate(40)">
-            <line x1="0" y1="0" x2="0" y2="12" stroke="#c1b49b" strokeWidth="1" opacity=".45" />
-          </pattern>
-        </defs>
-        <g strokeLinecap="round">
-          <circle cx="215" cy="168" r="142" fill="#bf53452b" stroke="#ee6251" strokeWidth="2" />
-          <circle cx="345" cy="168" r="142" fill="#d7c6a91a" stroke="#d7c6a9" strokeWidth="2" />
-          <circle cx="216.5" cy="167" r="141.5" fill="none" stroke="#ee6251" strokeWidth=".75" opacity=".38" />
-          <circle cx="343.5" cy="169" r="142.5" fill="none" stroke="#d7c6a9" strokeWidth=".75" opacity=".34" />
-          <circle cx="215" cy="168" r="142" fill="url(#ownership-hatch)" />
-          <circle cx="345" cy="168" r="142" fill="url(#distribution-hatch)" />
-        </g>
-        <text x="162" y="158">ARTIST</text>
-        <text x="397" y="158">DISTRIBUTOR</text>
-        <text x="280" y="206" className="venn-centre">PORTO</text>
-      </svg>
-      <figcaption>Artist and distributor, brought together in one service.</figcaption>
-    </figure>
-  )
+const Arrow = () => <span aria-hidden="true">↗</span>
+
+function PrototypeLink({ className = 'p-button' , children = 'Try the prototype' }) {
+  return <a className={className} href={prototype} target="_blank" rel="noopener noreferrer">{children} <Arrow /></a>
 }
 
-function PerformerShareGraphic() {
+function ProductScreen({ name, alt, caption, eager = false }) {
   return (
-    <figure className="performer-share">
-      <div className="performer-share-heading">
-        <div>
-          <p className="eyebrow">The artist economics gap</p>
-          <h3>Traditional UK streaming leaves artists with 8p. Porto automatically pays out up to 70p for independent artists.</h3>
-        </div>
-      </div>
-      <svg viewBox="0 0 1000 230" role="img" aria-labelledby="performer-share-title performer-share-description">
-        <title id="performer-share-title">Traditional platforms versus Porto artist claim.</title>
-        <desc id="performer-share-description">A pair of hand-drawn progress bars. The traditional model shows roughly eight pence to the artist for every pound. Porto's model shows up to seventy pence to the artist for every pound.</desc>
-        <defs>
-          <pattern id="performer-share-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
-            <line x1="0" y1="0" x2="0" y2="9" stroke="#ee6251" strokeWidth="1.25" opacity=".72" />
-          </pattern>
-        </defs>
-        <text className="share-label" x="8" y="15"><tspan className="share-label-model">Traditional model</tspan><tspan>: 8p to artist for every £1</tspan></text>
-        <path className="share-track" d="M8 31 C190 27 347 33 506 29 C684 25 837 32 992 28 L991 89 C816 93 668 87 501 91 C334 95 180 87 9 91 Z" />
-        <path className="share-fill" d="M9 32 C31 30 56 31 88 30 L87 90 C55 89 31 90 9 91 Z" />
-        <path className="share-hatch" d="M9 32 C31 30 56 31 88 30 L87 90 C55 89 31 90 9 91 Z" />
-        <path className="share-divider" d="M89 24 C86 46 91 69 87 98" />
-        <text className="share-value" x="49" y="69">~8p</text>
-        <text className="share-total" x="982" y="114">£1.00 generated</text>
-        <text className="share-label" x="8" y="142"><tspan className="share-label-model">Porto's model</tspan><tspan>: up to 70p to artist for every £1</tspan></text>
-        <path className="share-track" d="M8 158 C190 154 347 160 506 156 C684 152 837 159 992 155 L991 216 C816 220 668 214 501 218 C334 222 180 214 9 218 Z" />
-        <path className="share-fill" d="M9 159 C202 156 441 160 699 156 L698 217 C441 220 202 215 9 218 Z" />
-        <path className="share-hatch" d="M9 159 C202 156 441 160 699 156 L698 217 C441 220 202 215 9 218 Z" />
-        <path className="share-divider" d="M699 150 C696 172 702 195 698 225" />
-        <text className="share-value" x="349" y="196">~70p</text>
-        <text className="share-total" x="982" y="229">£1.00 generated</text>
-      </svg>
+    <figure className={`p-screen p-screen-${name}`}>
+      <a href={`/images/october/${name}.webp`} target="_blank" rel="noopener noreferrer" aria-label={`Enlarge ${caption.toLowerCase()} (opens in a new tab)`}>
+        <img src={`/images/october/${name}.webp`} width="1458" height="913" alt={alt} loading={eager ? 'eager' : 'lazy'} fetchPriority={eager ? 'high' : 'auto'} />
+      </a>
+      <figcaption><span>{caption}</span><span>Concept screen <Arrow /></span></figcaption>
     </figure>
   )
 }
@@ -110,139 +59,103 @@ const IndexPage = () => {
   }
 
   return (
-    <>
+    <div className="porto-site" id="home">
       <a className="skip-link" href="#main">Skip to content</a>
-      <header className="site-header">
-        <a className="wordmark" href="#home" aria-label="Porto home"><img className="brand-mark" src="/images/porto-mark-dark-branded.webp" width="64" height="64" alt="Porto" /></a>
+      <header className="p-header">
+        <a className="p-brand" href="#home" aria-label="Porto home"><img src="/images/porto-mark-dark-branded.webp" width="56" height="56" alt="" /><span>PORTO</span></a>
         <nav aria-label="Main navigation">
-          <a href="#how">The Network</a>
-          <a href={prototype} target="_blank" rel="noopener noreferrer">Prototype ↗</a>
-          <a href="#litepaper">Litepaper</a>
-          <a href="https://docs.portolabs.xyz/" target="_blank" rel="noopener noreferrer">Docs</a>
-          <a href="#team">Team</a>
-          <a className="nav-join" href="#join">Join Porto <span aria-hidden="true">↗</span></a>
+          <a href="#product">Product</a>
+          <a href="#artists">For artists</a>
+          <a href="#revenue">Revenue</a>
+          <a href="#ledger">Ledger</a>
         </nav>
+        <PrototypeLink className="p-nav-cta" />
       </header>
 
       <main id="main">
-        <section className="hero section" id="home">
-          <img className="scene hero-scene" src="/images/deck/arch-right.webp" alt="" fetchPriority="high" />
-          <img className="hero-brand-mark" src="/images/porto-mark-dark-branded.webp" width="240" height="240" alt="" aria-hidden="true" />
-          <div className="hero-content">
-            <p className="eyebrow">Licensed artist models. Exclusive music. One whole solution.</p>
-            <h1>One artist.<br /><span className="accent">One licensed model.</span></h1>
-            <p className="hero-description">{mission}</p>
-            <div className="actions">
-              <a className="button button-primary" href={prototype} target="_blank" rel="noopener noreferrer">Explore the prototype <span aria-hidden="true">↗</span></a>
-              <a className="text-link" href="#how">How it works <span aria-hidden="true">↓</span></a>
+        <section className="p-hero p-wrap" aria-labelledby="hero-heading">
+          <div className="p-hero-copy">
+            <p className="p-kicker">Streaming + music generation</p>
+            <h1 id="hero-heading">More music,<br />made to be<br /><span>listened to.</span></h1>
+            <p className="p-lead">Licensed originals. Personal variations.<br />More income to fund the next original.</p>
+            <div className="p-actions"><PrototypeLink /><a className="p-text-link" href="#product">Meet Porto <span aria-hidden="true">↓</span></a></div>
+            <p className="p-micro">Explore the interactive listening prototype.</p>
+          </div>
+          <div className="p-hero-visual">
+            <div className="p-visual-label"><span className="p-dot" /> Your library. A new possibility.</div>
+            <ProductScreen name="listening" eager caption="01 / Press play" alt="Porto listening concept: Afterlight by fictional artist June Arcade, a music library, playback controls and a Speak or type prompt." />
+            <div className="p-prompt"><span className="p-voice-icon" aria-hidden="true"><i /><i /><i /><i /><i /></span><p>“Play June Arcade’s Afterlight.”</p><span>Speak or type</span></div>
+          </div>
+        </section>
+
+        <div className="p-principles p-wrap" aria-label="The Porto experience"><span>Listen to originals</span><span>Make it personal</span><span>Keep the artist connected</span></div>
+
+        <section className="p-section p-wrap" id="product" aria-labelledby="product-heading">
+          <div className="p-section-heading"><p className="p-kicker">01 / Made for listening</p><h2 id="product-heading">Press play.<br />Then talk to Porto.</h2><p className="p-lead">Familiar streaming. Personalised by you.</p></div>
+          <div className="p-product-row">
+            <div className="p-product-copy"><span className="p-step">01 → 02</span><h3>Same song.<br /><span className="p-violet">Your version.</span></h3><p>Ask with your voice or type a request. Porto’s product direction is to turn licensed originals into personal User Variation Tracks, within the permissions set by the artist and rights holders.</p><blockquote>“Remove the guitar.<br />Slow it down.<br />Make it dreamy.”</blockquote><p className="p-caption">A concept request. Full generation capabilities are in development.</p></div>
+            <ProductScreen name="voice" caption="02 / Make it personal" alt="Porto voice request concept with a violet waveform and the request Remove the guitar. Slow it down. Make it dreamy. The resulting variation is attributed to Afterlight by June Arcade." />
+          </div>
+          <div className="p-product-row p-product-reverse">
+            <div className="p-product-copy"><span className="p-step">02 → 03</span><h3>One track.<br />So many possibilities.</h3><p>Find your version. Follow the people who made it. Share a new way to hear a song, with every variation connected to its original artist.</p><p className="p-pullquote">More ways to listen.<br />More ways for a single track<br />to generate royalties.</p><PrototypeLink className="p-text-link" children="Explore the prototype" /></div>
+            <ProductScreen name="creators" caption="03 / Listen. Follow. Share." alt="Porto creator feed concept showing three listener variations of Afterlight: Dreamy, No guitars and Slow drift, with creator portraits and the source artist credited." />
+          </div>
+          <p className="p-disclosure">Product concept screens feature fictional artists and creators. The interactive prototype demonstrates listening, voice/text requests and variations; it does not provide production model generation, licensed catalogue access or live payments.</p>
+        </section>
+
+        <section className="p-section p-artists" id="artists" aria-labelledby="artists-heading">
+          <div className="p-wrap">
+            <div className="p-section-heading p-heading-split"><div><p className="p-kicker">02 / To benefit the artist</p><h2 id="artists-heading">Amplify your catalogue.<br /><span>Keep it yours.</span></h2></div><p className="p-lead">The original stays at the centre. Every new way to listen should create another way to support the artist behind it.</p></div>
+            <div className="p-feature-grid">
+              <article><span className="p-step">01 / Permission</span><h3>Licensed from the start.</h3><p>Work with artists and labels on catalogue permissions and bespoke artist models. One model, built around one artist’s sound, with their approval.</p></article>
+              <article><span className="p-step">02 / Control</span><h3>Your sound. Your say.</h3><p>Artists and rights holders set the creative permissions. Approved variations keep their source connection, with control over rights and release decisions.</p></article>
+              <article><span className="p-step">03 / Income</span><h3>Back to the original.</h3><p>Paid listening to originals and permitted variations funds the source rights holders. Creator credit recognises a contribution; it does not automatically grant a royalty share.</p></article>
             </div>
-          </div>
-          <div className="hero-footer">
-            <span>Independent music. Shared infrastructure.</span>
-            <a href="https://altalab.ai" target="_blank" rel="noopener noreferrer">AltaLab <span className="muted">/ Autumn 2026 cohort</span> <span aria-hidden="true">↗</span></a>
+            <div className="p-section-footer"><p>Artist relationships, licensed music, listening and royalties. One whole solution.</p><a className="p-text-link" href="/book/">Talk to Porto <Arrow /></a></div>
           </div>
         </section>
 
-        <section className="section moat-section" id="how">
-          <img className="scene pillar-scene" src="/images/deck/pillar-centre.webp" alt="" loading="lazy" />
-          <p className="eyebrow">01 / The artist model</p>
-          <h2>A model built around<br /><span className="moat-infrastructure">one artist at a time.</span></h2>
-          <div className="moat-layout">
-            <div className="section-copy">
-              <p>Porto’s direction is one bespoke, licensed model for each artist, developed around their sound with their creative approval.</p>
-              <p>That model can help create new music exclusive to Porto, alongside the artist’s human-made catalogue. Artists and labels keep control of creative approval, rights and release decisions.</p>
-              <p className="bright moat-proof">One artist. One model. An exclusive catalogue built with them.</p>
-              <p className="accent closing-line">More music, with the artist in control.</p>
+        <section className="p-section p-wrap" id="revenue" aria-labelledby="revenue-heading">
+          <div className="p-section-heading"><p className="p-kicker">03 / The proposed revenue model</p><h2 id="revenue-heading">Pay for what<br />you listen to.</h2><p className="p-lead">Listening, without a subscription. A clear share for the music’s rights holders.</p></div>
+          <div className="p-revenue-grid">
+            <article className="p-rate-card"><p className="p-rate-type">Original track</p><h3><strong>90%</strong><span>to the rights-holder pool</span></h3><div className="p-split-bar" aria-hidden="true"><span style={{ width: '90%' }} /><i /></div><p className="p-fee"><span>Licensed originals</span><strong>10% Porto fee</strong></p></article>
+            <article className="p-rate-card p-rate-variation"><p className="p-rate-type">User Variation Track</p><h3><strong>70%</strong><span>to the rights-holder pool</span></h3><div className="p-split-bar" aria-hidden="true"><span style={{ width: '70%' }} /><i /></div><p className="p-fee"><span>Personal variations</span><strong>30% Porto fee</strong></p></article>
+          </div>
+          <div className="p-budget"><div><span className="p-budget-amount">£10</span><span className="p-kicker">Proposed monthly listening cap</span></div><p>At the cap, originals play on and variations pause. Choose to top up or wait for the monthly reset. No automatic extra charges.</p></div>
+          <p className="p-disclosure">Proposed shares apply to allocated track revenue. Individual artist receipts depend on agreed label, publisher and other rights splits. Launch pricing, generation costs and funding for original listening beyond the cap are still being validated.</p>
+        </section>
+
+        <section className="p-section p-ledger" id="ledger" aria-labelledby="ledger-heading">
+          <div className="p-wrap">
+            <div className="p-section-heading p-heading-split"><div><p className="p-kicker">04 / Porto Ledger</p><h2 id="ledger-heading">Every royalty.<br /><span>Connected.</span></h2></div><div><p className="p-lead">See what was paid, how it was calculated and when it arrived.</p><p className="p-target">Product target: daily payouts on Aptos, in USDC.</p></div></div>
+            <ol className="p-ledger-flow"><li><span>01</span><div><h3>Stream</h3><p>Originals and permitted variations.</p></div></li><li><span>02</span><div><h3>Share</h3><p>New versions. New listeners.</p></div></li><li><span>03</span><div><h3>Earn</h3><p>Paid listening returns to the source.</p></div></li></ol>
+            <div className="p-ledger-grid">
+              <figure className="p-ledger-image"><img src="/images/october/ledger.webp" width="1491" height="343" loading="lazy" alt="Illustrative Porto Ledger: an original earns £3 allocated revenue with £2.70 to its rights-holder pool; the Dreamy variation earns £4 with £2.80 to the pool. These are sample amounts." /><figcaption>From the October concept. Illustrative amounts, no money paid.</figcaption></figure>
+              <div className="p-record"><p className="p-kicker">The proposed payout record</p><dl><div><dt>What</dt><dd>USDC amount + royalty obligation</dd></div><div><dt>Who</dt><dd>Recipient + agreed rights version</dd></div><div><dt>How</dt><dd>Allocation rules + transaction record</dd></div><div><dt>When</dt><dd>Payment time + confirmation</dd></div></dl></div>
             </div>
-            <OwnershipDiagram />
-          </div>
-          <PerformerShareGraphic />
-        </section>
-
-        <section className="section network-section" aria-labelledby="network-heading">
-          <img className="scene network-scene" src="/images/deck/column-right.webp" alt="" loading="lazy" />
-          <div className="section-topline"><p className="eyebrow">02 / One whole solution</p><span className="small-note">From artist to listener</span></div>
-          <h2 id="network-heading">From licensed model<br /> to listening and payout.</h2>
-          <p className="section-intro network-intro">Porto is bringing the artist relationship, model development, exclusive music, listening and revenue accounting together in one end-to-end service.</p>
-          <div className="three-grid">
-            <article className="panel step"><span className="step-number">01</span><h3>Acquire and license</h3><p>Work with artists and labels on catalogue rights and permission to develop artist-specific models.</p></article>
-            <article className="panel step"><span className="step-number">02</span><h3>Create exclusive music</h3><p>Build artist-approved models to make new Artist-flow songs alongside each artist’s original work.</p></article>
-            <article className="panel step"><span className="step-number">03</span><h3>Listen. Account. Pay.</h3><p>Bring the catalogue to listeners, show how revenue is accounted for in Porto Ledger, and work toward daily artist payouts.</p></article>
-          </div>
-          <p className="section-anchor">One artist. One model. <span>An exclusive catalogue built with them.</span></p>
-        </section>
-
-        <section className="section product-section" id="product">
-          <div className="product-layout">
-            <div>
-          <p className="eyebrow">03 / The listening experience</p>
-              <h2><span className="familiar-lead">Familiar on the surface.</span><br /> Different at the foundations.</h2>
-              <p className="section-intro">Explore the interactive prototype: a listening experience for original and User Variation Tracks, with artist discovery, track lineage and an illustrative Porto Ledger.</p>
-              <a className="button button-primary" href={prototype} target="_blank" rel="noopener noreferrer">Open the prototype <span aria-hidden="true">↗</span></a>
-              <div className="product-features">
-                <div><span>01</span><h3>Discover</h3><p>Explore artists, original tracks and new variations in one listening feed.</p></div>
-                <div><span>02</span><h3>Follow the story</h3><p>See how tracks connect through artist-led creation and version lineage.</p></div>
-                <div><span>03</span><h3>See the Ledger</h3><p>Explore an illustrative view of listening allocation and payout information.</p></div>
-              </div>
-            </div>
-            <figure className="player-study">
-              <img src="/images/deck/player-responsive.svg" width="154" height="332" alt="Porto deck player showing Half Light by Stefanii, the LIVE · LDN-04 node badge, playback controls and illustrative payouts" loading="lazy" />
-              <figcaption>Product direction. Illustrative interface.</figcaption>
-            </figure>
-          </div>
-          <p className="small-note product-note">Interactive product prototype. Accounts, music permissions, generation and Ledger values are illustrative, not live services or payments.</p>
-          <p className="section-anchor product-anchor">Artist-led music. <span>A whole new listening business.</span></p>
-        </section>
-
-        <section className="section roadmap-section" id="roadmap">
-          <p className="eyebrow">04 / Roadmap</p><h2>Prove the model.<br /> Open the rails.</h2>
-          <div className="roadmap"><div><span className="roadmap-flag">🇬🇧</span><span className="roadmap-date">Q4 2026</span><h3>London testnet</h3><p>1,000 listeners · 100 artists · 5 operators</p></div><div><span className="roadmap-flag">🚀</span><span className="roadmap-date">Q1 2027</span><h3>Mainnet</h3><p>Production settlement</p></div><div><span className="roadmap-flag">🇺🇸</span><span className="roadmap-date">Q2 2027</span><h3>LA</h3></div><div><span className="roadmap-flag">🇿🇦</span><span className="roadmap-date">Q2 2027</span><h3>Cape Town</h3></div><div><span className="roadmap-flag">🇩🇪</span><span className="roadmap-date">Q3 2027</span><h3>Berlin</h3></div><div><span className="roadmap-flag">🇯🇵</span><span className="roadmap-date">Q3 2027</span><h3>Tokyo</h3></div><div><span className="roadmap-flag">🇳🇬</span><span className="roadmap-date">Q4 2027</span><h3>Lagos</h3></div><div><span className="roadmap-flag">🇺🇸</span><span className="roadmap-date">Q4 2027</span><h3>New York</h3><p>Global launch milestone</p></div></div>
-          <div className="roadmap-catalyst"><h3>The Catalyst Moment</h3><p>The city rollout makes Porto locally useful. The catalyst moment turns that proof into cultural momentum: a major artist joins, a meaningful independent label brings catalog depth, or a wider cultural moment makes Porto the visible counterexample to the existing model. The network is ready before that point arrives. The moment gives more artists and listeners a reason to move.</p></div>
-        </section>
-
-        <section className="section team-section" id="team">
-          <p className="eyebrow">05 / The team</p>
-          <h2>Built by people from<br /> both sides of the problem.</h2>
-          <div className="team-grid">
-            <article className="team-member"><img src="/images/richard_headshot.jpg" alt="Richard Melkonian" loading="lazy" width="160" height="190" /><div><p className="eyebrow">Founder</p><h3>Richard Melkonian</h3><p>Protocol Lead at Movement Labs, leading protocol design and implementation from pre-seed to mainnet and post Series A. Previously Parity Technologies, Dapper Labs and Fuel Labs. Former CTO of Inflow Music. Ex-Founder of Melkonian Music Publishing Ltd., representing Arabic and Middle Eastern artists in the UK and collecting royalties across a catalogue of more than 300 artists. Worked closely with PRS for Music and promoted represented artists through concerts at venues including the Royal Albert Hall.</p><a className="text-link" href="https://github.com/0xmovses" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></article>
-            <article className="team-member"><img src="/images/peter-xan.jpg" alt="Peter Xan" loading="lazy" width="160" height="190" /><div><p className="eyebrow">Head of Growth &amp; A&amp;R</p><h3>Peter Xan</h3><p>Growth and strategy across MediaCom, M&amp;C Saatchi, TBWA\Media Arts Lab and BBH. Founder of Thinning Room, developing artists and creator communities. Independent recording artist.</p></div></article>
-          </div>
-          <a className="cohort" href="https://altalab.ai" target="_blank" rel="noopener noreferrer"><img src="/images/altalab-logo.png" alt="AltaLab" loading="lazy" /><span>Autumn 2026 cohort <span className="muted">/ The founder program of AltaIR Capital</span></span><span aria-hidden="true">↗</span></a>
-        </section>
-
-        <section className="section litepaper-section" id="litepaper">
-          <div className="litepaper-intro"><p className="eyebrow">06 / Litepaper</p><h2>The infrastructure behind a new kind of stream.</h2><p>Porto replaces the delivery and settlement layer, so music’s infrastructure can be owned by the industry it’s supposed to serve.</p><p className="litepaper-price">A £5 monthly listener subscription.</p><a className="text-link" href="https://docs.portolabs.xyz" target="_blank" rel="noopener noreferrer">Read the full documentation <span aria-hidden="true">↗</span></a></div>
-          <div className="questions">
-            <details open><summary>The problem Porto solves</summary><p>Even artists with 1M+ monthly streams are struggling to survive. Streaming has scaled consumption, but centralized infrastructure has capped revenue. Labels, publishers and artists do not own the distribution layer. Platforms do. Porto changes the delivery layer itself, rather than wrapping a new payment system around the old one.</p></details>
-            <details><summary>Spotify’s real moat</summary><p>Spotify’s USP isn’t playlists or UI. It’s infrastructure. They built their own global edge compute CDN, a content delivery network optimized for fast audio streaming at scale. That gives Spotify control over performance, cost and data. Artists, labels and publishers do not see the upside. They plug in and get paid pennies.</p></details>
-            <details><summary>The Porto solution</summary><p>Recreate Spotify’s edge CDN model, but decentralized and owned by the music industry. Labels, artists, publishers and curators run nodes that cache and stream content. Each stream pays the rights holder and node operator through micropayment splits. Activity is logged on-chain for auditable, real-time royalties. There is no centralized platform tax, so value flows to participants.</p></details>
-            <details><summary>The network</summary><p>Node operators cache and serve licensed audio. Porto Chain records valid plays and runs the accounting needed to allocate the resulting revenue. It is a music-specific app-chain, designed for stream accounting and royalty settlement rather than general-purpose applications.</p></details>
-            <details><summary>Valid plays and clear accounting</summary><p>Each play must meet the network’s validity requirements before it becomes a settlement record. This creates an auditable trail from a listener’s playback to the work it funded, instead of asking artists and rights holders to accept an opaque report.</p></details>
-            <details><summary>Listener-centric settlement</summary><p>Listener revenue is allocated across the works that listener actually streamed, weighted by valid listening duration. Registered rights splits then determine the rights-holder allocation. Plays accrue during an epoch and settle automatically at its boundary. The Beta specification uses daily epochs.</p></details>
-            <details><summary>The independent artist opportunity</summary><p>There are now 8.2 million self-releasing artists, and their numbers are growing three-and-a-half times faster than their revenues. Porto is the platform for independent artists to grow and flourish with the fanbases they already built. We do not need every listener on day one. We need each artist’s most engaged fans. Artist brings fans. Fans become the network. The network attracts more artists.</p><p className="source-line"><a href="https://www.musicbusinessworldwide.com/global-recorded-music-revenues-rose-6-5-to-36-2bn-in-2024-says-midia-research/" target="_blank" rel="noopener noreferrer">Source: MIDiA Research, reported by Music Business Worldwide ↗</a></p></details>
-            <details><summary>Artist acquisition</summary><p>Artist acquisition is an active part of Porto’s strategy. Active negotiations are under way with major A-list artists, while dedicated A&amp;R efforts are reaching thousands of independent artists. These routes are complementary: major artists can create a defining early moment, while independent artists build the catalog and local communities that make the network durable.</p></details>
-            <details><summary>The long play before the tipping point</summary><p>Porto does not need to replace Spotify overnight. An artist’s most committed fans can be the first listeners on the network. Scale that across thousands of artists and the catalog grows, network effects compound and the next artist has a stronger reason to join.</p></details>
-            <details><summary>An £8 billion UK market</summary><p>UK music contributed a record £8.0 billion to the economy in 2024, generated £4.8 billion in exports and supported 220,000 jobs. This is a major cultural export with an infrastructure ownership problem. The money is there. The growth is real. The question is who captures the value.</p><p className="source-line"><a href="https://www.ukmusic.org/research-reports/this-is-music-2025/" target="_blank" rel="noopener noreferrer">Source: UK Music, This Is Music 2025 ↗</a></p></details>
-            <details><summary>Independent artists already prove the demand</summary><p>Skepta self-released the Mercury Prize-winning <em>Konnichiwa</em> through his own label. Stormzy’s <em>Gang Signs &amp; Prayer</em> was the first grime album to reach UK number one. Little Simz has released through her own label, Age 101, including the Mercury Prize-winning <em>Sometimes I Might Be Introvert</em>. These artists built audiences and cultural value independently. Porto gives that independence an infrastructure layer.</p></details>
-            <details><summary>What exists and what comes next</summary><p>A local, geo-targeted content delivery network is built in the MVP. London is the starting point. The next milestone is a testnet with working streams and payouts, followed by expansion to more cities and mainnet. Opening the rails to other platforms is a roadmap ambition.</p></details>
+            <p className="p-disclosure">Daily settlement is a product target. The prototype Ledger is illustrative. Private listening data and audio stay off chain; payout records are designed to make the money traceable.</p>
           </div>
         </section>
 
-        <section className="section join-section" id="join">
-          <p className="eyebrow">Build the network with us</p>
-          <h2>The music is yours.<br /> The rails can be too.</h2>
-          <p>Artists, labels, node operators and listeners.<br /> Get early access to Porto.</p>
-          <form onSubmit={handleSubmit} className="join-form">
-            <label htmlFor="join-email">Email address</label>
-            <div className="form-row"><input id="join-email" name="email" type="email" autoComplete="email" placeholder="[redacted-email]" required value={email} onChange={(event) => setEmail(event.target.value)} disabled={status === 'sending'} /><button className="button button-primary" type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Joining…' : 'Join The Network'}<span aria-hidden="true">↗</span></button><a className="button button-secondary" href="/book/">Book A Call<span aria-hidden="true">↗</span></a></div>
-            <div className="form-status" role="status" aria-live="polite">{status === 'success' && 'You’re on the list. We’ll be in touch.'}{status === 'error' && <>We couldn’t send that. Please try again or <a href={contact}>email us</a>.</>}</div>
-          </form>
-          <p className="investor-contact">Interested in the round? <a className="text-link" href={`${contact}?subject=Porto%20pitch%20deck`}>Request the deck <span aria-hidden="true">↗</span></a></p>
+        <section className="p-section p-wrap p-next" aria-labelledby="next-heading">
+          <div className="p-section-heading"><p className="p-kicker">05 / What comes next</p><h2 id="next-heading">London first.<br />Expansion follows proof.</h2></div>
+          <div className="p-milestones"><article><p className="p-kicker">Now</p><h3>Listening prototype</h3><p>Explore playback, voice and text requests, variations and track connections.</p><PrototypeLink className="p-text-link" children="Open prototype" /></article><article><p className="p-kicker">Next</p><h3>Controlled artist pilot</h3><p>Licensed catalogue. Real paid listening. Traceable settlement.</p></article><article><p className="p-kicker">Then</p><h3>Repeat what works</h3><p>Measure return listening, sharing and artist income before expanding catalogue and reach.</p></article></div>
+          <div className="p-team-heading"><h2>The music.<br />And the systems.</h2><p>Built by people who know both.</p></div>
+          <div className="p-team-grid">
+            <article><img src="/images/richard_headshot.jpg" alt="" width="112" height="136" loading="lazy" /><div><p className="p-kicker">Technical CEO / Co-founder</p><h3>Richard Melkonian</h3><p>Movement, Parity, Dapper and Fuel. Former CTO of Inflow Music. Publishing experience across 300+ artists.</p></div></article>
+            <article><img src="/images/peter-xan.jpg" alt="" width="112" height="136" loading="lazy" /><div><p className="p-kicker">CMO / Co-founder</p><h3>Peter Xan</h3><p>MediaCom, M&amp;C Saatchi, TBWA and BBH. Founder of Thinning Room. Recording artist and artist manager.</p></div></article>
+          </div>
+          <a className="p-cohort" href="https://altalab.ai" target="_blank" rel="noopener noreferrer"><img src="/images/altalab-logo.png" alt="AltaLab" width="80" height="30" loading="lazy" /><span>Founder programme · Autumn 2026 cohort</span><Arrow /></a>
+        </section>
+
+        <section className="p-section p-join" id="join" aria-labelledby="join-heading">
+          <div className="p-wrap p-join-grid"><div><p className="p-kicker">Be part of what’s next</p><h2 id="join-heading">Made to be<br /><span>listened to.</span></h2><div className="p-actions"><PrototypeLink /><a className="p-text-link" href="/book/">Artists &amp; labels, let’s talk <Arrow /></a></div></div>
+            <div className="p-signup"><h3>Stay close to Porto.</h3><p>Leave your email for product and pilot updates.</p><form onSubmit={handleSubmit}><label htmlFor="email">Email address</label><div className="p-form-row"><input id="email" name="email" type="email" autoComplete="email" placeholder="[redacted-email]" value={email} onChange={(event) => setEmail(event.target.value)} required disabled={status === 'sending'} /><button className="p-button p-button-paper" type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Joining…' : 'Keep me posted'} <Arrow /></button></div><p className="p-form-status" role="status" aria-live="polite">{status === 'success' && 'You’re on the list. We’ll be in touch.'}{status === 'error' && <>Something went wrong. Try again or <a href={contact}>email us</a>.</>}</p></form></div>
+          </div>
         </section>
       </main>
-
-      <footer className="site-footer"><a className="wordmark footer-brand" href="#home" aria-label="Porto home"><img className="brand-mark" src="/images/porto-mark-dark-branded.webp" width="80" height="80" alt="" /><span>PORTO</span></a><p>Music is the foundation.<br />Distribution ownership is the change.</p><div className="footer-links"><a href="https://docs.portolabs.xyz" target="_blank" rel="noopener noreferrer">Docs ↗</a><a href="https://github.com/porto-labs-xyz/porto-core" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href={contact}>Contact ↗</a></div><div className="partner-footer" aria-label="Partners"><a href="https://www.prsformusic.com" target="_blank" rel="noopener noreferrer"><img src="/images/prs-for-music-wordmark.svg" alt="PRS for Music" /></a><a href="https://altalab.ai" target="_blank" rel="noopener noreferrer"><img src="/images/altalab-logo.png" alt="AltaLab" /><span>Autumn Cohort</span></a></div><a className="social-link" href="https://x.com/porto_labs" target="_blank" rel="noopener noreferrer" aria-label="Follow Porto Labs on X (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.4l7.3-8.4L1.9 2h6.5l4.5 6.8L18.9 2Zm-1.1 18h1.7L7.4 3.9H5.6L17.8 20Z" /></svg><span>Follow Porto on X</span></a><span className="copyright">© {new Date().getFullYear()} Porto Labs Ltd.<br />UK Registered Company</span></footer>
-    </>
+      <footer className="p-footer p-wrap"><div className="p-footer-main"><a className="p-brand" href="#home" aria-label="Porto home"><img src="/images/porto-mark-dark-branded.webp" width="56" height="56" alt="" /><span>PORTO</span></a><p>Streaming + music generation.<br />To benefit the artist.</p><nav aria-label="Footer navigation"><PrototypeLink className="p-text-link" children="Prototype" /><a href={contact}>Contact <Arrow /></a><a href="https://x.com/porto_labs" target="_blank" rel="noopener noreferrer">Follow on X <Arrow /></a></nav></div><div className="p-footer-bottom"><span>© {new Date().getFullYear()} Porto Labs Ltd.</span><span>UK registered company</span></div></footer>
+    </div>
   )
 }
 
@@ -251,28 +164,26 @@ export default IndexPage
 export const Head = () => (
   <>
     <html lang="en" />
-    <title>Porto | Licensed artist models. Exclusive music.</title>
+    <title>Porto | More music, made to be listened to.</title>
     <meta name="description" content={seoDescription} />
-    <meta name="keywords" content="licensed artist models, exclusive music, artist-specific models, music listening, transparent music revenue" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.portolabs.xyz/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.portolabs.xyz/" />
-    <meta property="og:title" content="Porto | One artist. One licensed model." />
+    <meta property="og:title" content="Porto | More music, made to be listened to." />
     <meta property="og:description" content={seoDescription} />
     <meta property="og:site_name" content="Porto" />
     <meta property="og:locale" content="en_GB" />
-    <meta property="og:image" content="https://www.portolabs.xyz/images/og-image-bauhaus-1200x630.png?v=20260910-14" />
-    <meta property="og:image:secure_url" content="https://www.portolabs.xyz/images/og-image-bauhaus-1200x630.png?v=20260910-14" />
+    <meta property="og:image" content="https://www.portolabs.xyz/images/october/porto-listening-1200x630.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Porto: Spotify takes 30%. You get pennies." />
+    <meta property="og:image:alt" content="Porto. More music, made to be listened to. The listening concept with licensed originals and personal variations." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Porto | One artist. One licensed model." />
+    <meta name="twitter:title" content="Porto | More music, made to be listened to." />
     <meta name="twitter:description" content={seoDescription} />
-    <meta name="twitter:image" content="https://www.portolabs.xyz/images/og-image-bauhaus-1200x630.png?v=20260910-14" />
-    <meta name="twitter:image:alt" content="Porto: Spotify takes 30%. You get pennies." />
+    <meta name="twitter:image" content="https://www.portolabs.xyz/images/october/porto-listening-1200x630.png" />
+    <meta name="twitter:image:alt" content="Porto. More music, made to be listened to. The listening concept with licensed originals and personal variations." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />

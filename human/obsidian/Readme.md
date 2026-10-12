@@ -5,7 +5,7 @@ type: document
 
 # Readme
 
-Porto Decentralized Streaming Infrastructure Setup Development Site runs at http://localhost:8000 Build Deploy
+Porto Streaming + music generation. Licensed originals, personal variations and connected royalties. The homepage follows the October product presentation. Public claims and image provenance are documented in [CLAUDE.md](CLAUDE.md) and [docs/CONTENT-SOURCES.md](docs/CONTENT-SOURCES.md). [Explore the listening prototype](https://porto-prototype.vercel.app/). Setup Development Site runs at http://localhost:8000 Build.
 
 ## Connected knowledge
 
@@ -15,7 +15,11 @@ No outgoing links.
 
 # Porto
 
-Decentralized Streaming Infrastructure
+Streaming + music generation. Licensed originals, personal variations and connected royalties.
+
+The homepage follows the October product presentation. Public claims and image provenance are documented in [CLAUDE.md](CLAUDE.md) and [docs/CONTENT-SOURCES.md](docs/CONTENT-SOURCES.md).
+
+[Explore the listening prototype](https://porto-prototype.vercel.app/).
 
 ## Setup
 
