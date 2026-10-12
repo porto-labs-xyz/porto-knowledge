@@ -5,7 +5,7 @@ type: document
 
 # Porto Landing Page
 
-import React, { useState } from 'react' const mission = 'We help artists and record labels earn more from streaming by letting them own the network that delivers their music, so they earn from distribution, not just plays.' const seoDescription = 'Artist-owned streaming infrastructure. Porto lets artists and labels own the network that delivers their music.' const contact = 'mailto:[redacted-email]' function.
+import React, { useState } from 'react' const mission = 'Porto brings artist and label acquisition, licensed artist-specific models, exclusive new music, listening and transparent revenue accounting into one whole solution, with daily payouts as a product target.' const seoDescription = 'Porto is building licensed artist-specific music models, exclusive catalogue and an integrated listening and revenue experience.
 
 ## Connected knowledge
 
@@ -15,16 +15,17 @@ No outgoing links.
 
 import React, { useState } from 'react'
 
-const mission = 'We help artists and record labels earn more from streaming by letting them own the network that delivers their music, so they earn from distribution, not just plays.'
-const seoDescription = 'Artist-owned streaming infrastructure. Porto lets artists and labels own the network that delivers their music.'
+const mission = 'Porto brings artist and label acquisition, licensed artist-specific models, exclusive new music, listening and transparent revenue accounting into one whole solution, with daily payouts as a product target.'
+const seoDescription = 'Porto is building licensed artist-specific music models, exclusive catalogue and an integrated listening and revenue experience for artists and labels.'
+const prototype = 'https://porto-prototype.vercel.app'
 const contact = 'mailto:[redacted-email]'
 
 function OwnershipDiagram() {
   return (
     <figure className="ownership-figure">
       <svg viewBox="0 0 560 350" role="img" aria-labelledby="ownership-title ownership-description">
-        <title id="ownership-title">One party. Two revenue lines.</title>
-        <desc id="ownership-description">Artist and distributor overlap at Porto. Artists can earn as rights holders and as network operators.</desc>
+        <title id="ownership-title">One artist. One model. One whole solution.</title>
+        <desc id="ownership-description">Porto connects artist and label relationships, licensed artist-specific models, exclusive music, listening and revenue accounting.</desc>
         <defs>
           <pattern id="ownership-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(40)">
             <line x1="0" y1="0" x2="0" y2="12" stroke="#c1b49b" strokeWidth="1" opacity=".45" />
@@ -45,7 +46,7 @@ function OwnershipDiagram() {
         <text x="397" y="158">DISTRIBUTOR</text>
         <text x="280" y="206" className="venn-centre">PORTO</text>
       </svg>
-      <figcaption>One party. Two revenue lines.</figcaption>
+      <figcaption>Artist and distributor, brought together in one service.</figcaption>
     </figure>
   )
 }
@@ -115,6 +116,7 @@ const IndexPage = () => {
         <a className="wordmark" href="#home" aria-label="Porto home"><img className="brand-mark" src="/images/porto-mark-dark-branded.webp" width="64" height="64" alt="Porto" /></a>
         <nav aria-label="Main navigation">
           <a href="#how">The Network</a>
+          <a href={prototype} target="_blank" rel="noopener noreferrer">Prototype ↗</a>
           <a href="#litepaper">Litepaper</a>
           <a href="https://docs.portolabs.xyz/" target="_blank" rel="noopener noreferrer">Docs</a>
           <a href="#team">Team</a>
@@ -127,12 +129,12 @@ const IndexPage = () => {
           <img className="scene hero-scene" src="/images/deck/arch-right.webp" alt="" fetchPriority="high" />
           <img className="hero-brand-mark" src="/images/porto-mark-dark-branded.webp" width="240" height="240" alt="" aria-hidden="true" />
           <div className="hero-content">
-            <p className="eyebrow">Streaming infrastructure for artists and labels</p>
-            <h1>Spotify takes 30%.<br /><span className="accent">You get pennies.</span></h1>
+            <p className="eyebrow">Licensed artist models. Exclusive music. One whole solution.</p>
+            <h1>One artist.<br /><span className="accent">One licensed model.</span></h1>
             <p className="hero-description">{mission}</p>
             <div className="actions">
-              <a className="button button-primary" href="#join">Join the network <span aria-hidden="true">↗</span></a>
-              <a className="text-link" href="#how">Explore the model <span aria-hidden="true">↓</span></a>
+              <a className="button button-primary" href={prototype} target="_blank" rel="noopener noreferrer">Explore the prototype <span aria-hidden="true">↗</span></a>
+              <a className="text-link" href="#how">How it works <span aria-hidden="true">↓</span></a>
             </div>
           </div>
           <div className="hero-footer">
@@ -143,14 +145,14 @@ const IndexPage = () => {
 
         <section className="section moat-section" id="how">
           <img className="scene pillar-scene" src="/images/deck/pillar-centre.webp" alt="" loading="lazy" />
-          <p className="eyebrow">01 / The inherited moat</p>
-          <h2>Spotify’s USP isn’t playlists or UI.<br /><span className="moat-infrastructure"> It’s infrastructure.</span></h2>
+          <p className="eyebrow">01 / The artist model</p>
+          <h2>A model built around<br /><span className="moat-infrastructure">one artist at a time.</span></h2>
           <div className="moat-layout">
             <div className="section-copy">
-              <p>Platforms own the infrastructure that delivers music. Artists and labels bring the music and the audience, but do not share in the value of distribution.</p>
-              <p>The assumption is that building this infrastructure is a massive undertaking. With AI-powered development and cheap access to extremely fast cloud computing, it no longer has to be.</p>
-              <p className="bright moat-proof">Their custom CDN. We’ve rebuilt it. It works, and it’s performant.</p>
-              <p className="accent closing-line">No more moats where none are needed.</p>
+              <p>Porto’s direction is one bespoke, licensed model for each artist, developed around their sound with their creative approval.</p>
+              <p>That model can help create new music exclusive to Porto, alongside the artist’s human-made catalogue. Artists and labels keep control of creative approval, rights and release decisions.</p>
+              <p className="bright moat-proof">One artist. One model. An exclusive catalogue built with them.</p>
+              <p className="accent closing-line">More music, with the artist in control.</p>
             </div>
             <OwnershipDiagram />
           </div>
@@ -159,28 +161,28 @@ const IndexPage = () => {
 
         <section className="section network-section" aria-labelledby="network-heading">
           <img className="scene network-scene" src="/images/deck/column-right.webp" alt="" loading="lazy" />
-          <div className="section-topline"><p className="eyebrow">02 / The Network</p><span className="small-note">London first</span></div>
-          <h2 id="network-heading">Rebuild the delivery layer.<br /> Share the ownership.</h2>
-          <p className="section-intro network-intro">Platforms own the infrastructure that delivers music. Spotify built its own custom CDN (Content Distribution Network) that serves music at the edge, close to the listener, to guarantee fast, reliable, high-performance streaming on demand.</p>
-          <p className="network-analogy">Porto is closer to radio than a centralized streaming platform: peer-to-peer internet radio where anyone can broadcast and get paid.</p>
+          <div className="section-topline"><p className="eyebrow">02 / One whole solution</p><span className="small-note">From artist to listener</span></div>
+          <h2 id="network-heading">From licensed model<br /> to listening and payout.</h2>
+          <p className="section-intro network-intro">Porto is bringing the artist relationship, model development, exclusive music, listening and revenue accounting together in one end-to-end service.</p>
           <div className="three-grid">
-            <article className="panel step"><span className="step-number">01</span><h3>Run the network</h3><p>Artists, labels and operators run the nodes that cache and stream the catalogue. The people making the music can also deliver it.</p></article>
-            <article className="panel step"><span className="step-number">02</span><h3>Account for every play</h3><p>Valid plays feed an auditable record. Listener revenue is allocated to the music each listener actually streams.</p></article>
-            <article className="panel step"><span className="step-number">03</span><h3>Split the revenue</h3><p>Rights holders, network operators and the protocol receive their share automatically at settlement. Beta is designed around daily settlement.</p></article>
+            <article className="panel step"><span className="step-number">01</span><h3>Acquire and license</h3><p>Work with artists and labels on catalogue rights and permission to develop artist-specific models.</p></article>
+            <article className="panel step"><span className="step-number">02</span><h3>Create exclusive music</h3><p>Build artist-approved models to make new Artist-flow songs alongside each artist’s original work.</p></article>
+            <article className="panel step"><span className="step-number">03</span><h3>Listen. Account. Pay.</h3><p>Bring the catalogue to listeners, show how revenue is accounted for in Porto Ledger, and work toward daily artist payouts.</p></article>
           </div>
-          <p className="section-anchor">They’re not tenants anymore. <span>They’re landlords.</span></p>
+          <p className="section-anchor">One artist. One model. <span>An exclusive catalogue built with them.</span></p>
         </section>
 
         <section className="section product-section" id="product">
           <div className="product-layout">
             <div>
-              <p className="eyebrow">03 / The listening app</p>
+          <p className="eyebrow">03 / The listening experience</p>
               <h2><span className="familiar-lead">Familiar on the surface.</span><br /> Different at the foundations.</h2>
-              <p className="section-intro">Porto’s product direction starts with a listening app. A familiar way to discover and play music, with the network and its economics made visible.</p>
+              <p className="section-intro">Explore the interactive prototype: a listening experience for original and User Variation Tracks, with artist discovery, track lineage and an illustrative Porto Ledger.</p>
+              <a className="button button-primary" href={prototype} target="_blank" rel="noopener noreferrer">Open the prototype <span aria-hidden="true">↗</span></a>
               <div className="product-features">
-                <div><span>01</span><h3>See the route</h3><p>The player is designed to show which node served the track.</p></div>
-                <div><span>02</span><h3>Follow the value</h3><p>Playback and payout visibility bring the economics closer to the listening experience.</p></div>
-                <div><span>03</span><h3>Own the delivery</h3><p>Artists and labels can operate the rails their fans listen through.</p></div>
+                <div><span>01</span><h3>Discover</h3><p>Explore artists, original tracks and new variations in one listening feed.</p></div>
+                <div><span>02</span><h3>Follow the story</h3><p>See how tracks connect through artist-led creation and version lineage.</p></div>
+                <div><span>03</span><h3>See the Ledger</h3><p>Explore an illustrative view of listening allocation and payout information.</p></div>
               </div>
             </div>
             <figure className="player-study">
@@ -188,8 +190,8 @@ const IndexPage = () => {
               <figcaption>Product direction. Illustrative interface.</figcaption>
             </figure>
           </div>
-          <p className="small-note product-note">App features are design targets. The geo-localised delivery network is built in the MVP.</p>
-          <p className="section-anchor product-anchor">Artist brings fans. <span>Fans become the network.</span></p>
+          <p className="small-note product-note">Interactive product prototype. Accounts, music permissions, generation and Ledger values are illustrative, not live services or payments.</p>
+          <p className="section-anchor product-anchor">Artist-led music. <span>A whole new listening business.</span></p>
         </section>
 
         <section className="section roadmap-section" id="roadmap">
@@ -249,14 +251,14 @@ export default IndexPage
 export const Head = () => (
   <>
     <html lang="en" />
-    <title>Porto | Artist-owned streaming infrastructure</title>
+    <title>Porto | Licensed artist models. Exclusive music.</title>
     <meta name="description" content={seoDescription} />
-    <meta name="keywords" content="artist-owned streaming, music streaming infrastructure, music distribution, artist royalties, music CDN" />
+    <meta name="keywords" content="licensed artist models, exclusive music, artist-specific models, music listening, transparent music revenue" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.portolabs.xyz/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.portolabs.xyz/" />
-    <meta property="og:title" content="Porto | Spotify takes 30%. You get pennies." />
+    <meta property="og:title" content="Porto | One artist. One licensed model." />
     <meta property="og:description" content={seoDescription} />
     <meta property="og:site_name" content="Porto" />
     <meta property="og:locale" content="en_GB" />
@@ -267,7 +269,7 @@ export const Head = () => (
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Porto: Spotify takes 30%. You get pennies." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Porto | Spotify takes 30%. You get pennies." />
+    <meta name="twitter:title" content="Porto | One artist. One licensed model." />
     <meta name="twitter:description" content={seoDescription} />
     <meta name="twitter:image" content="https://www.portolabs.xyz/images/og-image-bauhaus-1200x630.png?v=20260910-14" />
     <meta name="twitter:image:alt" content="Porto: Spotify takes 30%. You get pennies." />

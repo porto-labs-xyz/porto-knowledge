@@ -58,13 +58,13 @@ Shares of settled listener revenue. The 70% rights-holder pool is divided by reg
 
 ## Key Lines (do not change without instruction)
 
-Hero headline: "Spotify takes 30%. You get pennies."
+Hero headline: "One artist. One licensed model."
 Restored 10 September 2026 at the user’s request. Keep DM Sans for body text and most section headings. Use IBM Plex Mono in the hero headline, navigation, labels, buttons and percentage figures, plus red monospaced product and join headings and network/product feature headings. Do not use monospace everywhere. Use near-black directional gradients with subtle warm light, following deck slides 14 and 15. The listener preview uses the corrected `player-responsive.svg` at its natural 154:332 ratio; never squash the interface to fit a phone silhouette. Use the hand-drawn P from the “Enhance glassy panels and typography” task as the logo, preserving its square proportions.
 Footer tagline: "Music is the foundation. Distribution ownership is the change."
 Keep detailed economics comparisons in the investor deck. The public site uses the Litepaper for the product and protocol explanation.
-Mission: "We help artists and record labels earn more from streaming by letting them own
-the network that delivers their music, so they earn from distribution, not just plays."
-Anchor line: "They're not tenants anymore. They're landlords."
+Mission: "Porto brings artist and label acquisition, licensed artist-specific models, exclusive new music, listening and transparent revenue accounting into one whole solution, with daily payouts as a product target."
+Prototype: https://porto-prototype.vercel.app
+Anchor line: "One artist. One model. An exclusive catalogue built with them."
 
 ## What This Repo Is
 
