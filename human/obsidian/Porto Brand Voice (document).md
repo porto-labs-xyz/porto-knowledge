@@ -41,7 +41,7 @@ Porto Ledger connects paid listening to the source rights holders. Show what was
 
 - Follow the released Porto Design System. Charcoal, warm paper and coral #EE6251; violet supports voice interaction.
 - DM Sans for body and section headings; IBM Plex Mono for the hero, labels, navigation, buttons and financial figures.
-- Use the approved drawn P. Preserve image proportions. Reuse the October product graphics instead of the old infrastructure, ownership and city-rollout diagrams.
+- Place the approved drawn P directly above “Co-create” in the hero, with a smaller mark on mobile. Preserve image proportions. Reuse the October product graphics instead of the old infrastructure, ownership and city-rollout diagrams.
 - Put primary copy and revenue shares in accessible HTML. Product images can be enlarged and have meaningful alternative text.
 - Direct, concise language for listeners, artists and labels. No em dashes.
 - Show the current product stages: listening prototype, controlled artist pilot, then expansion following evidence. Do not invent launch dates.
