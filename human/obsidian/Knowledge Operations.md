@@ -10,6 +10,12 @@ How organisational knowledge is refreshed, queried and kept connected.
 ## Connected knowledge
 
 - contains_source: [[Documentation build guidance|Documentation build guidance]] (EXTRACTED)
+- contains_source: [[Architecture|Architecture]] (EXTRACTED)
+- contains_source: [[Audio Research|Audio Research]] (EXTRACTED)
+- contains_source: [[Data And Operations|Data And Operations]] (EXTRACTED)
+- contains_source: [[Decisions And Evidence|Decisions And Evidence]] (EXTRACTED)
+- contains_source: [[Development Plan|Development Plan]] (EXTRACTED)
+- contains_source: [[Index|Index]] (EXTRACTED)
 - contains_source: [[Porto Documentation|Porto Documentation]] (EXTRACTED)
 - contains_source: [[Player Contribution Workflow|Player Contribution Workflow]] (EXTRACTED)
 - contains_source: [[Whitepaper Contents|Whitepaper Contents]] (EXTRACTED)
