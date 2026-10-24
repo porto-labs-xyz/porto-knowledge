@@ -84,7 +84,7 @@
       "kind": "restricted_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": null,
+      "source_revision": "5c4b123a98ef196742f542dbd7542200c40c327e",
       "content": null
     },
     {
