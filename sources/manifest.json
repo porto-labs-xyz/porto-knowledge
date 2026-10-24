@@ -89,7 +89,7 @@
       "authority": "implementation_documentation",
       "classification": "restricted_metadata_only",
       "materialize": false,
-      "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2"
+      "source_revision": "aa4c8c9eae21b9a8a6be398284406fe36c96ac04"
     }
   ],
   "documents": [
@@ -547,6 +547,20 @@
       "domain": "knowledge_ops",
       "kind": "implementation",
       "title": "FREQ automatic deployment guidance"
+    },
+    {
+      "path": "freq/docs/hybrid-sampler.md",
+      "source": "freq",
+      "domain": "product_distribution",
+      "kind": "experimental_implementation",
+      "title": "FREQ hybrid sampler experiment"
+    },
+    {
+      "path": "freq/docs/musical-sketches.md",
+      "source": "freq",
+      "domain": "product_distribution",
+      "kind": "experimental_implementation",
+      "title": "FREQ musical sketch experiment"
     }
   ]
 }

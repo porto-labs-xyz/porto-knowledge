@@ -489,6 +489,28 @@
           "Failures, expiry and recovery"
         ]
       }
+    },
+    "concept_freq_audio_experiments": {
+      "label": "FREQ audio experiments",
+      "domain": "product_distribution",
+      "description": "Navigation to experimental FREQ audio implementations and their acceptance boundaries. Verify source and cloud runtime configuration before claiming a feature is enabled or listening acceptance is complete.",
+      "aliases": [
+        "musical sketches",
+        "hybrid sampler"
+      ],
+      "sources": [
+        "freq/docs/hybrid-sampler.md",
+        "freq/docs/musical-sketches.md"
+      ],
+      "source_sections": {
+        "freq/docs/hybrid-sampler.md": [
+          "Real-model listening gate"
+        ],
+        "freq/docs/musical-sketches.md": [
+          "Enable model interpretation",
+          "Evidence and boundaries"
+        ]
+      }
     }
   },
   "relations": [

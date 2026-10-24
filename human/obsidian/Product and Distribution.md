@@ -47,6 +47,8 @@ Music delivery, app-chain architecture and node roles.
 - contains_source: [[London APPROVED- release-profile.schema|London APPROVED: release-profile.schema]] (EXTRACTED)
 - contains_source: [[London APPROVED- source-manifest|London APPROVED: source-manifest]] (EXTRACTED)
 - contains_source: [[London Move storage spike (research)|London Move storage spike (research)]] (EXTRACTED)
+- contains_source: [[FREQ hybrid sampler experiment|FREQ hybrid sampler experiment]] (EXTRACTED)
+- contains_source: [[FREQ musical sketch experiment|FREQ musical sketch experiment]] (EXTRACTED)
 - contains_source: [[Player Prototype (document)|Player Prototype]] (EXTRACTED)
 - contains_source: [[Player Architecture and Behaviour|Player Architecture and Behaviour]] (EXTRACTED)
 - contains_source: [[PIP-2- Network Architecture|PIP-2: Network Architecture]] (EXTRACTED)
@@ -56,6 +58,7 @@ Music delivery, app-chain architecture and node roles.
 - contains: [[London Mainnet architecture (APPROVED)|London Mainnet architecture (APPROVED)]] (EXTRACTED)
 - contains: [[London RocksDB ledger (SUPERSEDED)|London RocksDB ledger (SUPERSEDED)]] (EXTRACTED)
 - contains: [[London Move accounting and storage spike|London Move accounting and storage spike]] (EXTRACTED)
+- contains: [[FREQ audio experiments|FREQ audio experiments]] (EXTRACTED)
 
 ## Source content
 

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "directed": true,
-  "generated_at": "2026-10-24T20:35:31.456486+00:00",
-  "workspace_fingerprint": "sha256:04d9ed0730f3d96ea15b0067734b22af591ad682c516e937a4b5d62b5e7d85d7",
+  "generated_at": "2026-10-24T21:05:45.361205+00:00",
+  "workspace_fingerprint": "sha256:8415c53c58cafb52f1525bb30d655502a06258adf096e04da55be1f7636a9a3e",
   "missing_allowlisted_sources": [],
   "nodes": [
     {
@@ -84,7 +84,7 @@
       "kind": "restricted_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "5c4b123a98ef196742f542dbd7542200c40c327e",
+      "source_revision": null,
       "content": null
     },
     {
@@ -789,7 +789,37 @@
       "kind": "implementation",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2",
+      "source_revision": "aa4c8c9eae21b9a8a6be398284406fe36c96ac04",
+      "content": null
+    },
+    {
+      "id": "doc_freq_docs_hybrid_sampler_md",
+      "type": "document",
+      "label": "FREQ hybrid sampler experiment",
+      "description": "experimental implementation source. restricted_metadata_only.",
+      "source_path": "freq/docs/hybrid-sampler.md",
+      "source_repository": "freq",
+      "authority": "implementation_documentation",
+      "classification": "restricted_metadata_only",
+      "kind": "experimental_implementation",
+      "materialized": false,
+      "source_hash": null,
+      "source_revision": "aa4c8c9eae21b9a8a6be398284406fe36c96ac04",
+      "content": null
+    },
+    {
+      "id": "doc_freq_docs_musical_sketches_md",
+      "type": "document",
+      "label": "FREQ musical sketch experiment",
+      "description": "experimental implementation source. restricted_metadata_only.",
+      "source_path": "freq/docs/musical-sketches.md",
+      "source_repository": "freq",
+      "authority": "implementation_documentation",
+      "classification": "restricted_metadata_only",
+      "kind": "experimental_implementation",
+      "materialized": false,
+      "source_hash": null,
+      "source_revision": "aa4c8c9eae21b9a8a6be398284406fe36c96ac04",
       "content": null
     },
     {
@@ -1892,7 +1922,7 @@
           "source_path": "freq/docs/auto-deploy.md",
           "heading": "Automatic AWS deployments",
           "source_hash": null,
-          "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2",
+          "source_revision": "aa4c8c9eae21b9a8a6be398284406fe36c96ac04",
           "authority": "implementation_documentation",
           "availability": "restricted_metadata_only"
         },
@@ -1900,12 +1930,51 @@
           "source_path": "freq/docs/auto-deploy.md",
           "heading": "Failures, expiry and recovery",
           "source_hash": null,
-          "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2",
+          "source_revision": "aa4c8c9eae21b9a8a6be398284406fe36c96ac04",
           "authority": "implementation_documentation",
           "availability": "restricted_metadata_only"
         }
       ],
       "content": "Source: freq/docs/auto-deploy.md\nAutomatic AWS deployments\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: freq/docs/auto-deploy.md\nFailures, expiry and recovery\nPrivate source: section pointer only. Read in its approved repository."
+    },
+    {
+      "id": "concept_freq_audio_experiments",
+      "type": "concept",
+      "label": "FREQ audio experiments",
+      "description": "Navigation to experimental FREQ audio implementations and their acceptance boundaries. Verify source and cloud runtime configuration before claiming a feature is enabled or listening acceptance is complete.",
+      "aliases": [
+        "musical sketches",
+        "hybrid sampler"
+      ],
+      "authority": "source_grounded",
+      "temporal_scope": "verify_source",
+      "source_details": [
+        {
+          "source_path": "freq/docs/hybrid-sampler.md",
+          "heading": "Real-model listening gate",
+          "source_hash": null,
+          "source_revision": "aa4c8c9eae21b9a8a6be398284406fe36c96ac04",
+          "authority": "implementation_documentation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "freq/docs/musical-sketches.md",
+          "heading": "Enable model interpretation",
+          "source_hash": null,
+          "source_revision": "aa4c8c9eae21b9a8a6be398284406fe36c96ac04",
+          "authority": "implementation_documentation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "freq/docs/musical-sketches.md",
+          "heading": "Evidence and boundaries",
+          "source_hash": null,
+          "source_revision": "aa4c8c9eae21b9a8a6be398284406fe36c96ac04",
+          "authority": "implementation_documentation",
+          "availability": "restricted_metadata_only"
+        }
+      ],
+      "content": "Source: freq/docs/hybrid-sampler.md\nReal-model listening gate\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: freq/docs/musical-sketches.md\nEnable model interpretation\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: freq/docs/musical-sketches.md\nEvidence and boundaries\nPrivate source: section pointer only. Read in its approved repository."
     },
     {
       "id": "route_marketing-deck",
@@ -2463,6 +2532,24 @@
       "confidence": "EXTRACTED",
       "evidence": {
         "source_path": "freq/docs/auto-deploy.md"
+      }
+    },
+    {
+      "source": "domain_product_distribution",
+      "relation": "contains_source",
+      "target": "doc_freq_docs_hybrid_sampler_md",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "freq/docs/hybrid-sampler.md"
+      }
+    },
+    {
+      "source": "domain_product_distribution",
+      "relation": "contains_source",
+      "target": "doc_freq_docs_musical_sketches_md",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "freq/docs/musical-sketches.md"
       }
     },
     {
@@ -3241,6 +3328,31 @@
       "confidence": "EXTRACTED",
       "evidence": {
         "source_path": "freq/docs/auto-deploy.md"
+      }
+    },
+    {
+      "source": "domain_product_distribution",
+      "relation": "contains",
+      "target": "concept_freq_audio_experiments",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "doc_freq_docs_hybrid_sampler_md",
+      "relation": "describes",
+      "target": "concept_freq_audio_experiments",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "freq/docs/hybrid-sampler.md"
+      }
+    },
+    {
+      "source": "doc_freq_docs_musical_sketches_md",
+      "relation": "describes",
+      "target": "concept_freq_audio_experiments",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "freq/docs/musical-sketches.md"
       }
     },
     {
