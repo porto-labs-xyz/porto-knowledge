@@ -81,6 +81,15 @@
       "authority": "approved_implementation_specification",
       "classification": "public",
       "materialize": true
+    },
+    {
+      "id": "freq",
+      "url": "https://github.com/porto-labs-xyz/freq",
+      "workspace_path": "freq",
+      "authority": "implementation_documentation",
+      "classification": "restricted_metadata_only",
+      "materialize": false,
+      "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2"
     }
   ],
   "documents": [
@@ -531,6 +540,13 @@
       "domain": "product_distribution",
       "kind": "research",
       "title": "London Move storage spike (research)"
+    },
+    {
+      "path": "freq/docs/auto-deploy.md",
+      "source": "freq",
+      "domain": "knowledge_ops",
+      "kind": "implementation",
+      "title": "FREQ automatic deployment guidance"
     }
   ]
 }

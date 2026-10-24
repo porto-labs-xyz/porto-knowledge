@@ -470,6 +470,25 @@
           "Approved direction: Move accounting, one streaming-node role"
         ]
       }
+    },
+    "concept_freq_deployment": {
+      "label": "FREQ deployment documentation",
+      "domain": "knowledge_ops",
+      "description": "Navigation to authoritative FREQ deployment guidance. Read the private source for current implementation, validation and release status; graph presence is not runtime evidence.",
+      "aliases": [
+        "FREQ deployment",
+        "automatic deployment",
+        "release validation"
+      ],
+      "sources": [
+        "freq/docs/auto-deploy.md"
+      ],
+      "source_sections": {
+        "freq/docs/auto-deploy.md": [
+          "Automatic AWS deployments",
+          "Failures, expiry and recovery"
+        ]
+      }
     }
   },
   "relations": [
@@ -668,6 +687,13 @@
         "concept_london_evidence"
       ],
       "instruction": "Current agreed direction is Move accounting/payouts, S3 audio and one streaming-node role. Start with the storage spike. The RocksDB-first and hash-only commitment designs are superseded; detailed chapters await coordinated revision. Do not claim production scalability from local collection tests."
+    },
+    "freq-deployment": {
+      "label": "FREQ deployment review",
+      "start": [
+        "concept_freq_deployment"
+      ],
+      "instruction": "Read the registered private deployment source and verify current repository and run evidence. Keep branch validation distinct from merged or deployed behaviour; preserve metadata-only source handling."
     }
   }
 }
