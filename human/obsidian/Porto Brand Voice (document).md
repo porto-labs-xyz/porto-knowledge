@@ -5,7 +5,7 @@ type: document
 
 # Porto Brand Voice
 
-Porto landing page Gatsby static site for Porto. The founder requested a complete homepage redesign on 12 October 2026, using the latest October product presentation. That instruction supersedes the former copy-only constraint and CDN-first narrative. Current product story Porto brings streaming and music generation into one experience: licensed originals, personal User Variation Tracks, creator discovery and.
+Porto landing page Current landing direction, 29 October 2026 The founder now requests a minimal, premium FREQ by Porto Labs stealth landing page. This supersedes the October homepage instructions below, including prominent prototype links and detailed product/revenue sections. Follow docs/CONTENT-SOURCES.md for the current copy, branding, provenance and preservation branch. Use the founder-supplied 27 October v5.
 
 ## Connected knowledge
 
@@ -14,6 +14,10 @@ Porto landing page Gatsby static site for Porto. The founder requested a complet
 ## Source content
 
 # Porto landing page
+
+## Current landing direction, 29 October 2026
+
+The founder now requests a minimal, premium FREQ by Porto Labs stealth landing page. This supersedes the October homepage instructions below, including prominent prototype links and detailed product/revenue sections. Follow `docs/CONTENT-SOURCES.md` for the current copy, branding, provenance and preservation branch. Use the founder-supplied 27 October v5 deck’s Afterimage identity, exact fluid wordmark, orbital artwork, oxblood and bone palette; preserve the approved copy and retain `/book/`, the email waitlist, contact and X links. Keep the October narrative below as historical context, not current public-page requirements. Do not deploy automatically.
 
 Gatsby static site for Porto. The founder requested a complete homepage redesign on 12 October 2026, using the latest October product presentation. That instruction supersedes the former copy-only constraint and CDN-first narrative.
 
