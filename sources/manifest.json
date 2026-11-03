@@ -89,7 +89,7 @@
       "authority": "implementation_documentation",
       "classification": "restricted_metadata_only",
       "materialize": false,
-      "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2"
+      "source_revision": "3668dbd9e5086c566fc79ff1a00c5c4438260c2d"
     }
   ],
   "documents": [
@@ -547,6 +547,27 @@
       "domain": "knowledge_ops",
       "kind": "implementation",
       "title": "FREQ automatic deployment guidance"
+    },
+    {
+      "path": "freq/README.md",
+      "source": "freq",
+      "domain": "knowledge_ops",
+      "kind": "implementation",
+      "title": "FREQ engineering repository"
+    },
+    {
+      "path": "freq/docs/live-test.md",
+      "source": "freq",
+      "domain": "knowledge_ops",
+      "kind": "implementation_operating_guidance",
+      "title": "FREQ listening lab runbook"
+    },
+    {
+      "path": "freq/docs/power.md",
+      "source": "freq",
+      "domain": "knowledge_ops",
+      "kind": "implementation_operating_guidance",
+      "title": "FREQ backend power, rebuild and stable lab address"
     }
   ]
 }
