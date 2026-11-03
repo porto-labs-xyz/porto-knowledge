@@ -489,6 +489,30 @@
           "Failures, expiry and recovery"
         ]
       }
+    },
+    "concept_freq_genre_benchmark": {
+      "label": "FREQ paired genre benchmark",
+      "domain": "product_distribution",
+      "description": "Navigation to the paired genre benchmark implementation and Creative Commons reference candidates. Source, fixture execution, real-model runs, listening decisions and browser acceptance are separate evidence stages.",
+      "aliases": [
+        "Trap benchmark",
+        "genre evaluation",
+        "Creative Commons Trap audio",
+        "Direct versus Qwen"
+      ],
+      "sources": [
+        "freq/docs/benchmark.md",
+        "freq/docs/musical-sketches.md"
+      ],
+      "source_sections": {
+        "freq/docs/benchmark.md": [
+          "Trap genre benchmark",
+          "Creative Commons reference audio"
+        ],
+        "freq/docs/musical-sketches.md": [
+          "Verification and outstanding listening work"
+        ]
+      }
     }
   },
   "relations": [
@@ -694,6 +718,13 @@
         "concept_freq_deployment"
       ],
       "instruction": "Read the registered private deployment source and verify current repository and run evidence. Keep branch validation distinct from merged or deployed behaviour; preserve metadata-only source handling."
+    },
+    "freq-genre-benchmark": {
+      "label": "FREQ genre benchmark review",
+      "start": [
+        "concept_freq_genre_benchmark"
+      ],
+      "instruction": "Read the registered private source and verify exact model/image pins and effective settings. Keep test-imposed musical settings distinct from inferred choices. Do not treat fixtures or generated clips as listening or continuous-browser acceptance. Preserve private media and metadata-only graph handling."
     }
   }
 }
