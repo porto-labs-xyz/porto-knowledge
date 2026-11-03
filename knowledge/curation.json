@@ -474,19 +474,30 @@
     "concept_freq_deployment": {
       "label": "FREQ deployment documentation",
       "domain": "knowledge_ops",
-      "description": "Navigation to authoritative FREQ deployment guidance. Read the private source for current implementation, validation and release status; graph presence is not runtime evidence.",
+      "description": "Navigation to authoritative FREQ deployment, backend power, rebuild and stable-address guidance. Read the private sources for current implementation, validation and release status; configured DNS or graph presence does not establish runtime or listening acceptance.",
       "aliases": [
         "FREQ deployment",
         "automatic deployment",
-        "release validation"
+        "release validation",
+        "FREQ listening lab address",
+        "lab.portolabs.xyz",
+        "FREQ power",
+        "Rebuild FREQ"
       ],
       "sources": [
-        "freq/docs/auto-deploy.md"
+        "freq/docs/auto-deploy.md",
+        "freq/docs/power.md",
+        "freq/docs/live-test.md"
       ],
       "source_sections": {
         "freq/docs/auto-deploy.md": [
           "Automatic AWS deployments",
           "Failures, expiry and recovery"
+        ],
+        "freq/docs/power.md": [
+          "Cost boundary",
+          "Rebuild after account teardown",
+          "Stable listening-lab address"
         ]
       }
     }

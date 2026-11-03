@@ -30,6 +30,25 @@ jobs:
           git clone https://github.com/porto-labs-xyz/PIPs.git workspace/pips
           git clone https://github.com/porto-labs-xyz/docs.git workspace/docs
           git clone https://github.com/porto-labs-xyz/lander.git workspace/porto-landing
+      - name: Read the pinned private FREQ revision
+        id: freq
+        run: |
+          python3 - <<'PY'
+          import json, os
+          with open('sources/manifest.json') as source:
+              manifest = json.load(source)
+          revision = next(repo['source_revision'] for repo in manifest['repositories'] if repo['id'] == 'freq')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              print(f'revision={revision}', file=output)
+          PY
+      - name: Check out private FREQ sources for metadata-only registration
+        uses: actions/checkout@v4
+        with:
+          repository: porto-labs-xyz/freq
+          ref: ${{ steps.freq.outputs.revision }}
+          token: ${{ secrets.PORTO_KNOWLEDGE_SOURCES_TOKEN }}
+          path: workspace/freq
+          persist-credentials: false
       - name: Build and verify projections
         run: |
           python3 scripts/refresh.py --workspace workspace
