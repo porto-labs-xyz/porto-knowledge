@@ -502,7 +502,8 @@
       ],
       "sources": [
         "freq-native/docs/NATIVE-STATUS.md",
-        "freq-native/docs/IOS-SIMULATOR.md"
+        "freq-native/docs/IOS-SIMULATOR.md",
+        "freq-native/.github/pull_request_template.md"
       ],
       "source_sections": {
         "freq-native/docs/NATIVE-STATUS.md": [
@@ -517,6 +518,11 @@
           "Download a build for cofounders",
           "Browser testing with Appetize",
           "What this preview can test"
+        ],
+        "freq-native/.github/pull_request_template.md": [
+          "Description",
+          "Changelog",
+          "Testing"
         ]
       }
     }

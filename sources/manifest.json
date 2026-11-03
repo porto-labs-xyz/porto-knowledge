@@ -98,7 +98,7 @@
       "authority": "prototype_implementation",
       "classification": "restricted_metadata_only",
       "materialize": false,
-      "source_revision": "741007103c69463e452f5aa4cd7a2f0dda17cdfe"
+      "source_revision": "b7a8c5dcf92b6effb8106add98c18e4a05111504"
     }
   ],
   "documents": [
@@ -570,6 +570,13 @@
       "domain": "product_distribution",
       "kind": "implementation_operating_guidance",
       "title": "FREQ pre-TestFlight simulator testing"
+    },
+    {
+      "path": "freq-native/.github/pull_request_template.md",
+      "source": "freq-native",
+      "domain": "product_distribution",
+      "kind": "operating_guidance",
+      "title": "FREQ native default pull request template"
     }
   ]
 }
