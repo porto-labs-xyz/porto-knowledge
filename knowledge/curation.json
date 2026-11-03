@@ -489,6 +489,36 @@
           "Failures, expiry and recovery"
         ]
       }
+    },
+    "concept_freq_native_v139": {
+      "label": "FREQ v139 native clients",
+      "domain": "product_distribution",
+      "description": "Private native room integration slice. Read source status before claiming complete apps or TestFlight acceptance.",
+      "aliases": [
+        "SwiftUI",
+        "Android Compose",
+        "FREQ native",
+        "TestFlight"
+      ],
+      "sources": [
+        "freq-native/docs/NATIVE-STATUS.md",
+        "freq-native/docs/IOS-SIMULATOR.md"
+      ],
+      "source_sections": {
+        "freq-native/docs/NATIVE-STATUS.md": [
+          "Scope and provenance",
+          "Implemented source",
+          "Validation and evidence",
+          "Required server and distribution decisions",
+          "Remaining acceptance"
+        ],
+        "freq-native/docs/IOS-SIMULATOR.md": [
+          "On your Mac",
+          "Download a build for cofounders",
+          "Browser testing with Appetize",
+          "What this preview can test"
+        ]
+      }
     }
   },
   "relations": [
@@ -694,6 +724,13 @@
         "concept_freq_deployment"
       ],
       "instruction": "Read the registered private deployment source and verify current repository and run evidence. Keep branch validation distinct from merged or deployed behaviour; preserve metadata-only source handling."
+    },
+    "freq-native": {
+      "label": "FREQ v139 native implementation",
+      "start": [
+        "concept_freq_native_v139"
+      ],
+      "instruction": "Use the v139 handoff and active apps directory. Distinguish fixture, compilation, staging audio and TestFlight evidence. Native auth and signing require approved server/team configuration."
     }
   }
 }
