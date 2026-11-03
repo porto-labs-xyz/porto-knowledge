@@ -89,7 +89,7 @@
       "authority": "implementation_documentation",
       "classification": "restricted_metadata_only",
       "materialize": false,
-      "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2"
+      "source_revision": "3e9195c99513c59bdc835ee0277aea7fb3dcb652"
     }
   ],
   "documents": [
@@ -547,6 +547,20 @@
       "domain": "knowledge_ops",
       "kind": "implementation",
       "title": "FREQ automatic deployment guidance"
+    },
+    {
+      "path": "freq/docs/benchmark.md",
+      "source": "freq",
+      "domain": "product_distribution",
+      "kind": "implementation",
+      "title": "FREQ benchmark runner and genre evidence gate"
+    },
+    {
+      "path": "freq/docs/musical-sketches.md",
+      "source": "freq",
+      "domain": "product_distribution",
+      "kind": "implementation",
+      "title": "FREQ musical sketch experiment"
     }
   ]
 }
