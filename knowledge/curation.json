@@ -489,6 +489,29 @@
           "Failures, expiry and recovery"
         ]
       }
+    },
+    "concept_freq_first_conversation": {
+      "label": "FREQ first conversation (INTERACTION PROPOSAL)",
+      "domain": "design_system",
+      "description": "Navigation to the private console interaction prototype, its proposed journey, source references and validation limits. Branch publication is not approval or deployment.",
+      "aliases": [
+        "FREQ onboarding",
+        "first conversation",
+        "console prototype"
+      ],
+      "sources": [
+        "freq-console-prototype/README.md",
+        "design/design-notes.md"
+      ],
+      "source_sections": {
+        "freq-console-prototype/README.md": [
+          "Journey",
+          "Visual and interaction sources",
+          "Boundaries",
+          "Accessibility",
+          "Validation checkpoint"
+        ]
+      }
     }
   },
   "relations": [
@@ -606,6 +629,21 @@
       "concept_london_move_storage",
       "informs",
       "concept_london_settlement"
+    ],
+    [
+      "concept_freq_first_conversation",
+      "references",
+      "concept_design_system"
+    ],
+    [
+      "concept_freq_first_conversation",
+      "requires_review",
+      "concept_brand_voice"
+    ],
+    [
+      "concept_freq_first_conversation",
+      "requires",
+      "concept_knowledge_refresh"
     ]
   ],
   "routes": {
@@ -694,6 +732,15 @@
         "concept_freq_deployment"
       ],
       "instruction": "Read the registered private deployment source and verify current repository and run evidence. Keep branch validation distinct from merged or deployed behaviour; preserve metadata-only source handling."
+    },
+    "freq-console-prototype": {
+      "label": "FREQ console prototype",
+      "start": [
+        "concept_freq_first_conversation",
+        "concept_design_system",
+        "concept_brand_voice"
+      ],
+      "instruction": "Read the private prototype source and deck-specific design guidance. Distinguish proposed interaction, scripted browser behaviour, verified checks and deployed model capabilities. Preserve metadata-only handling."
     }
   }
 }

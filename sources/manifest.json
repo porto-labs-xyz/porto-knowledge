@@ -90,6 +90,15 @@
       "classification": "restricted_metadata_only",
       "materialize": false,
       "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2"
+    },
+    {
+      "id": "freq-console-prototype",
+      "url": "https://github.com/porto-labs-xyz/freq-console-prototype",
+      "workspace_path": "freq-console-prototype",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false,
+      "source_revision": "458bca866174709ea7d96e990f472fe136d1ee4a"
     }
   ],
   "documents": [
@@ -547,6 +556,13 @@
       "domain": "knowledge_ops",
       "kind": "implementation",
       "title": "FREQ automatic deployment guidance"
+    },
+    {
+      "path": "freq-console-prototype/README.md",
+      "source": "freq-console-prototype",
+      "domain": "design_system",
+      "kind": "prototype",
+      "title": "FREQ first conversation prototype"
     }
   ]
 }
