@@ -90,6 +90,15 @@
       "classification": "restricted_metadata_only",
       "materialize": false,
       "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2"
+    },
+    {
+      "id": "freq-native",
+      "url": "https://github.com/porto-labs-xyz/freq-native",
+      "workspace_path": "freq-handoff-bliss/FREQ-Richard-v139",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false,
+      "source_revision": "12dba8e8f1fb8de111c107bb829f34d82fe16130"
     }
   ],
   "documents": [
@@ -547,6 +556,13 @@
       "domain": "knowledge_ops",
       "kind": "implementation",
       "title": "FREQ automatic deployment guidance"
+    },
+    {
+      "path": "freq-handoff-bliss/FREQ-Richard-v139/docs/NATIVE-STATUS.md",
+      "source": "freq-native",
+      "domain": "product_distribution",
+      "kind": "implementation_status",
+      "title": "FREQ v139 native client implementation status"
     }
   ]
 }
