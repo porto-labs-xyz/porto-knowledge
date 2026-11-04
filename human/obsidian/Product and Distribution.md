@@ -9,6 +9,17 @@ Music delivery, app-chain architecture and node roles.
 
 ## Connected knowledge
 
+- contains_source: [[KilnOS Tauri desktop client|KilnOS Tauri desktop client]] (EXTRACTED)
+- contains_source: [[KilnOS shared web client|KilnOS shared web client]] (EXTRACTED)
+- contains_source: [[KilnOS authenticated API contract|KilnOS authenticated API contract]] (EXTRACTED)
+- contains_source: [[KilnOS prototype implementation and evidence|KilnOS prototype implementation and evidence]] (EXTRACTED)
+- contains_source: [[KilnOS prototype acceptance procedure|KilnOS prototype acceptance procedure]] (EXTRACTED)
+- contains_source: [[KilnOS reproducible model runtime builds|KilnOS reproducible model runtime builds]] (EXTRACTED)
+- contains_source: [[KilnOS model sources and runtime gates|KilnOS model sources and runtime gates]] (EXTRACTED)
+- contains_source: [[KilnOS isolated platform deployment runbook|KilnOS isolated platform deployment runbook]] (EXTRACTED)
+- contains_source: [[KilnOS deterministic branded rendering|KilnOS deterministic branded rendering]] (EXTRACTED)
+- contains_source: [[KilnOS durable workflow and recovery|KilnOS durable workflow and recovery]] (EXTRACTED)
+- contains_source: [[KilnOS proposed build specification|KilnOS proposed build specification]] (EXTRACTED)
 - contains_source: [[London APPROVED- Status, approval and exact scope|London APPROVED: Status, approval and exact scope]] (EXTRACTED)
 - contains_source: [[London APPROVED- Executive architecture|London APPROVED: Executive architecture]] (EXTRACTED)
 - contains_source: [[London APPROVED- System architecture and ownership|London APPROVED: System architecture and ownership]] (EXTRACTED)
@@ -56,6 +67,8 @@ Music delivery, app-chain architecture and node roles.
 - contains: [[London Mainnet architecture (APPROVED)|London Mainnet architecture (APPROVED)]] (EXTRACTED)
 - contains: [[London RocksDB ledger (SUPERSEDED)|London RocksDB ledger (SUPERSEDED)]] (EXTRACTED)
 - contains: [[London Move accounting and storage spike|London Move accounting and storage spike]] (EXTRACTED)
+- contains: [[KilnOS prototype implementation|KilnOS prototype implementation]] (EXTRACTED)
+- contains: [[KilnOS proposed cloud prototype|KilnOS proposed cloud prototype]] (EXTRACTED)
 
 ## Source content
 
