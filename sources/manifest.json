@@ -90,6 +90,15 @@
       "classification": "restricted_metadata_only",
       "materialize": false,
       "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2"
+    },
+    {
+      "id": "kilnos",
+      "url": "https://github.com/porto-labs-xyz/KilnOS",
+      "workspace_path": "KilnOS",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false,
+      "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41"
     }
   ],
   "documents": [
@@ -547,6 +556,116 @@
       "domain": "knowledge_ops",
       "kind": "implementation",
       "title": "FREQ automatic deployment guidance"
+    },
+    {
+      "path": "KilnOS/docs/DELIVERY.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "implementation_status",
+      "title": "KilnOS prototype implementation and evidence",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/docs/platform.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "implementation_operating_guidance",
+      "title": "KilnOS isolated platform deployment runbook",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/docs/models.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "implementation_operating_guidance",
+      "title": "KilnOS model sources and runtime gates",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/docs/workflow.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "implementation_operating_guidance",
+      "title": "KilnOS durable workflow and recovery",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "design/kilnos-prototype-build-spec-2026-11-04.md",
+      "source": "workspace-guidance",
+      "domain": "product_distribution",
+      "kind": "restricted_prototype_specification",
+      "title": "KilnOS proposed build specification",
+      "authority": "proposed_implementation_specification",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/docs/model-builds.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "implementation_operating_guidance",
+      "title": "KilnOS reproducible model runtime builds",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/docs/rendering.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "prototype_implementation",
+      "title": "KilnOS deterministic branded rendering",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/docs/evaluation.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "acceptance_policy",
+      "title": "KilnOS prototype acceptance procedure",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/contracts/README.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "implementation_contract",
+      "title": "KilnOS authenticated API contract",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/apps/web/README.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "prototype_implementation",
+      "title": "KilnOS shared web client",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/apps/desktop/README.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "prototype_implementation",
+      "title": "KilnOS Tauri desktop client",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
     }
   ]
 }

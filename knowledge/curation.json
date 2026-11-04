@@ -489,6 +489,90 @@
           "Failures, expiry and recovery"
         ]
       }
+    },
+    "concept_kilnos_prototype_implementation": {
+      "label": "KilnOS prototype implementation",
+      "domain": "product_distribution",
+      "description": "Private application implementation and evidence status. Source and fixture validation are distinct from cloud deployment, model evaluation and team acceptance. Consult the pinned source sections before claiming delivery.",
+      "aliases": [
+        "KilnOS",
+        "KilnOS implementation",
+        "KilnOS delivery evidence",
+        "KilnOS infrastructure isolation"
+      ],
+      "sources": [
+        "KilnOS/docs/DELIVERY.md",
+        "KilnOS/docs/platform.md",
+        "KilnOS/docs/models.md",
+        "KilnOS/docs/workflow.md",
+        "KilnOS/docs/model-builds.md",
+        "KilnOS/docs/rendering.md",
+        "KilnOS/docs/evaluation.md",
+        "KilnOS/contracts/README.md",
+        "KilnOS/apps/web/README.md",
+        "KilnOS/apps/desktop/README.md"
+      ],
+      "source_sections": {
+        "KilnOS/docs/DELIVERY.md": [
+          "Scope and status",
+          "Decisions enforced by source",
+          "Evidence classes",
+          "Remaining acceptance gates"
+        ],
+        "KilnOS/docs/platform.md": [
+          "Ownership and residency",
+          "Observed hosting inputs, 4 November 2026",
+          "Workflow and adapter contract"
+        ],
+        "KilnOS/docs/models.md": [
+          "Implemented serving boundary",
+          "Evidence still required"
+        ],
+        "KilnOS/docs/workflow.md": [
+          "Entrypoints",
+          "Submission, results and recovery",
+          "Cancellation, deletion and limits"
+        ],
+        "KilnOS/docs/model-builds.md": [
+          "Pinned inputs",
+          "Build and check",
+          "Licences and remaining evidence"
+        ],
+        "KilnOS/docs/rendering.md": [
+          "Deterministic ten-second renderer"
+        ],
+        "KilnOS/docs/evaluation.md": [
+          "Prototype acceptance procedure"
+        ],
+        "KilnOS/contracts/README.md": [
+          "Public API v1"
+        ],
+        "KilnOS/apps/web/README.md": [
+          "Kiln web workspace"
+        ],
+        "KilnOS/apps/desktop/README.md": [
+          "Kiln desktop"
+        ]
+      }
+    },
+    "concept_kilnos_cloud_prototype": {
+      "label": "KilnOS proposed cloud prototype",
+      "domain": "product_distribution",
+      "description": "Proposed creative application build specification. This proposal alone is not deployed or benchmarked implementation evidence.",
+      "aliases": [
+        "KilnOS specification",
+        "KilnOS proposal"
+      ],
+      "sources": [
+        "design/kilnos-prototype-build-spec-2026-11-04.md"
+      ],
+      "source_sections": {
+        "design/kilnos-prototype-build-spec-2026-11-04.md": [
+          "1. The prototype we are building",
+          "9. Evaluation and acceptance",
+          "12. Decisions to close at kickoff"
+        ]
+      }
     }
   },
   "relations": [
@@ -606,6 +690,21 @@
       "concept_london_move_storage",
       "informs",
       "concept_london_settlement"
+    ],
+    [
+      "concept_kilnos_prototype_implementation",
+      "references",
+      "concept_kilnos_cloud_prototype"
+    ],
+    [
+      "domain_knowledge_ops",
+      "tracks",
+      "concept_kilnos_prototype_implementation"
+    ],
+    [
+      "concept_kilnos_prototype_implementation",
+      "requires",
+      "concept_knowledge_refresh"
     ]
   ],
   "routes": {
@@ -694,6 +793,15 @@
         "concept_freq_deployment"
       ],
       "instruction": "Read the registered private deployment source and verify current repository and run evidence. Keep branch validation distinct from merged or deployed behaviour; preserve metadata-only source handling."
+    },
+    "kilnos-implementation": {
+      "label": "KilnOS implementation",
+      "start": [
+        "concept_kilnos_prototype_implementation",
+        "concept_kilnos_cloud_prototype",
+        "concept_knowledge_refresh"
+      ],
+      "instruction": "Read the pinned private implementation/status sections and distinguish source/fixture checks, cloud deployment and model/user acceptance. Keep KilnOS infrastructure ownership isolated from older AWS resources. Do not materialize private source prose or operational inventories."
     }
   }
 }
