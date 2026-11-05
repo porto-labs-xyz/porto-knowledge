@@ -84,7 +84,7 @@
       "kind": "prototype_implementation",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+      "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
       "content": null
     },
     {
@@ -99,7 +99,7 @@
       "kind": "prototype_implementation",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+      "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
       "content": null
     },
     {
@@ -114,7 +114,7 @@
       "kind": "implementation_contract",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+      "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
       "content": null
     },
     {
@@ -129,7 +129,7 @@
       "kind": "implementation_status",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+      "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
       "content": null
     },
     {
@@ -144,7 +144,7 @@
       "kind": "acceptance_policy",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+      "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
       "content": null
     },
     {
@@ -159,7 +159,7 @@
       "kind": "implementation_operating_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+      "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
       "content": null
     },
     {
@@ -174,7 +174,7 @@
       "kind": "implementation_operating_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+      "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
       "content": null
     },
     {
@@ -189,7 +189,7 @@
       "kind": "implementation_operating_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+      "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
       "content": null
     },
     {
@@ -204,7 +204,7 @@
       "kind": "prototype_implementation",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+      "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
       "content": null
     },
     {
@@ -219,7 +219,7 @@
       "kind": "implementation_operating_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+      "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
       "content": null
     },
     {
@@ -2090,7 +2090,7 @@
           "source_path": "KilnOS/docs/DELIVERY.md",
           "heading": "Scope and status",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2098,7 +2098,7 @@
           "source_path": "KilnOS/docs/DELIVERY.md",
           "heading": "Decisions enforced by source",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2106,7 +2106,7 @@
           "source_path": "KilnOS/docs/DELIVERY.md",
           "heading": "Evidence classes",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2114,7 +2114,7 @@
           "source_path": "KilnOS/docs/DELIVERY.md",
           "heading": "Remaining acceptance gates",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2122,7 +2122,7 @@
           "source_path": "KilnOS/docs/platform.md",
           "heading": "Ownership and residency",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2130,7 +2130,7 @@
           "source_path": "KilnOS/docs/platform.md",
           "heading": "Observed hosting inputs, 4 November 2026",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2138,7 +2138,7 @@
           "source_path": "KilnOS/docs/platform.md",
           "heading": "Workflow and adapter contract",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2146,7 +2146,7 @@
           "source_path": "KilnOS/docs/models.md",
           "heading": "Implemented serving boundary",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2154,7 +2154,7 @@
           "source_path": "KilnOS/docs/models.md",
           "heading": "Evidence still required",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2162,7 +2162,7 @@
           "source_path": "KilnOS/docs/workflow.md",
           "heading": "Entrypoints",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2170,7 +2170,7 @@
           "source_path": "KilnOS/docs/workflow.md",
           "heading": "Submission, results and recovery",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2178,7 +2178,7 @@
           "source_path": "KilnOS/docs/workflow.md",
           "heading": "Cancellation, deletion and limits",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2186,7 +2186,7 @@
           "source_path": "KilnOS/docs/model-builds.md",
           "heading": "Pinned inputs",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2194,7 +2194,7 @@
           "source_path": "KilnOS/docs/model-builds.md",
           "heading": "Build and check",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2202,7 +2202,7 @@
           "source_path": "KilnOS/docs/model-builds.md",
           "heading": "Licences and remaining evidence",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2210,7 +2210,7 @@
           "source_path": "KilnOS/docs/rendering.md",
           "heading": "Deterministic ten-second renderer",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2218,7 +2218,7 @@
           "source_path": "KilnOS/docs/evaluation.md",
           "heading": "Prototype acceptance procedure",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2226,7 +2226,7 @@
           "source_path": "KilnOS/contracts/README.md",
           "heading": "Public API v1",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2234,7 +2234,7 @@
           "source_path": "KilnOS/apps/web/README.md",
           "heading": "Kiln web workspace",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2242,7 +2242,7 @@
           "source_path": "KilnOS/apps/desktop/README.md",
           "heading": "Kiln desktop",
           "source_hash": null,
-          "source_revision": "a44d89d30d201aaf3e3e9c46f758b0ebcc9fae41",
+          "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         }
