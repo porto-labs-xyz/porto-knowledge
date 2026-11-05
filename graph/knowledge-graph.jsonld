@@ -84,7 +84,7 @@
       "kind": "prototype_implementation",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -99,7 +99,7 @@
       "kind": "prototype_implementation",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -114,7 +114,7 @@
       "kind": "implementation_contract",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -129,7 +129,22 @@
       "kind": "implementation_status",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
+      "content": null
+    },
+    {
+      "id": "doc_kilnos_docs_deployment_md",
+      "type": "document",
+      "label": "KilnOS single-dev release operations and acceptance gates",
+      "description": "implementation operating guidance source. restricted_metadata_only.",
+      "source_path": "KilnOS/docs/deployment.md",
+      "source_repository": "kilnos",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "kind": "implementation_operating_guidance",
+      "materialized": false,
+      "source_hash": null,
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -144,7 +159,7 @@
       "kind": "acceptance_policy",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -159,7 +174,7 @@
       "kind": "implementation_operating_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -174,7 +189,7 @@
       "kind": "implementation_operating_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -189,7 +204,7 @@
       "kind": "implementation_operating_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -204,7 +219,7 @@
       "kind": "implementation_operating_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -219,7 +234,7 @@
       "kind": "prototype_implementation",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -234,7 +249,7 @@
       "kind": "implementation_language_policy",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -249,7 +264,7 @@
       "kind": "implementation_operating_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
       "content": null
     },
     {
@@ -2120,7 +2135,7 @@
           "source_path": "KilnOS/docs/DELIVERY.md",
           "heading": "Scope and status",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2128,7 +2143,7 @@
           "source_path": "KilnOS/docs/DELIVERY.md",
           "heading": "Decisions enforced by source",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2136,7 +2151,7 @@
           "source_path": "KilnOS/docs/DELIVERY.md",
           "heading": "Evidence classes",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2144,7 +2159,7 @@
           "source_path": "KilnOS/docs/DELIVERY.md",
           "heading": "Remaining acceptance gates",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2152,7 +2167,7 @@
           "source_path": "KilnOS/docs/platform.md",
           "heading": "Ownership and residency",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2160,7 +2175,7 @@
           "source_path": "KilnOS/docs/platform.md",
           "heading": "Observed hosting inputs, 4 November 2026",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2168,7 +2183,7 @@
           "source_path": "KilnOS/docs/platform.md",
           "heading": "Workflow and adapter contract",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2176,7 +2191,7 @@
           "source_path": "KilnOS/docs/models.md",
           "heading": "Implemented serving boundary",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2184,7 +2199,7 @@
           "source_path": "KilnOS/docs/models.md",
           "heading": "Evidence still required",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2192,7 +2207,7 @@
           "source_path": "KilnOS/docs/workflow.md",
           "heading": "Entrypoints",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2200,7 +2215,7 @@
           "source_path": "KilnOS/docs/workflow.md",
           "heading": "Submission, results and recovery",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2208,7 +2223,7 @@
           "source_path": "KilnOS/docs/workflow.md",
           "heading": "Cancellation, deletion and limits",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2216,7 +2231,7 @@
           "source_path": "KilnOS/docs/model-builds.md",
           "heading": "Pinned inputs",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2224,7 +2239,7 @@
           "source_path": "KilnOS/docs/model-builds.md",
           "heading": "Build and check",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2232,7 +2247,7 @@
           "source_path": "KilnOS/docs/model-builds.md",
           "heading": "Licences and remaining evidence",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2240,7 +2255,7 @@
           "source_path": "KilnOS/docs/rendering.md",
           "heading": "Deterministic ten-second renderer",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2248,7 +2263,7 @@
           "source_path": "KilnOS/docs/evaluation.md",
           "heading": "Prototype acceptance procedure",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2256,7 +2271,7 @@
           "source_path": "KilnOS/contracts/README.md",
           "heading": "Public API v1",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2264,7 +2279,7 @@
           "source_path": "KilnOS/apps/web/README.md",
           "heading": "Kiln web workspace",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2272,7 +2287,7 @@
           "source_path": "KilnOS/apps/desktop/README.md",
           "heading": "Kiln desktop",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2280,7 +2295,7 @@
           "source_path": "KilnOS/docs/preview-rust-handoff.md",
           "heading": "Preview rebase after the Rust migration",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2288,7 +2303,7 @@
           "source_path": "KilnOS/docs/rust-tooling.md",
           "heading": "Inventory",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2296,7 +2311,7 @@
           "source_path": "KilnOS/docs/rust-tooling.md",
           "heading": "Model dependency boundary",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2304,12 +2319,28 @@
           "source_path": "KilnOS/docs/rust-tooling.md",
           "heading": "Validation and safeguards",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "KilnOS/docs/deployment.md",
+          "heading": "Single-dev releases",
+          "source_hash": null,
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "KilnOS/docs/deployment.md",
+          "heading": "Readiness and demo acceptance",
+          "source_hash": null,
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         }
       ],
-      "content": "Source: KilnOS/docs/DELIVERY.md\nScope and status\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/DELIVERY.md\nDecisions enforced by source\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/DELIVERY.md\nEvidence classes\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/DELIVERY.md\nRemaining acceptance gates\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/platform.md\nOwnership and residency\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/platform.md\nObserved hosting inputs, 4 November 2026\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/platform.md\nWorkflow and adapter contract\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/models.md\nImplemented serving boundary\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/models.md\nEvidence still required\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/workflow.md\nEntrypoints\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/workflow.md\nSubmission, results and recovery\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/workflow.md\nCancellation, deletion and limits\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/model-builds.md\nPinned inputs\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/model-builds.md\nBuild and check\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/model-builds.md\nLicences and remaining evidence\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/rendering.md\nDeterministic ten-second renderer\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/evaluation.md\nPrototype acceptance procedure\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/contracts/README.md\nPublic API v1\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/apps/web/README.md\nKiln web workspace\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/apps/desktop/README.md\nKiln desktop\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/preview-rust-handoff.md\nPreview rebase after the Rust migration\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/rust-tooling.md\nInventory\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/rust-tooling.md\nModel dependency boundary\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/rust-tooling.md\nValidation and safeguards\nPrivate source: section pointer only. Read in its approved repository."
+      "content": "Source: KilnOS/docs/DELIVERY.md\nScope and status\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/DELIVERY.md\nDecisions enforced by source\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/DELIVERY.md\nEvidence classes\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/DELIVERY.md\nRemaining acceptance gates\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/platform.md\nOwnership and residency\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/platform.md\nObserved hosting inputs, 4 November 2026\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/platform.md\nWorkflow and adapter contract\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/models.md\nImplemented serving boundary\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/models.md\nEvidence still required\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/workflow.md\nEntrypoints\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/workflow.md\nSubmission, results and recovery\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/workflow.md\nCancellation, deletion and limits\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/model-builds.md\nPinned inputs\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/model-builds.md\nBuild and check\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/model-builds.md\nLicences and remaining evidence\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/rendering.md\nDeterministic ten-second renderer\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/evaluation.md\nPrototype acceptance procedure\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/contracts/README.md\nPublic API v1\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/apps/web/README.md\nKiln web workspace\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/apps/desktop/README.md\nKiln desktop\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/preview-rust-handoff.md\nPreview rebase after the Rust migration\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/rust-tooling.md\nInventory\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/rust-tooling.md\nModel dependency boundary\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/rust-tooling.md\nValidation and safeguards\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/deployment.md\nSingle-dev releases\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/deployment.md\nReadiness and demo acceptance\nPrivate source: section pointer only. Read in its approved repository."
     },
     {
       "id": "concept_kilnos_cloud_prototype",
@@ -2366,7 +2397,7 @@
           "source_path": "KilnOS/docs/preview-rust-handoff.md",
           "heading": "Preview rebase after the Rust migration",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         }
@@ -2389,7 +2420,7 @@
           "source_path": "KilnOS/docs/rust-tooling.md",
           "heading": "Inventory",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2397,7 +2428,7 @@
           "source_path": "KilnOS/docs/rust-tooling.md",
           "heading": "Model dependency boundary",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         },
@@ -2405,12 +2436,68 @@
           "source_path": "KilnOS/docs/rust-tooling.md",
           "heading": "Validation and safeguards",
           "source_hash": null,
-          "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909",
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
           "authority": "prototype_implementation",
           "availability": "restricted_metadata_only"
         }
       ],
       "content": "Source: KilnOS/docs/rust-tooling.md\nInventory\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/rust-tooling.md\nModel dependency boundary\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/rust-tooling.md\nValidation and safeguards\nPrivate source: section pointer only. Read in its approved repository."
+    },
+    {
+      "id": "concept_kilnos_dev_releases",
+      "type": "concept",
+      "label": "KilnOS single-dev releases",
+      "description": "Private release operations guidance under review in KilnOS PR 22. Source and CI controls do not establish deployment, real-model readiness or acceptance.",
+      "aliases": [
+        "KilnOS issue 21",
+        "KilnOS automated deployment",
+        "KilnOS AWS service inventory"
+      ],
+      "authority": "source_grounded",
+      "temporal_scope": "verify_source",
+      "source_details": [
+        {
+          "source_path": "KilnOS/docs/deployment.md",
+          "heading": "Deploy after a merge",
+          "source_hash": null,
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "KilnOS/docs/deployment.md",
+          "heading": "Operator workflow",
+          "source_hash": null,
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "KilnOS/docs/deployment.md",
+          "heading": "Immutable manifest and recovery",
+          "source_hash": null,
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "KilnOS/docs/deployment.md",
+          "heading": "Readiness and demo acceptance",
+          "source_hash": null,
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "KilnOS/docs/deployment.md",
+          "heading": "Observability and ownership",
+          "source_hash": null,
+          "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        }
+      ],
+      "content": "Source: KilnOS/docs/deployment.md\nDeploy after a merge\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/deployment.md\nOperator workflow\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/deployment.md\nImmutable manifest and recovery\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/deployment.md\nReadiness and demo acceptance\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/deployment.md\nObservability and ownership\nPrivate source: section pointer only. Read in its approved repository."
     },
     {
       "id": "route_marketing-deck",
@@ -2576,6 +2663,15 @@
       "confidence": "EXTRACTED",
       "evidence": {
         "source_path": "KilnOS/docs/DELIVERY.md"
+      }
+    },
+    {
+      "source": "domain_product_distribution",
+      "relation": "contains_source",
+      "target": "doc_kilnos_docs_deployment_md",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "KilnOS/docs/deployment.md"
       }
     },
     {
@@ -3985,6 +4081,15 @@
       }
     },
     {
+      "source": "doc_kilnos_docs_deployment_md",
+      "relation": "describes",
+      "target": "concept_kilnos_prototype_implementation",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "KilnOS/docs/deployment.md"
+      }
+    },
+    {
       "source": "domain_product_distribution",
       "relation": "contains",
       "target": "concept_kilnos_cloud_prototype",
@@ -4030,6 +4135,22 @@
       "confidence": "EXTRACTED",
       "evidence": {
         "source_path": "KilnOS/docs/rust-tooling.md"
+      }
+    },
+    {
+      "source": "domain_product_distribution",
+      "relation": "contains",
+      "target": "concept_kilnos_dev_releases",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "doc_kilnos_docs_deployment_md",
+      "relation": "describes",
+      "target": "concept_kilnos_dev_releases",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "KilnOS/docs/deployment.md"
       }
     },
     {
@@ -4279,6 +4400,24 @@
       "source": "concept_kilnos_prototype_implementation",
       "relation": "uses",
       "target": "concept_kilnos_hosted_preview",
+      "confidence": "INFERRED",
+      "evidence": {
+        "note": "Curated traversal relation, verify against cited source."
+      }
+    },
+    {
+      "source": "concept_kilnos_prototype_implementation",
+      "relation": "requires",
+      "target": "concept_kilnos_dev_releases",
+      "confidence": "INFERRED",
+      "evidence": {
+        "note": "Curated traversal relation, verify against cited source."
+      }
+    },
+    {
+      "source": "concept_kilnos_dev_releases",
+      "relation": "requires",
+      "target": "concept_kilnos_rust_tooling",
       "confidence": "INFERRED",
       "evidence": {
         "note": "Curated traversal relation, verify against cited source."
@@ -4603,6 +4742,13 @@
       "source": "route_kilnos-implementation",
       "relation": "starts_with",
       "target": "concept_kilnos_rust_tooling",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "route_kilnos-implementation",
+      "relation": "starts_with",
+      "target": "concept_kilnos_dev_releases",
       "confidence": "EXTRACTED",
       "evidence": {}
     }

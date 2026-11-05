@@ -13,6 +13,7 @@ Private application implementation and evidence status. Source and fixture valid
 - requires: [[Knowledge refresh and impact review|Knowledge refresh and impact review]] (INFERRED)
 - requires: [[KilnOS Rust tooling policy|KilnOS Rust tooling policy]] (INFERRED)
 - uses: [[KilnOS preview migration dependency|KilnOS preview migration dependency]] (INFERRED)
+- requires: [[KilnOS single-dev releases|KilnOS single-dev releases]] (INFERRED)
 
 ## Source content
 
@@ -110,4 +111,12 @@ Private source: section pointer only. Read in its approved repository.
 
 Source: KilnOS/docs/rust-tooling.md
 Validation and safeguards
+Private source: section pointer only. Read in its approved repository.
+
+Source: KilnOS/docs/deployment.md
+Single-dev releases
+Private source: section pointer only. Read in its approved repository.
+
+Source: KilnOS/docs/deployment.md
+Readiness and demo acceptance
 Private source: section pointer only. Read in its approved repository.

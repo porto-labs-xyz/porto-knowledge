@@ -98,7 +98,7 @@
       "authority": "prototype_implementation",
       "classification": "restricted_metadata_only",
       "materialize": false,
-      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909"
+      "source_revision": "7a41becba1d603e5a975e3c1b895949b580ed73c"
     }
   ],
   "documents": [
@@ -683,6 +683,16 @@
       "domain": "knowledge_ops",
       "kind": "implementation_language_policy",
       "title": "KilnOS Rust tooling migration and evidence boundaries",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/docs/deployment.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "implementation_operating_guidance",
+      "title": "KilnOS single-dev release operations and acceptance gates",
       "authority": "prototype_implementation",
       "classification": "restricted_metadata_only",
       "materialize": false

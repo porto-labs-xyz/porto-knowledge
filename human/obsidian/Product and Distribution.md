@@ -13,6 +13,7 @@ Music delivery, app-chain architecture and node roles.
 - contains_source: [[KilnOS shared web client|KilnOS shared web client]] (EXTRACTED)
 - contains_source: [[KilnOS authenticated API contract|KilnOS authenticated API contract]] (EXTRACTED)
 - contains_source: [[KilnOS prototype implementation and evidence|KilnOS prototype implementation and evidence]] (EXTRACTED)
+- contains_source: [[KilnOS single-dev release operations and acceptance gates|KilnOS single-dev release operations and acceptance gates]] (EXTRACTED)
 - contains_source: [[KilnOS prototype acceptance procedure|KilnOS prototype acceptance procedure]] (EXTRACTED)
 - contains_source: [[KilnOS reproducible model runtime builds|KilnOS reproducible model runtime builds]] (EXTRACTED)
 - contains_source: [[KilnOS model sources and runtime gates|KilnOS model sources and runtime gates]] (EXTRACTED)
@@ -71,6 +72,7 @@ Music delivery, app-chain architecture and node roles.
 - contains: [[KilnOS prototype implementation|KilnOS prototype implementation]] (EXTRACTED)
 - contains: [[KilnOS proposed cloud prototype|KilnOS proposed cloud prototype]] (EXTRACTED)
 - contains: [[KilnOS preview migration dependency|KilnOS preview migration dependency]] (EXTRACTED)
+- contains: [[KilnOS single-dev releases|KilnOS single-dev releases]] (EXTRACTED)
 
 ## Source content
 

@@ -512,7 +512,8 @@
         "KilnOS/docs/preview-rust-handoff.md",
         "KilnOS/docs/rendering.md",
         "KilnOS/docs/rust-tooling.md",
-        "KilnOS/docs/workflow.md"
+        "KilnOS/docs/workflow.md",
+        "KilnOS/docs/deployment.md"
       ],
       "source_sections": {
         "KilnOS/docs/DELIVERY.md": [
@@ -562,6 +563,10 @@
           "Inventory",
           "Model dependency boundary",
           "Validation and safeguards"
+        ],
+        "KilnOS/docs/deployment.md": [
+          "Single-dev releases",
+          "Readiness and demo acceptance"
         ]
       }
     },
@@ -617,6 +622,28 @@
           "Inventory",
           "Model dependency boundary",
           "Validation and safeguards"
+        ]
+      }
+    },
+    "concept_kilnos_dev_releases": {
+      "label": "KilnOS single-dev releases",
+      "domain": "product_distribution",
+      "description": "Private release operations guidance under review in KilnOS PR 22. Source and CI controls do not establish deployment, real-model readiness or acceptance.",
+      "aliases": [
+        "KilnOS issue 21",
+        "KilnOS automated deployment",
+        "KilnOS AWS service inventory"
+      ],
+      "sources": [
+        "KilnOS/docs/deployment.md"
+      ],
+      "source_sections": {
+        "KilnOS/docs/deployment.md": [
+          "Deploy after a merge",
+          "Operator workflow",
+          "Immutable manifest and recovery",
+          "Readiness and demo acceptance",
+          "Observability and ownership"
         ]
       }
     }
@@ -761,6 +788,16 @@
       "concept_kilnos_prototype_implementation",
       "uses",
       "concept_kilnos_hosted_preview"
+    ],
+    [
+      "concept_kilnos_prototype_implementation",
+      "requires",
+      "concept_kilnos_dev_releases"
+    ],
+    [
+      "concept_kilnos_dev_releases",
+      "requires",
+      "concept_kilnos_rust_tooling"
     ]
   ],
   "routes": {
@@ -856,7 +893,8 @@
         "concept_kilnos_prototype_implementation",
         "concept_kilnos_cloud_prototype",
         "concept_knowledge_refresh",
-        "concept_kilnos_rust_tooling"
+        "concept_kilnos_rust_tooling",
+        "concept_kilnos_dev_releases"
       ],
       "instruction": "Read the pinned private implementation/status sections and distinguish source/fixture checks, cloud deployment and model/user acceptance. Keep KilnOS infrastructure ownership isolated from older AWS resources. Do not materialize private source prose or operational inventories."
     }
