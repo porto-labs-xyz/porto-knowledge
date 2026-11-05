@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "directed": true,
-  "generated_at": "2026-11-05T15:37:41.053504+00:00",
-  "workspace_fingerprint": "sha256:1451ccf015c9aaadc7ba280e9e97d09dcafd4736d36e9454f5b018ab651a9dd2",
+  "generated_at": "2026-11-05T15:39:01.769941+00:00",
+  "workspace_fingerprint": "sha256:04d9ed0730f3d96ea15b0067734b22af591ad682c516e937a4b5d62b5e7d85d7",
   "missing_allowlisted_sources": [],
   "nodes": [
     {
