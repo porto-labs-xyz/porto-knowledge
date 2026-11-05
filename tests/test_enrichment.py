@@ -1,6 +1,7 @@
 import importlib.util
 import pathlib
 import unittest
+from unittest.mock import patch
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("refresh", ROOT / "scripts/refresh.py")
@@ -19,6 +20,17 @@ class SourceSections(unittest.TestCase):
     def test_matching_heading_must_be_exact(self):
         with self.assertRaises(ValueError):
             refresh.selected_section("## Player demo\nBody", "Player")
+
+    def test_unversioned_source_cannot_inherit_graph_checkout_revision(self):
+        source = ROOT / "workspace"
+        with patch.object(refresh.subprocess, "check_output", return_value=str(ROOT)) as git:
+            self.assertIsNone(refresh.git_revision(source))
+            self.assertEqual(git.call_count, 1)
+
+    def test_exact_source_repository_retains_its_commit_provenance(self):
+        source = ROOT / "workspace" / "source-repository"
+        with patch.object(refresh.subprocess, "check_output", side_effect=[str(source), "a" * 40]):
+            self.assertEqual(refresh.git_revision(source), "a" * 40)
 
 if __name__ == "__main__":
     unittest.main()

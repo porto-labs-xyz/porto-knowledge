@@ -30,6 +30,13 @@ def redact(text):
 
 def git_revision(path):
     try:
+        # A CI workspace can live inside the graph checkout without being an
+        # authoritative source repository. Never pin that ancestor's commit.
+        repository_root = subprocess.check_output(
+            ["git", "-C", str(path), "rev-parse", "--show-toplevel"],
+            text=True, stderr=subprocess.DEVNULL).strip()
+        if Path(repository_root).resolve() != Path(path).resolve():
+            return None
         return subprocess.check_output(["git", "-C", str(path), "rev-parse", "HEAD"], text=True, stderr=subprocess.DEVNULL).strip()
     except (OSError, subprocess.CalledProcessError):
         return None

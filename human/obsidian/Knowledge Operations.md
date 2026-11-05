@@ -22,6 +22,7 @@ How organisational knowledge is refreshed, queried and kept connected.
 - contains_source: [[Whitepaper Contents|Whitepaper Contents]] (EXTRACTED)
 - contains: [[Knowledge refresh and impact review|Knowledge refresh and impact review]] (EXTRACTED)
 - contains: [[FREQ deployment documentation|FREQ deployment documentation]] (EXTRACTED)
+- tracks: [[KilnOS prototype implementation|KilnOS prototype implementation]] (INFERRED)
 - provides_route: [[Marketing deck|Marketing deck]] (EXTRACTED)
 - provides_route: [[Landing page|Landing page]] (EXTRACTED)
 - provides_route: [[Protocol change|Protocol change]] (EXTRACTED)
@@ -31,6 +32,7 @@ How organisational knowledge is refreshed, queried and kept connected.
 - provides_route: [[London 0.1.0 approved implementation|London 0.1.0 approved implementation]] (EXTRACTED)
 - provides_route: [[London Move accounting and storage research|London Move accounting and storage research]] (EXTRACTED)
 - provides_route: [[FREQ deployment review|FREQ deployment review]] (EXTRACTED)
+- provides_route: [[KilnOS implementation|KilnOS implementation]] (EXTRACTED)
 
 ## Source content
 

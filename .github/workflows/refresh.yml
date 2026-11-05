@@ -10,7 +10,7 @@ on:
     - cron: '17 4 * * 1-5'
 
 concurrency:
-  group: refresh-porto-knowledge
+  group: refresh-porto-knowledge-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -40,5 +40,5 @@ jobs:
           git config user.email "porto-knowledge[bot]@users.noreply.github.com"
           git add graph human dist
           git diff --cached --quiet || git commit -m "Refresh knowledge graph"
-          git pull --rebase origin main
-          git push
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
