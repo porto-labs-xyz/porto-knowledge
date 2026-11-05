@@ -17,6 +17,7 @@ Music delivery, app-chain architecture and node roles.
 - contains_source: [[KilnOS reproducible model runtime builds|KilnOS reproducible model runtime builds]] (EXTRACTED)
 - contains_source: [[KilnOS model sources and runtime gates|KilnOS model sources and runtime gates]] (EXTRACTED)
 - contains_source: [[KilnOS isolated platform deployment runbook|KilnOS isolated platform deployment runbook]] (EXTRACTED)
+- contains_source: [[KilnOS preview dependency and Rust migration handoff|KilnOS preview dependency and Rust migration handoff]] (EXTRACTED)
 - contains_source: [[KilnOS deterministic branded rendering|KilnOS deterministic branded rendering]] (EXTRACTED)
 - contains_source: [[KilnOS durable workflow and recovery|KilnOS durable workflow and recovery]] (EXTRACTED)
 - contains_source: [[KilnOS proposed build specification|KilnOS proposed build specification]] (EXTRACTED)
@@ -69,6 +70,7 @@ Music delivery, app-chain architecture and node roles.
 - contains: [[London Move accounting and storage spike|London Move accounting and storage spike]] (EXTRACTED)
 - contains: [[KilnOS prototype implementation|KilnOS prototype implementation]] (EXTRACTED)
 - contains: [[KilnOS proposed cloud prototype|KilnOS proposed cloud prototype]] (EXTRACTED)
+- contains: [[KilnOS preview migration dependency|KilnOS preview migration dependency]] (EXTRACTED)
 
 ## Source content
 

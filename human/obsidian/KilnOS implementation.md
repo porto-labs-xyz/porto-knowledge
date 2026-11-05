@@ -12,6 +12,7 @@ Read the pinned private implementation/status sections and distinguish source/fi
 - starts_with: [[KilnOS prototype implementation|KilnOS prototype implementation]] (EXTRACTED)
 - starts_with: [[KilnOS proposed cloud prototype|KilnOS proposed cloud prototype]] (EXTRACTED)
 - starts_with: [[Knowledge refresh and impact review|Knowledge refresh and impact review]] (EXTRACTED)
+- starts_with: [[KilnOS Rust tooling policy|KilnOS Rust tooling policy]] (EXTRACTED)
 
 ## Source content
 

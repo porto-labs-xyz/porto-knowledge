@@ -501,16 +501,18 @@
         "KilnOS infrastructure isolation"
       ],
       "sources": [
-        "KilnOS/docs/DELIVERY.md",
-        "KilnOS/docs/platform.md",
-        "KilnOS/docs/models.md",
-        "KilnOS/docs/workflow.md",
-        "KilnOS/docs/model-builds.md",
-        "KilnOS/docs/rendering.md",
-        "KilnOS/docs/evaluation.md",
-        "KilnOS/contracts/README.md",
+        "KilnOS/apps/desktop/README.md",
         "KilnOS/apps/web/README.md",
-        "KilnOS/apps/desktop/README.md"
+        "KilnOS/contracts/README.md",
+        "KilnOS/docs/DELIVERY.md",
+        "KilnOS/docs/evaluation.md",
+        "KilnOS/docs/model-builds.md",
+        "KilnOS/docs/models.md",
+        "KilnOS/docs/platform.md",
+        "KilnOS/docs/preview-rust-handoff.md",
+        "KilnOS/docs/rendering.md",
+        "KilnOS/docs/rust-tooling.md",
+        "KilnOS/docs/workflow.md"
       ],
       "source_sections": {
         "KilnOS/docs/DELIVERY.md": [
@@ -552,6 +554,14 @@
         ],
         "KilnOS/apps/desktop/README.md": [
           "Kiln desktop"
+        ],
+        "KilnOS/docs/preview-rust-handoff.md": [
+          "Preview rebase after the Rust migration"
+        ],
+        "KilnOS/docs/rust-tooling.md": [
+          "Inventory",
+          "Model dependency boundary",
+          "Validation and safeguards"
         ]
       }
     },
@@ -571,6 +581,42 @@
           "1. The prototype we are building",
           "9. Evaluation and acceptance",
           "12. Decisions to close at kickoff"
+        ]
+      }
+    },
+    "concept_kilnos_hosted_preview": {
+      "label": "KilnOS preview migration dependency",
+      "domain": "product_distribution",
+      "description": "Preview work waits for the Rust migration to merge before the preview branch is rebased. Source and regression evidence do not establish hosted output acceptance.",
+      "aliases": [
+        "KilnOS preview rebase",
+        "KilnOS hosted preview prerequisite"
+      ],
+      "sources": [
+        "KilnOS/docs/preview-rust-handoff.md"
+      ],
+      "source_sections": {
+        "KilnOS/docs/preview-rust-handoff.md": [
+          "Preview rebase after the Rust migration"
+        ]
+      }
+    },
+    "concept_kilnos_rust_tooling": {
+      "label": "KilnOS Rust tooling policy",
+      "domain": "knowledge_ops",
+      "description": "Project-owned control logic and tests use Rust. Rust regression checks run in GitHub Actions; model checks are explicitly selected AWS work. Consult the private source for inventory and evidence limits.",
+      "aliases": [
+        "KilnOS Python migration",
+        "KilnOS issue 18"
+      ],
+      "sources": [
+        "KilnOS/docs/rust-tooling.md"
+      ],
+      "source_sections": {
+        "KilnOS/docs/rust-tooling.md": [
+          "Inventory",
+          "Model dependency boundary",
+          "Validation and safeguards"
         ]
       }
     }
@@ -705,6 +751,16 @@
       "concept_kilnos_prototype_implementation",
       "requires",
       "concept_knowledge_refresh"
+    ],
+    [
+      "concept_kilnos_prototype_implementation",
+      "requires",
+      "concept_kilnos_rust_tooling"
+    ],
+    [
+      "concept_kilnos_prototype_implementation",
+      "uses",
+      "concept_kilnos_hosted_preview"
     ]
   ],
   "routes": {
@@ -799,7 +855,8 @@
       "start": [
         "concept_kilnos_prototype_implementation",
         "concept_kilnos_cloud_prototype",
-        "concept_knowledge_refresh"
+        "concept_knowledge_refresh",
+        "concept_kilnos_rust_tooling"
       ],
       "instruction": "Read the pinned private implementation/status sections and distinguish source/fixture checks, cloud deployment and model/user acceptance. Keep KilnOS infrastructure ownership isolated from older AWS resources. Do not materialize private source prose or operational inventories."
     }

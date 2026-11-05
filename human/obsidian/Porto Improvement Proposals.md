@@ -30,6 +30,7 @@ Start with [PIP-2](./PIP-2.md) for the non-technical overview (the problem, the 
 | [5](./PIP-5.md) | Payout Splitter Module | Standards Track (Core) | Draft |
 | [6](./PIP-6.md) | Node Operator Registration, Roles & Staking | Standards Track (Core) | Draft |
 | [7](./PIP-7.md) | Governance Parameters & Upgrade Process | Standards Track (Core) | Draft |
+| [8](./PIP-8.md) | PRT Tokenomics & Economic Model | Standards Track (Core) | Draft |
 
 ## Reading order
 
@@ -41,6 +42,7 @@ PIP-1  (process)
        │    └─ PIP-5  (payout splitter — consumes finalized StreamEvents)
        ├─ PIP-6  (node operator staking — secures PIP-4's V1 attestation model)
        └─ PIP-7  (governance — parameters referenced by PIP-3 through PIP-6)
+             └─ PIP-8  (cross-cutting tokenomics — issuance, allocation, supply, reserve, redemption)
 ```
 
 ## Numbering ranges

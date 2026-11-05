@@ -56,3 +56,49 @@ Porto Ledger connects paid listening to the source rights holders. Show what was
 ## Sources and maintenance
 
 See docs/CONTENT-SOURCES.md for the page-to-asset mapping. Do not ship the private presentation itself. Refresh the Porto workspace and organisation graphs after content changes, following the workspace agent instructions.
+
+<!-- PORTO-KNOWLEDGE-COMPLETION:START -->
+## Mandatory source registration and enrichment
+
+These local rules carry the policy merged in `porto-labs-xyz/porto-knowledge`
+PR #1. Apply them even when the remote README or knowledge service is unavailable.
+
+1. **Always query, traverse and verify.** Search the graph before meaningful Porto
+   work, follow relevant typed links, and read authoritative source files. If the
+   graph is missing or stale, inspect the owning repository and report the gap.
+2. **Always establish and register a source.** Reuse an appropriate authoritative
+   document. If it is absent from the graph, register its repository and document
+   in `../porto-knowledge/sources/manifest.json`. If no authoritative document
+   exists, create one in the owning repository recording the change, decisions,
+   evidence and unresolved limits, then register it. Do not stop at recording a
+   gap when registration is possible within the authorised scope.
+3. **Always classify and preserve provenance.** Record authority, repository
+   ownership, classification, materialisation policy and source revision where
+   required. Private sources remain metadata-only in the organisation projection.
+   Never copy restricted prose, credentials, personal data or private logs into it.
+4. **Always enrich meaning.** Update maintained curation to connect the source to
+   relevant domains, concepts, decisions, implementation and agent routes. Add
+   useful source-section pointers and permitted content. Registration alone is
+   not completed enrichment. Distinguish proposals, tests and deployed evidence.
+5. **Always refresh and validate.** Locate the Porto workspace and run its full
+   `scripts/update-porto-knowledge-graph.sh` pipeline after authorised changes.
+   Verify the local semantic graph, organisation graph and semantic parity.
+   Confirm current source coverage and privacy handling, then test search,
+   traversal and `knowledge.py impact <source-path>`. Never hand-edit generated
+   graphs or vault notes, or claim a partial refresh as complete.
+6. **Always review impact and publish within scope.** Review connected concepts,
+   documentation and public copy. Honour the user's publication scope, including
+   local-only requests. For authorised repository publication, commit and push
+   scoped changes with a PR; never merge or deploy without authorisation. Notify
+   the target refresh workflow only after its source registration and revision
+   are available there, then verify the result. Dispatch is not refresh success.
+7. **Always report unresolved work.** If access, privacy classification or an
+   external dependency blocks a required step, record the precise gap and report
+   the unfinished stage. Do not call enrichment complete until required source
+   registration, refresh, validation and authorised publication are complete.
+
+The detailed canonical policy is `../porto-knowledge/README.md`, section
+`Mandatory source registration and enrichment`. When working from a nested
+repository, resolve these paths from the Porto workspace root. Preserve each
+project's additional ownership, acceptance, privacy and deployment restrictions.
+<!-- PORTO-KNOWLEDGE-COMPLETION:END -->

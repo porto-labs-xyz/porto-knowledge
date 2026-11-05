@@ -11,6 +11,8 @@ Private application implementation and evidence status. Source and fixture valid
 
 - references: [[KilnOS proposed cloud prototype|KilnOS proposed cloud prototype]] (INFERRED)
 - requires: [[Knowledge refresh and impact review|Knowledge refresh and impact review]] (INFERRED)
+- requires: [[KilnOS Rust tooling policy|KilnOS Rust tooling policy]] (INFERRED)
+- uses: [[KilnOS preview migration dependency|KilnOS preview migration dependency]] (INFERRED)
 
 ## Source content
 
@@ -92,4 +94,20 @@ Private source: section pointer only. Read in its approved repository.
 
 Source: KilnOS/apps/desktop/README.md
 Kiln desktop
+Private source: section pointer only. Read in its approved repository.
+
+Source: KilnOS/docs/preview-rust-handoff.md
+Preview rebase after the Rust migration
+Private source: section pointer only. Read in its approved repository.
+
+Source: KilnOS/docs/rust-tooling.md
+Inventory
+Private source: section pointer only. Read in its approved repository.
+
+Source: KilnOS/docs/rust-tooling.md
+Model dependency boundary
+Private source: section pointer only. Read in its approved repository.
+
+Source: KilnOS/docs/rust-tooling.md
+Validation and safeguards
 Private source: section pointer only. Read in its approved repository.

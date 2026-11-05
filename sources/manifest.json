@@ -98,7 +98,7 @@
       "authority": "prototype_implementation",
       "classification": "restricted_metadata_only",
       "materialize": false,
-      "source_revision": "6cf0e8c44bce89c9ac659cf41bf197ce5916dc5d"
+      "source_revision": "0bf9b8958f2f3a8046a510f36f9510d382ccb909"
     }
   ],
   "documents": [
@@ -663,6 +663,26 @@
       "domain": "product_distribution",
       "kind": "prototype_implementation",
       "title": "KilnOS Tauri desktop client",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/docs/preview-rust-handoff.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "implementation_operating_guidance",
+      "title": "KilnOS preview dependency and Rust migration handoff",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
+    },
+    {
+      "path": "KilnOS/docs/rust-tooling.md",
+      "source": "kilnos",
+      "domain": "knowledge_ops",
+      "kind": "implementation_language_policy",
+      "title": "KilnOS Rust tooling migration and evidence boundaries",
       "authority": "prototype_implementation",
       "classification": "restricted_metadata_only",
       "materialize": false
