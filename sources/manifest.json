@@ -90,6 +90,15 @@
       "classification": "restricted_metadata_only",
       "materialize": false,
       "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2"
+    },
+    {
+      "id": "freq-native",
+      "url": "https://github.com/porto-labs-xyz/freq-native",
+      "workspace_path": "freq-native",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false,
+      "source_revision": "b7a8c5dcf92b6effb8106add98c18e4a05111504"
     }
   ],
   "documents": [
@@ -547,6 +556,27 @@
       "domain": "knowledge_ops",
       "kind": "implementation",
       "title": "FREQ automatic deployment guidance"
+    },
+    {
+      "path": "freq-native/docs/NATIVE-STATUS.md",
+      "source": "freq-native",
+      "domain": "product_distribution",
+      "kind": "implementation_status",
+      "title": "FREQ v139 native client implementation status"
+    },
+    {
+      "path": "freq-native/docs/IOS-SIMULATOR.md",
+      "source": "freq-native",
+      "domain": "product_distribution",
+      "kind": "implementation_operating_guidance",
+      "title": "FREQ pre-TestFlight simulator testing"
+    },
+    {
+      "path": "freq-native/.github/pull_request_template.md",
+      "source": "freq-native",
+      "domain": "product_distribution",
+      "kind": "operating_guidance",
+      "title": "FREQ native default pull request template"
     }
   ]
 }
