@@ -90,6 +90,15 @@
       "classification": "restricted_metadata_only",
       "materialize": false,
       "source_revision": "704855ac26b91e88566a58e7f0f83c6e93be8fa2"
+    },
+    {
+      "id": "kilnos",
+      "url": "https://github.com/porto-labs-xyz/KilnOS",
+      "workspace_path": "KilnOS",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false,
+      "source_revision": "c6691e56d27c310bdda3d7bfa05a43b74f909eef"
     }
   ],
   "documents": [
@@ -547,6 +556,16 @@
       "domain": "knowledge_ops",
       "kind": "implementation",
       "title": "FREQ automatic deployment guidance"
+    },
+    {
+      "path": "KilnOS/docs/tastemaker.md",
+      "source": "kilnos",
+      "domain": "product_distribution",
+      "kind": "implementation_operating_guidance",
+      "title": "KilnOS Tastemaker evidence and forecast review",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "materialize": false
     }
   ]
 }

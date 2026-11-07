@@ -489,6 +489,32 @@
           "Failures, expiry and recovery"
         ]
       }
+    },
+    "concept_kilnos_tastemaker": {
+      "label": "KilnOS Tastemaker cultural forecasts",
+      "domain": "product_distribution",
+      "description": "Source collection, cited forecasts, reviewer outcomes and versioned learning. Implementation awaiting AWS and prospective acceptance; consult the private source for status and limits.",
+      "aliases": [
+        "Tastemaker",
+        "cultural signals",
+        "RSS",
+        "Atom",
+        "X feeds",
+        "forecast ledger"
+      ],
+      "sources": [
+        "KilnOS/docs/tastemaker.md"
+      ],
+      "source_sections": {
+        "KilnOS/docs/tastemaker.md": [
+          "Sources and coverage",
+          "X feeds",
+          "Collection and storage",
+          "Forecast contract and review",
+          "Outcome scoring and learning",
+          "Operation and acceptance"
+        ]
+      }
     }
   },
   "relations": [
@@ -606,6 +632,11 @@
       "concept_london_move_storage",
       "informs",
       "concept_london_settlement"
+    ],
+    [
+      "concept_kilnos_tastemaker",
+      "requires",
+      "concept_knowledge_refresh"
     ]
   ],
   "routes": {
@@ -694,6 +725,13 @@
         "concept_freq_deployment"
       ],
       "instruction": "Read the registered private deployment source and verify current repository and run evidence. Keep branch validation distinct from merged or deployed behaviour; preserve metadata-only source handling."
+    },
+    "kilnos-tastemaker": {
+      "label": "KilnOS Tastemaker",
+      "start": [
+        "concept_kilnos_tastemaker"
+      ],
+      "instruction": "Read the private implementation guide. Separate source and fixture evidence from AWS operation, model output and prospective forecasting acceptance. Preserve source attribution and metadata-only privacy."
     }
   }
 }
