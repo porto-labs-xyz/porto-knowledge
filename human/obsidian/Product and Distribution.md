@@ -9,6 +9,7 @@ Music delivery, app-chain architecture and node roles.
 
 ## Connected knowledge
 
+- contains_source: [[KilnOS Tastemaker evidence and forecast review|KilnOS Tastemaker evidence and forecast review]] (EXTRACTED)
 - contains_source: [[London APPROVED- Status, approval and exact scope|London APPROVED: Status, approval and exact scope]] (EXTRACTED)
 - contains_source: [[London APPROVED- Executive architecture|London APPROVED: Executive architecture]] (EXTRACTED)
 - contains_source: [[London APPROVED- System architecture and ownership|London APPROVED: System architecture and ownership]] (EXTRACTED)
@@ -56,6 +57,7 @@ Music delivery, app-chain architecture and node roles.
 - contains: [[London Mainnet architecture (APPROVED)|London Mainnet architecture (APPROVED)]] (EXTRACTED)
 - contains: [[London RocksDB ledger (SUPERSEDED)|London RocksDB ledger (SUPERSEDED)]] (EXTRACTED)
 - contains: [[London Move accounting and storage spike|London Move accounting and storage spike]] (EXTRACTED)
+- contains: [[KilnOS Tastemaker cultural forecasts|KilnOS Tastemaker cultural forecasts]] (EXTRACTED)
 
 ## Source content
 

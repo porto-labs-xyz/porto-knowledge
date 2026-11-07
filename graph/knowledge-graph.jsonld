@@ -73,6 +73,21 @@
       "description": "How organisational knowledge is refreshed, queried and kept connected."
     },
     {
+      "id": "doc_kilnos_docs_tastemaker_md",
+      "type": "document",
+      "label": "KilnOS Tastemaker evidence and forecast review",
+      "description": "implementation operating guidance source. restricted_metadata_only.",
+      "source_path": "KilnOS/docs/tastemaker.md",
+      "source_repository": "kilnos",
+      "authority": "prototype_implementation",
+      "classification": "restricted_metadata_only",
+      "kind": "implementation_operating_guidance",
+      "materialized": false,
+      "source_hash": null,
+      "source_revision": "be0f1a3d825883a2547501db67f3b6c4b3047b83",
+      "content": null
+    },
+    {
       "id": "doc_design_design_notes_md",
       "type": "document",
       "label": "Private Design Guidance",
@@ -84,7 +99,7 @@
       "kind": "restricted_guidance",
       "materialized": false,
       "source_hash": null,
-      "source_revision": "39c9472f46a08c8b2b848e4eb7d10312af7d72d3",
+      "source_revision": "3131083af28d8c7a22c10bc594afa32fff7d928b",
       "content": null
     },
     {
@@ -1908,6 +1923,73 @@
       "content": "Source: freq/docs/auto-deploy.md\nAutomatic AWS deployments\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: freq/docs/auto-deploy.md\nFailures, expiry and recovery\nPrivate source: section pointer only. Read in its approved repository."
     },
     {
+      "id": "concept_kilnos_tastemaker",
+      "type": "concept",
+      "label": "KilnOS Tastemaker cultural forecasts",
+      "description": "Source collection, cited forecasts, reviewer outcomes and versioned learning. Implementation awaiting AWS and prospective acceptance; consult the private source for status and limits.",
+      "aliases": [
+        "Tastemaker",
+        "cultural signals",
+        "RSS",
+        "Atom",
+        "X feeds",
+        "forecast ledger"
+      ],
+      "authority": "source_grounded",
+      "temporal_scope": "verify_source",
+      "source_details": [
+        {
+          "source_path": "KilnOS/docs/tastemaker.md",
+          "heading": "Sources and coverage",
+          "source_hash": null,
+          "source_revision": "be0f1a3d825883a2547501db67f3b6c4b3047b83",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "KilnOS/docs/tastemaker.md",
+          "heading": "X feeds",
+          "source_hash": null,
+          "source_revision": "be0f1a3d825883a2547501db67f3b6c4b3047b83",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "KilnOS/docs/tastemaker.md",
+          "heading": "Collection and storage",
+          "source_hash": null,
+          "source_revision": "be0f1a3d825883a2547501db67f3b6c4b3047b83",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "KilnOS/docs/tastemaker.md",
+          "heading": "Forecast contract and review",
+          "source_hash": null,
+          "source_revision": "be0f1a3d825883a2547501db67f3b6c4b3047b83",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "KilnOS/docs/tastemaker.md",
+          "heading": "Outcome scoring and learning",
+          "source_hash": null,
+          "source_revision": "be0f1a3d825883a2547501db67f3b6c4b3047b83",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        },
+        {
+          "source_path": "KilnOS/docs/tastemaker.md",
+          "heading": "Operation and acceptance",
+          "source_hash": null,
+          "source_revision": "be0f1a3d825883a2547501db67f3b6c4b3047b83",
+          "authority": "prototype_implementation",
+          "availability": "restricted_metadata_only"
+        }
+      ],
+      "content": "Source: KilnOS/docs/tastemaker.md\nSources and coverage\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/tastemaker.md\nX feeds\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/tastemaker.md\nCollection and storage\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/tastemaker.md\nForecast contract and review\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/tastemaker.md\nOutcome scoring and learning\nPrivate source: section pointer only. Read in its approved repository.\n\nSource: KilnOS/docs/tastemaker.md\nOperation and acceptance\nPrivate source: section pointer only. Read in its approved repository."
+    },
+    {
       "id": "route_marketing-deck",
       "type": "agent_route",
       "label": "Marketing deck",
@@ -1960,6 +2042,12 @@
       "type": "agent_route",
       "label": "FREQ deployment review",
       "description": "Read the registered private deployment source and verify current repository and run evidence. Keep branch validation distinct from merged or deployed behaviour; preserve metadata-only source handling."
+    },
+    {
+      "id": "route_kilnos-tastemaker",
+      "type": "agent_route",
+      "label": "KilnOS Tastemaker",
+      "description": "Read the private implementation guide. Separate source and fixture evidence from AWS operation, model output and prospective forecasting acceptance. Preserve source attribution and metadata-only privacy."
     },
     {
       "source": "porto_knowledge",
@@ -2030,6 +2118,15 @@
       "target": "domain_knowledge_ops",
       "confidence": "EXTRACTED",
       "evidence": {}
+    },
+    {
+      "source": "domain_product_distribution",
+      "relation": "contains_source",
+      "target": "doc_kilnos_docs_tastemaker_md",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "KilnOS/docs/tastemaker.md"
+      }
     },
     {
       "source": "domain_design_system",
@@ -3242,6 +3339,22 @@
       }
     },
     {
+      "source": "domain_product_distribution",
+      "relation": "contains",
+      "target": "concept_kilnos_tastemaker",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "doc_kilnos_docs_tastemaker_md",
+      "relation": "describes",
+      "target": "concept_kilnos_tastemaker",
+      "confidence": "EXTRACTED",
+      "evidence": {
+        "source_path": "KilnOS/docs/tastemaker.md"
+      }
+    },
+    {
       "source": "concept_music_distribution",
       "relation": "uses",
       "target": "concept_node_roles",
@@ -3443,6 +3556,15 @@
       "source": "concept_london_move_storage",
       "relation": "informs",
       "target": "concept_london_settlement",
+      "confidence": "INFERRED",
+      "evidence": {
+        "note": "Curated traversal relation, verify against cited source."
+      }
+    },
+    {
+      "source": "concept_kilnos_tastemaker",
+      "relation": "requires",
+      "target": "concept_knowledge_refresh",
       "confidence": "INFERRED",
       "evidence": {
         "note": "Curated traversal relation, verify against cited source."
@@ -3732,6 +3854,20 @@
       "source": "route_freq-deployment",
       "relation": "starts_with",
       "target": "concept_freq_deployment",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "domain_knowledge_ops",
+      "relation": "provides_route",
+      "target": "route_kilnos-tastemaker",
+      "confidence": "EXTRACTED",
+      "evidence": {}
+    },
+    {
+      "source": "route_kilnos-tastemaker",
+      "relation": "starts_with",
+      "target": "concept_kilnos_tastemaker",
       "confidence": "EXTRACTED",
       "evidence": {}
     }

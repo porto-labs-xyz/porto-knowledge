@@ -31,6 +31,7 @@ How organisational knowledge is refreshed, queried and kept connected.
 - provides_route: [[London 0.1.0 approved implementation|London 0.1.0 approved implementation]] (EXTRACTED)
 - provides_route: [[London Move accounting and storage research|London Move accounting and storage research]] (EXTRACTED)
 - provides_route: [[FREQ deployment review|FREQ deployment review]] (EXTRACTED)
+- provides_route: [[KilnOS Tastemaker|KilnOS Tastemaker]] (EXTRACTED)
 
 ## Source content
 
