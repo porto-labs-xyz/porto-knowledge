@@ -5,7 +5,7 @@ type: document
 
 # Porto Brand Voice
 
-Porto landing page Current landing direction, 29 October 2026 The founder now requests a minimal, premium FREQ by Porto Labs stealth landing page. This supersedes the October homepage instructions below, including prominent prototype links and detailed product/revenue sections. Follow docs/CONTENT-SOURCES.md for the current copy, branding, provenance and preservation branch. Use the founder-supplied 27 October v5.
+Porto landing page Current landing direction, 10 November 2026 Use Kiln branding from the founder-linked Creative Studios Figma deck: paper, black, blue and monospaced editorial headings. Keep copy brief and mysterious, remove FREQ from active pages and metadata, show no computer imagery, and preserve existing conversion labels and destinations. See docs/CONTENT-SOURCES.md for provenance and evidence limits. This.
 
 ## Connected knowledge
 
@@ -15,7 +15,11 @@ Porto landing page Current landing direction, 29 October 2026 The founder now re
 
 # Porto landing page
 
-## Current landing direction, 29 October 2026
+## Current landing direction, 10 November 2026
+
+Use Kiln branding from the founder-linked Creative Studios Figma deck: paper, black, blue and monospaced editorial headings. Keep copy brief and mysterious, remove FREQ from active pages and metadata, show no computer imagery, and preserve existing conversion labels and destinations. See docs/CONTENT-SOURCES.md for provenance and evidence limits. This instruction supersedes the historical direction below. Do not deploy automatically.
+
+## Historical landing direction, 29 October 2026
 
 The founder now requests a minimal, premium FREQ by Porto Labs stealth landing page. This supersedes the October homepage instructions below, including prominent prototype links and detailed product/revenue sections. Follow `docs/CONTENT-SOURCES.md` for the current copy, branding, provenance and preservation branch. Use the founder-supplied 27 October v5 deck’s Afterimage identity, exact fluid wordmark, orbital artwork, oxblood and bone palette; preserve the approved copy and retain `/book/`, the email waitlist, contact and X links. Keep the October narrative below as historical context, not current public-page requirements. Do not deploy automatically.
 
