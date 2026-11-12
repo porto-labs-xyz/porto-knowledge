@@ -44,7 +44,7 @@ export default function BookPage() {
           <span className="kiln-wordmark">kiln</span>
           <span className="kiln-byline">by Porto Labs</span>
         </a>
-        <a className="kiln-text-link" href="/#join">Join the waitlist <span aria-hidden="true">↗</span></a>
+        <a className="kiln-text-link" href="/#join">Stay in the Kiln <span aria-hidden="true">↗</span></a>
       </header>
       <main className="booking-main" id="booking-main">
         <div className="booking-intro">

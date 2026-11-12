@@ -5,7 +5,7 @@ type: document
 
 # Porto Landing Page
 
-import React, { useRef, useState } from 'react' const contact = 'mailto:[redacted-email]' const description = 'Kiln by Porto Labs. Private creative AI. A space for your imagination. Join the waitlist or start a conversation.' const Arrow = () = <span aria-hidden="true"↗</span export default function IndexPage() { const [email, setEmail] = useState('') const [status, setStatus] = useState('idle') const pending =.
+import React, { useRef, useState } from 'react' const contact = 'mailto:[redacted-email]' const description = 'Kiln by Porto Labs. Private creative AI. A space for your imagination. Stay in the Kiln or start a conversation.' const Arrow = () = <span aria-hidden="true"↗</span export default function IndexPage() { const [email, setEmail] = useState('') const [status, setStatus] = useState('idle') const pending =.
 
 ## Connected knowledge
 
@@ -16,7 +16,7 @@ No outgoing links.
 import React, { useRef, useState } from 'react'
 
 const contact = 'mailto:[redacted-email]'
-const description = 'Kiln by Porto Labs. Private creative AI. A space for your imagination. Join the waitlist or start a conversation.'
+const description = 'Kiln by Porto Labs. Private creative AI. A space for your imagination. Stay in the Kiln or start a conversation.'
 const Arrow = () => <span aria-hidden="true">↗</span>
 
 export default function IndexPage() {
@@ -58,7 +58,7 @@ export default function IndexPage() {
           <span className="kiln-byline">by Porto Labs</span>
         </a>
         <nav aria-label="Main navigation">
-          <a className="kiln-nav-join" href="#join">Join the waitlist</a>
+          <a className="kiln-nav-join" href="#join">Stay in the Kiln</a>
           <a className="kiln-nav-call" href="/book/">Book a call <Arrow /></a>
         </nav>
       </header>
@@ -70,7 +70,7 @@ export default function IndexPage() {
             <h1 id="hero-heading">Your imagination.<br />A space of its own.</h1>
             <p className="kiln-intro">Private creative AI.<br />Something new is taking shape at Kiln.</p>
             <div className="kiln-actions">
-              <a className="kiln-button" href="#join">Join the waitlist <Arrow /></a>
+              <a className="kiln-button" href="#join">Stay in the Kiln <Arrow /></a>
               <a className="kiln-text-link" href="/book/">Book a call <Arrow /></a>
             </div>
           </div>
@@ -82,17 +82,17 @@ export default function IndexPage() {
             <h2 id="join-heading">Be here for <br />what’s next.</h2>
           </div>
           <div className="kiln-signup">
-            <p>A little mystery. A lot in the making.<br />Leave your email for the first look.</p>
+            <p>Stay in the Kiln.</p>
             <form onSubmit={handleSubmit} action="https://formspree.io/f/xjgepgbg" method="POST" aria-busy={status === 'sending'}>
               <label htmlFor="email">Email address</label>
               <div className="kiln-form-row">
                 <input id="email" name="email" type="email" autoComplete="email" placeholder="[redacted-email]" required maxLength={254} value={email} onChange={(event) => setEmail(event.target.value)} disabled={status === 'sending'} aria-describedby="signup-note signup-status" />
-                <button className="kiln-button" type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Joining…' : 'Join the waitlist'} <Arrow /></button>
+                <button className="kiln-button" type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Saving…' : 'Stay in the Kiln'} <Arrow /></button>
               </div>
-              <p className="kiln-small" id="signup-note">By joining, you agree to receive Kiln updates from Porto Labs.</p>
+              <p className="kiln-small" id="signup-note">By leaving your email, you agree to receive Kiln updates from Porto Labs.</p>
               <p className="kiln-form-status" id="signup-status" role="status" aria-live="polite">
-                {status === 'success' && 'You’re on the list. We’ll be in touch.'}
-                {status === 'error' && <>We couldn’t add you just now. Please try again or <a href={contact}>email us</a>.</>}
+                {status === 'success' && 'You’re in the Kiln. We’ll be in touch.'}
+                {status === 'error' && <>We couldn’t save your email just now. Please try again or <a href={contact}>email us</a>.</>}
               </p>
             </form>
           </div>
