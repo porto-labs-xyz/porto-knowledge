@@ -5,7 +5,7 @@ type: document
 
 # Readme
 
-Kiln by Porto Labs A minimal, responsive stealth landing page for a creative system in development. The page follows the founder-linked Kiln Creative Studios deck, using paper, black, red, yellow, blue and monospaced headings and keeps two conversion paths: the email waitlist and /book/ appointment booking. Current copy, asset provenance and historical context are documented in [CLAUDE.md](CLAUDE.md) and.
+Kiln by Porto Labs The approved Kiln product website, built in the existing Gatsby application. Monument Grotesk, the close-up One introduction, native hardware carousel and a black Atelier interlude introduce private AI hardware and an agent-native OS. Register interest is the primary conversion. No deposits or pre-orders are collected. Development Validation The signup tests use controlled responses and send no.
 
 ## Connected knowledge
 
@@ -15,46 +15,37 @@ No outgoing links.
 
 # Kiln by Porto Labs
 
-A minimal, responsive stealth landing page for a creative system in development. The page follows the founder-linked Kiln Creative Studios deck, using paper, black, red, yellow, blue and monospaced headings and keeps two conversion paths: the email waitlist and `/book/` appointment booking.
-
-Current copy, asset provenance and historical context are documented in [CLAUDE.md](CLAUDE.md) and [docs/CONTENT-SOURCES.md](docs/CONTENT-SOURCES.md).
-
-## Preserved version
-
-The previous landing page is retained on `entropy-acs/landing-before-freq-stealth-2026-10-29`, at `b3df6f0`. The Kiln refresh lives on `entropy-acs/kiln-brand`. Existing October assets remain available for historical reference.
-
-## Validation, 10 November 2026
-
-Production build and diff checks passed. Browser review covered desktop and 390px mobile, with no horizontal overflow at 320px. Waitlist navigation, required email validation, conversion destinations and the booking page shell were checked. The signup handler and Calendar URL are unchanged from main. No live signup or appointment was submitted; Calendar availability was not verified.
-
-## Historical validation, 29 October 2026
-
-The production build passed. Browser checks covered 320px and 390px mobile, 768px tablet and desktop layouts, email validation, waitlist navigation and the Google Calendar embed. Controlled checks exercised the actual signup handler with successful, rejected, failed and timed-out requests, plus duplicate-submission prevention. No real email signup or appointment was submitted.
-
-## Setup
-
-```bash
-npm install
-```
+The approved Kiln product website, built in the existing Gatsby application. Monument Grotesk, the close-up One introduction, native hardware carousel and a black Atelier interlude introduce private AI hardware and an agent-native OS. Register interest is the primary conversion. No deposits or pre-orders are collected.
 
 ## Development
 
-```bash
+```sh
+npm ci --legacy-peer-deps
 npm run develop
 ```
 
-Site runs at `http://localhost:8000`
+## Validation
 
-## Build
-
-```bash
+```sh
 npm run build
+node --test src/lib/*.test.mjs
+git diff --check
 ```
 
-## Deploy
+The signup tests use controlled responses and send no real lead. They cover success, duplicate prevention, rejected responses, network failures, timeout and cleanup. The signup endpoint and Calendar destination are preserved from the previous production page. Provider-side delivery has not been verified with a real submission.
 
-Deployment is manual and requires an explicit request. This refresh does not deploy automatically.
+## Release
 
-```bash
-vercel --prod
-```
+PR #5 targets `porto-labs-xyz/lander:staging`. Richard owns review, merge and the production-domain release. Source provenance and content boundaries are in `docs/CONTENT-SOURCES.md`.
+
+## Structure
+
+- `src/content/*.json`: trusted, versioned editorial markup for Home, About, Hardware, three product pages and Privacy.
+- `src/components/MonumentPage.jsx`: Gatsby wrapper and effect lifecycle.
+- `src/lib/monument.mjs`: native carousel, keyboard tabs, dialogs and menu.
+- `src/lib/monument-arrival.mjs`: scroll-linked One opening and original Little Tilt cue, with reduced-motion and teardown support.
+- `src/lib/enquiry-form.mjs`: Formspree registration/contact, explicit marketing consent, duplicate prevention and retry states.
+- `src/styles/monument.css`, `product-pages.css`: current design; `booking.css` is scoped to the Calendar shell.
+- `static/assets/`: current artwork and webfonts. Older components and assets remain in the repository but are not routed by the current pages.
+
+Current release and integration validation: [release notes](docs/RELEASE-2026-11-14.md). Older motion/performance documents describe the superseded grille-animation implementation.

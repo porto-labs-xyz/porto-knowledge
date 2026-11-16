@@ -5,7 +5,7 @@ type: document
 
 # Porto Brand Voice
 
-Porto landing page Current landing direction, 10 November 2026 Use Kiln branding from the founder-linked Creative Studios Figma deck: paper, black, blue and monospaced editorial headings. Keep copy brief and mysterious, remove FREQ from active pages and metadata, show no computer imagery, and preserve existing conversion labels and destinations. See docs/CONTENT-SOURCES.md for provenance and evidence limits. This.
+Kiln website Current direction, 14 November 2026 The founder approved Sites v48: Monument Grotesk, “Keep the work close”, the close-up One opening, register-interest-only conversion, native product carousel, simplified copy and the black Atelier visual break. The PR must retain the existing Formspree endpoint and /book/ Google Calendar destination. This direction supersedes older design and opt-in sound instructions.
 
 ## Connected knowledge
 
@@ -13,9 +13,20 @@ Porto landing page Current landing direction, 10 November 2026 Use Kiln branding
 
 ## Source content
 
-# Porto landing page
+# Kiln website
 
-## Current landing direction, 10 November 2026
+## Current direction, 14 November 2026
+
+The founder approved Sites v48: Monument Grotesk, “Keep the work close”, the close-up One opening, register-interest-only conversion, native product carousel, simplified copy and the black Atelier visual break. The PR must retain the existing Formspree endpoint and `/book/` Google Calendar destination. This direction supersedes older design and opt-in sound instructions below. Richard still owns the production merge and domain release.
+
+
+## Current landing direction, 13 November 2026
+
+The founder approved the full Kiln website and requested launch through a pull request to `porto-labs-xyz/lander`. Richard owns the merge to `main` and domain release. Preserve the approved v10 design: “Private AI. Local production.”, static One hero, corrected One cutaway, One/Atelier tabs, KilnOS, About and the £17,000 target price. This supersedes the earlier stealth-page/no-hardware direction below.
+
+Keep the existing Formspree endpoint and Google Calendar booking destination. Registration now sends the selected interest and an explicit, optional company-updates preference. Do not submit real test leads or appointments during automated checks. Keep development targets qualified. The source of truth for this release is `docs/CONTENT-SOURCES.md`.
+
+## Previous landing direction, 10 November 2026
 
 Use Kiln branding from the founder-linked Creative Studios Figma deck: paper, black, blue and monospaced editorial headings. Keep copy brief and mysterious, remove FREQ from active pages and metadata, show no computer imagery, and preserve existing conversion labels and destinations. See docs/CONTENT-SOURCES.md for provenance and evidence limits. This instruction supersedes the historical direction below. Do not deploy automatically.
 
