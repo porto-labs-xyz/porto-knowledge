@@ -5,7 +5,7 @@ type: document
 
 # Seo
 
-import React from 'react' export default function Seo({ title, description, path, hero = false }) { const url = https://www.portolabs.xyz${path} const image = 'https://www.portolabs.xyz/assets/kiln/one-boot-poster.jpg' return < <html lang="en" / <title{title}</title <meta name="description" content={description} / <meta name="robots" content="index, follow" / <meta name="theme-color" content="F1F0ED" / <meta.
+import React from 'react' export default function Seo({ title, description, path, hero = false }) { const url = https://www.portolabs.xyz${path} const image = 'https://letskiln.xyz/images/kiln-social-20261118-v2.png' return < <html lang="en" / <title{title}</title <meta name="description" content={description} / <meta name="robots" content="index, follow" / <meta name="theme-color" content="F1F0ED" / <meta.
 
 ## Connected knowledge
 
@@ -17,7 +17,7 @@ import React from 'react'
 
 export default function Seo({ title, description, path, hero = false }) {
   const url = `https://www.portolabs.xyz${path}`
-  const image = 'https://www.portolabs.xyz/assets/kiln/one-boot-poster.jpg'
+  const image = 'https://letskiln.xyz/images/kiln-social-20261118-v2.png'
   return <>
     <html lang="en" />
     <title>{title}</title>
@@ -36,7 +36,10 @@ export default function Seo({ title, description, path, hero = false }) {
     <meta property="og:site_name" content="Kiln by Porto Labs" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:image" content={image} />
-    <meta property="og:image:alt" content="Kiln One, local AI hardware for creative teams" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kiln. Your imagination. A space of its own." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
