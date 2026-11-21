@@ -5,7 +5,7 @@ type: document
 
 # Porto Landing Page
 
-import '../styles/network-thesis.css' import '../styles/hardware-reveal.css' import React from 'react' import MonumentPage from '../components/MonumentPage' import Seo from '../components/Seo' import content from '../content/index.json' export default function Page() { return <MonumentPage content={content} / } export const Head = () = <Seo title={content.title} description={content.description} path={content.path}.
+import '../styles/creative-preview.css' import '../styles/network-thesis.css' import '../styles/hardware-reveal.css' import React from 'react' import MonumentPage from '../components/MonumentPage' import Seo from '../components/Seo' import content from '../content/index.json' export default function Page() { return <MonumentPage content={content} / } export const Head = () = <Seo title={content.title}.
 
 ## Connected knowledge
 
@@ -13,6 +13,7 @@ No outgoing links.
 
 ## Source content
 
+import '../styles/creative-preview.css'
 import '../styles/network-thesis.css'
 import '../styles/hardware-reveal.css'
 import React from 'react'
