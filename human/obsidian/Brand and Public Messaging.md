@@ -13,6 +13,7 @@ Approved public narrative, voice and site copy.
 - contains_source: [[Readme|Readme]] (EXTRACTED)
 - contains_source: [[Aboutcontent|Aboutcontent]] (EXTRACTED)
 - contains_source: [[Hardwarecomparison|Hardwarecomparison]] (EXTRACTED)
+- contains_source: [[Hardwareredirect|Hardwareredirect]] (EXTRACTED)
 - contains_source: [[Homecontent|Homecontent]] (EXTRACTED)
 - contains_source: [[Kilnpage|Kilnpage]] (EXTRACTED)
 - contains_source: [[Monumentpage|Monumentpage]] (EXTRACTED)

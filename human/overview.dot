@@ -81,6 +81,7 @@ digraph PortoKnowledge { rankdir=LR; node [shape=box, style=rounded];
   "domain_brand_public" -> "doc_porto_landing_readme_md" [label="contains_source"];
   "domain_brand_public" -> "doc_porto_landing_src_components_aboutcontent_jsx" [label="contains_source"];
   "domain_brand_public" -> "doc_porto_landing_src_components_hardwarecomparison_jsx" [label="contains_source"];
+  "domain_brand_public" -> "doc_porto_landing_src_components_hardwareredirect_jsx" [label="contains_source"];
   "domain_brand_public" -> "doc_porto_landing_src_components_homecontent_jsx" [label="contains_source"];
   "domain_brand_public" -> "doc_porto_landing_src_components_kilnpage_jsx" [label="contains_source"];
   "domain_brand_public" -> "doc_porto_landing_src_components_monumentpage_jsx" [label="contains_source"];

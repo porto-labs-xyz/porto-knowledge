@@ -29,10 +29,9 @@ function GoogleBookingEmbed() {
           title="Book a call with Kiln by Porto Labs on Google Calendar"
           width="100%"
           height="720"
-          style={{ border: 0 }}
         />
       </div>
-      <p className="booking-fallback">Calendar not loading? <a href={bookingUrl} target="_blank" rel="noopener noreferrer">Open the booking page directly <span className="action-square" aria-hidden="true"></span></a></p>
+      <p className="booking-fallback">Calendar not loading? <a href={bookingUrl} target="_blank" rel="noopener noreferrer">open the booking page directly <span className="action-square" aria-hidden="true"></span></a></p>
     </section>
   )
 }
@@ -40,16 +39,16 @@ function GoogleBookingEmbed() {
 export default function BookPage() {
   return (
     <div className="booking-page kiln-site">
-      <a className="skip-link" href="#booking-main">Skip to booking</a>
+      <a className="skip-link" href="#booking-main">skip to booking</a>
       <header className="kiln-header kiln-wrap">
         <a className="kiln-brand" href="/" aria-label="Kiln by Porto Labs home">
-          <img src="/assets/kiln-lockup-semibold-ink.svg" width="104" height="35" alt="kiln" />
+          <img src="/assets/kiln/kiln-crucible.svg" width="32" height="35" alt="Kiln" />
         </a>
-        <a className="kiln-text-link" href="/#interest">Register interest <span className="action-square" aria-hidden="true"></span></a>
+        <a className="kiln-text-link" href="/#interest">register interest <span className="action-square" aria-hidden="true"></span></a>
       </header>
       <main className="booking-main" id="booking-main">
         <div className="booking-intro">
-          <p className="booking-eyebrow">Kiln / A conversation</p>
+          <p className="booking-eyebrow">Kiln / a conversation</p>
           <h1>Book a call</h1>
           <p>Choose a time to meet the people building Kiln.</p>
         </div>

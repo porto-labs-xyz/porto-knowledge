@@ -43,7 +43,7 @@ PR #5 targets `porto-labs-xyz/lander:staging`. Richard owns review, merge and th
 - `src/content/*.json`: trusted, versioned editorial markup for Home, About, Hardware, three product pages and Privacy.
 - `src/components/MonumentPage.jsx`: Gatsby wrapper and effect lifecycle.
 - `src/lib/monument.mjs`: native carousel, keyboard tabs, dialogs and menu.
-- `src/lib/monument-arrival.mjs`: scroll-linked One opening and original Little Tilt cue, with reduced-motion and teardown support.
+- `src/lib/monument-arrival.mjs`: silent, scroll-linked One opening, with reduced-motion and teardown support.
 - `src/lib/enquiry-form.mjs`: Formspree registration/contact, explicit marketing consent, duplicate prevention and retry states.
 - `src/styles/monument.css`, `product-pages.css`: current design; `booking.css` is scoped to the Calendar shell.
 - `static/assets/`: current artwork and webfonts. Older components and assets remain in the repository but are not routed by the current pages.

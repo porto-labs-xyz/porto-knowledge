@@ -5,7 +5,7 @@ type: document
 
 # Porto Brand Voice
 
-Kiln website Current direction, 14 November 2026 The founder approved Sites v48: Monument Grotesk, “Keep the work close”, the close-up One opening, register-interest-only conversion, native product carousel, simplified copy and the black Atelier visual break. The PR must retain the existing Formspree endpoint and /book/ Google Calendar destination. This direction supersedes older design and opt-in sound instructions.
+Kiln website The primary public website is https://letskiln.xyz. Verify production changes on this domain and use it for public site links. Homepage headline, 26 November 2026 Use “Keep the work close.” for the homepage opening and link preview. Set “Keep the” above the outline, “work” inside it and “close.” below it on the right. Previous direction, 14 November 2026 The founder approved Sites v48: Monument Grotesk,.
 
 ## Connected knowledge
 
@@ -15,7 +15,13 @@ Kiln website Current direction, 14 November 2026 The founder approved Sites v48:
 
 # Kiln website
 
-## Current direction, 14 November 2026
+The primary public website is https://letskiln.xyz. Verify production changes on this domain and use it for public site links.
+
+## Homepage headline, 26 November 2026
+
+Use “Keep the work close.” for the homepage opening and link preview. Set “Keep the” above the outline, “work” inside it and “close.” below it on the right.
+
+## Previous direction, 14 November 2026
 
 The founder approved Sites v48: Monument Grotesk, “Keep the work close”, the close-up One opening, register-interest-only conversion, native product carousel, simplified copy and the black Atelier visual break. The PR must retain the existing Formspree endpoint and `/book/` Google Calendar destination. This direction supersedes older design and opt-in sound instructions below. Richard still owns the production merge and domain release.
 
